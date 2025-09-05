@@ -1,9 +1,9 @@
 # 📘 Proyecto Final - [Nombre del Proyecto]
 
 **Universidad Tecnológica del Perú (UTP)**  
-**Facultad:** Ingeniería 
-**Curso:** Taller de Programación Web
-**Docente:** Luis Antonio Paucarhuanca Aldoradin
+**Facultad:** Ingeniería  
+**Curso:** Taller de Programación Web  
+**Docente:** Luis Antonio Paucarhuanca Aldoradin  
 **Integrantes:**
 
 - Viera Asca, Marco Fabián
