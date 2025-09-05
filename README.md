@@ -1,7 +1,7 @@
 # 📘 Proyecto Final - [Nombre del Proyecto]
 
 **Universidad Tecnológica del Perú (UTP)**  
-**Carrera:** [Tu carrera]  
+**Facultad:** Ingeniería 
 **Curso:** Taller de Programación Web
 **Docente:** Luis Antonio Paucarhuanca Aldoradin
 **Integrantes:**
@@ -11,6 +11,7 @@
 - Huaccha Egoavil, Dajhana Jassira
 - Ortega Perez, David Gabriel
 - Cruz Franco, Jean Carlos
+- Espinoza Robles, Anderson Romeo
 
 ---
 
