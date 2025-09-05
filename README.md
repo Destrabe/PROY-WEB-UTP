@@ -23,7 +23,6 @@ Este proyecto fue desarrollado como parte del curso de **Taller de Programación
 
 - Desarrollar una página web con **HTML, CSS y JavaScript** sin frameworks externos.
 - Aplicar buenas prácticas en la estructura y diseño del código.
-- [Otro objetivo específico que tengas].
 
 ## 🛠️ Tecnologías utilizadas
 
