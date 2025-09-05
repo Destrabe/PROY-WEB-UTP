@@ -1,4 +1,4 @@
-# 📘 Proyecto Final - [Nombre del Proyecto]
+# 📘 Proyecto Final
 
 **Universidad Tecnológica del Perú (UTP)**  
 **Facultad:** Ingeniería  
