@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brami - Reservas</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <h1>BRAMI</h1>
+      <nav>
+        <a href="/index.html">Inicio</a>
+        <a href="/pages/carta.html">Carta</a>
+        <a href="/pages/promociones.html">Promociones</a>
+        <a href="/pages/reservas.html">Reservas</a>
+      </nav>
+    </header>
+    <!--Main-->
+    <main>
+      <h1>Reserva</h1>
+      <!--Formulario-->
+      <form id="reserva">
+        <fieldset>
+          <!--Nombre-->
+          <label for="name">Nombre</label>
+          <br />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Ingrese su Nombre"
+            required
+          />
+          <br />
+          <br />
+          <!--Apellido-->
+          <label for="apellido">Apellido</label>
+          <br />
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Ingrese su Apellido"
+            required
+          />
+          <br />
+          <br />
+          <!--Email-->
+          <label for="email">Email</label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingrese su email"
+            required
+          />
+          <br />
+          <br />
+          <!--Teléfono-->
+          <label for="telefono">Teléfono</label>
+          <br />
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Ingrese su teléfono"
+            required
+          />
+          <br />
+          <br />
+          <!--Tipo de documento-->
+          <label for="type_document">Tipo de documento</label>
+          <br />
+          <select id="document" name="document" required>
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="dni">DNI</option>
+            <option value="ce">CE</option>
+            <option value="ruc">RUC</option>
+          </select>
+          <br />
+          <br />
+          <!--Documento-->
+          <label for="document">Número de documento</label>
+          <br />
+          <input
+            type="text"
+            id="document"
+            name="document"
+            pattern="\d{}"
+            placeholder="Ingrese el n° del documento"
+            required
+          />
+          <br />
+          <br />
+          <!--Cantidad de personas-->
+          <label for="cantidad_personas">Cantidad de personas</label><br />
+          <select id="cantidad_personas" name="cantidad_personas" required>
+            <option value="" disabled selected>Seleccione la cantidad</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 personas</option>
+            <option value="6">6 personas</option>
+            <option value="7">7 personas</option>
+            <option value="8">8 personas</option>
+            <option value="9">9 personas</option>
+            <option value="10">10 personas</option>
+            <option value="otro">-----Otro-----</option>
+          </select>
+          <br />
+          <br />
+          <!--Fecha-->
+          <label for="fechaNacimiento"> Elija una fecha</label>
+          <br />
+          <input type="date" id="fecha" name="fecha" />
+          <br />
+          <br />
+          <!--Hora -->
+          <label for="hora">Hora</label>
+          <br />
+          <input type="time" id="hora" name="hora" required />
+          <br />
+          <br />
+          <!--Observaciones-->
+          <label for="observaciones">Observaciones</label><br />
+          <textarea
+            id="observaciones"
+            name="observaciones"
+            rows="5"
+            cols="40"
+            placeholder="Ingrese observaciones o comentarios"
+            style="resize: none"
+          ></textarea>
+          <!--Boton-->
+          <br />
+          <br />
+          <button type="submit">Reservar</button>
+        </fieldset>
+      </form>
+    </main>
+    <!--Footer-->
+    <footer>
+      <p>© 2025 Mi Sitio Web - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
