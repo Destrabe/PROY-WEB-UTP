@@ -9,21 +9,28 @@
   </head>
   <body>
     <!--Header-->
-    <header>
+    <header style="text-align: center">
       <h1>BRAMI</h1>
       <nav>
-        <a href="/index.html">Inicio</a>
-        <a href="/pages/carta.html">Carta</a>
-        <a href="/pages/promociones.html">Promociones</a>
-        <a href="/pages/reservas.html">Reservas</a>
+        <a style="color: black" href="/index.html">Inicio</a>
+        <a style="color: black" href="/pages/carta.html">Carta</a>
+        <a style="color: black" href="/pages/promociones.html">Promociones</a>
+        <a style="color: black" href="/pages/reservas.html">Reservas</a>
       </nav>
     </header>
     <!--Main-->
-    <main>
-      <h1>Reserva</h1>
+    <main
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      "
+    >
+      <h1 style="text-align: center">Reserva</h1>
       <!--Formulario-->
-      <form id="reserva">
-        <fieldset>
+      <form style="width: 100%; max-width: 400px" id="reserva">
+        <fieldset style="border: 2px solid black; border-radius: 3%">
           <!--Nombre-->
           <label for="name">Nombre</label>
           <br />
@@ -144,7 +151,7 @@
       </form>
     </main>
     <!--Footer-->
-    <footer>
+    <footer style="text-align: center">
       <p>© 2025 Mi Sitio Web - Todos los derechos reservados</p>
     </footer>
   </body>
