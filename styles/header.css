@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 40px;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+/* Navegación */
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
