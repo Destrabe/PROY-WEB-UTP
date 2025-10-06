@@ -1,3 +1,199 @@
 img {
   width: 400px;
 }
+:root {
+  --footer-bg: #121212;
+  --footer-accent: #FFC857;
+  --footer-text: #F5F5F5;
+  --footer-muted: #b5b5b5;
+  --footer-line: rgba(255, 255, 255, 0.15);
+  --footer-wine: #8B1E2D; /* para el gradiente del subrayado */
+}
+
+/* ===== FOOTER BASE ===== */
+.footer-pagina {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 60px 80px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== GRID / LAYOUT ===== */
+.contenedor-footer {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr 0.8fr;
+  gap: 60px;
+  position: relative;
+}
+
+/* Líneas divisorias entre columnas */
+.contenedor-footer > *:not(:first-child) {
+  border-left: 1px solid var(--footer-line);
+  padding-left: 60px; 
+}
+
+/* ===== COLUMNA 1: LOGO + TEXTO ===== */
+.footer-logo {
+  display: grid;
+  gap: 14px;
+  justify-items: center;  
+  text-align: center;     
+}
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.pie-contacto p {
+  color: var(--footer-muted);
+  font-size: 0.95rem;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* ===== TITULARES COLUMNA ===== */
+.footer-nav h4,
+.footer-horarios h4,
+.Ubicacion h4,
+.footer-metodos-pago h4,
+.footer-redes h4 {
+  color: var(--footer-accent);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+/* ===== COLUMNA 2: NAVEGACIÓN ===== */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav li { margin-bottom: 10px; }
+
+/* Enlaces + efecto hover*/
+.footer-nav a{
+  position: relative;
+  display: inline-block;
+  color: var(--footer-text);
+  text-decoration: none;
+  padding: 2px 0;
+  transition: color .2s ease, transform .2s ease;
+  outline: none;
+}
+.footer-nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--footer-wine), var(--footer-accent));
+  border-radius: 2px;
+  transition: width .25s ease;
+}
+.footer-nav a:hover{
+  color: #ffffff;
+  transform: translateX(2px);
+}
+.footer-nav a:hover::after{ width: 100%; }
+/* Accesible con teclado */
+.footer-nav a:focus-visible{
+  color: var(--footer-accent);
+  transform: translateX(2px);
+}
+.footer-nav a:focus-visible::after{ width: 100%; }
+
+/* ===== COLUMNA 3: UBICACIÓN ===== */
+.Ubicacion p {
+  color: var(--footer-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.Ubicacion iframe {
+  width: 100%;
+  max-width: 420px;
+  height: 200px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+/* ===== COLUMNA 4: HORARIOS ===== */
+.footer-horarios p {
+  margin: 5px 0;
+  color: var(--footer-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== COLUMNA 5: MÉTODOS DE PAGO ===== */
+.footer-iconos-pago {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.footer-metodos-pago img {
+  width: 45px;
+  filter: brightness(0.9);
+}
+
+/* ===== COLUMNA 6: REDES + LIBRO ===== */
+.footer-redes h4 { text-align: left; }
+.footer-redes .redes-iconos,
+.footer-redes { display: flex; gap: 18px; align-items: center; }
+.footer-redes .redes-iconos { gap: 18px; }
+
+.footer-redes img {
+  width: 35px;
+  height: 35px;
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.footer-redes img:hover {
+  background-color: var(--footer-accent);
+  transform: scale(1.1);
+}
+
+/* Libro de reclamaciones (debajo de redes) */
+.footer-reclamaciones{ margin-top:22px; display:flex; }
+.footer-enlace-reclamaciones{
+  margin-left:auto; margin-right:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--footer-text);
+  background-color: #2E2E2E;
+  border: 1.5px solid var(--footer-accent);
+  border-radius: 20px;
+  padding: 12px 25px;
+  transition: all 0.3s ease;
+}
+.footer-enlace-reclamaciones:hover {
+  background-color: var(--footer-accent);
+  color: #121212;
+}
+.footer-enlace-reclamaciones img { width: 30px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .contenedor-footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .contenedor-footer > *:not(:first-child) {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--footer-line);
+    padding-top: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-footer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
