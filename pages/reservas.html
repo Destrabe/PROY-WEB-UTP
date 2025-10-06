@@ -4,155 +4,286 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Reservas</title>
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <!--Header-->
-    <header style="text-align: center">
-      <h1>BRAMI</h1>
-      <nav>
-        <a style="color: black" href="/index.html">Inicio</a>
-        <a style="color: black" href="/pages/carta.html">Carta</a>
-        <a style="color: black" href="/pages/promociones.html">Promociones</a>
-        <a style="color: black" href="/pages/reservas.html">Reservas</a>
-      </nav>
-    </header>
-    <!--Main-->
-    <main
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-      "
-    >
-      <h1 style="text-align: center">Reserva</h1>
-      <!--Formulario-->
-      <form style="width: 100%; max-width: 400px" id="reserva">
-        <fieldset style="border: 2px solid black; border-radius: 3%">
-          <!--Nombre-->
-          <label for="name">Nombre</label>
-          <br />
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Ingrese su Nombre"
-            required
-          />
-          <br />
-          <br />
-          <!--Apellido-->
-          <label for="apellido">Apellido</label>
-          <br />
-          <input
-            type="text"
-            name="apellido"
-            id="apellido"
-            placeholder="Ingrese su Apellido"
-            required
-          />
-          <br />
-          <br />
-          <!--Email-->
-          <label for="email">Email</label>
-          <br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Ingrese su email"
-            required
-          />
-          <br />
-          <br />
-          <!--Teléfono-->
-          <label for="telefono">Teléfono</label>
-          <br />
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="Ingrese su teléfono"
-            required
-          />
-          <br />
-          <br />
-          <!--Tipo de documento-->
-          <label for="type_document">Tipo de documento</label>
-          <br />
-          <select id="document" name="document" required>
-            <option value="" disabled selected>Seleccione una opción</option>
-            <option value="dni">DNI</option>
-            <option value="ce">CE</option>
-            <option value="ruc">RUC</option>
-          </select>
-          <br />
-          <br />
-          <!--Documento-->
-          <label for="document">Número de documento</label>
-          <br />
-          <input
-            type="text"
-            id="document"
-            name="document"
-            pattern="\d{}"
-            placeholder="Ingrese el n° del documento"
-            required
-          />
-          <br />
-          <br />
-          <!--Cantidad de personas-->
-          <label for="cantidad_personas">Cantidad de personas</label><br />
-          <select id="cantidad_personas" name="cantidad_personas" required>
-            <option value="" disabled selected>Seleccione la cantidad</option>
-            <option value="1">1 persona</option>
-            <option value="2">2 personas</option>
-            <option value="3">3 personas</option>
-            <option value="4">4 personas</option>
-            <option value="5">5 personas</option>
-            <option value="6">6 personas</option>
-            <option value="7">7 personas</option>
-            <option value="8">8 personas</option>
-            <option value="9">9 personas</option>
-            <option value="10">10 personas</option>
-            <option value="otro">-----Otro-----</option>
-          </select>
-          <br />
-          <br />
-          <!--Fecha-->
-          <label for="fechaNacimiento"> Elija una fecha</label>
-          <br />
-          <input type="date" id="fecha" name="fecha" />
-          <br />
-          <br />
-          <!--Hora -->
-          <label for="hora">Hora</label>
-          <br />
-          <input type="time" id="hora" name="hora" required />
-          <br />
-          <br />
-          <!--Observaciones-->
-          <label for="observaciones">Observaciones</label><br />
-          <textarea
-            id="observaciones"
-            name="observaciones"
-            rows="5"
-            cols="40"
-            placeholder="Ingrese observaciones o comentarios"
-            style="resize: none"
-          ></textarea>
-          <!--Boton-->
-          <br />
-          <br />
-          <button type="submit">Reservar</button>
-        </fieldset>
-      </form>
-    </main>
-    <!--Footer-->
-    <footer style="text-align: center">
-      <p>© 2025 Mi Sitio Web - Todos los derechos reservados</p>
-    </footer>
+    <div class="order">
+      <!--Header-->
+      <header style="text-align: center">
+        <h1>BRAMI</h1>
+        <nav>
+          <a style="color: black" href="/index.html">Inicio</a>
+          <a style="color: black" href="/pages/carta.html">Carta</a>
+          <a style="color: black" href="/pages/promociones.html">Promociones</a>
+          <a style="color: black" href="/pages/reservas.html">Reservas</a>
+        </nav>
+      </header>
+      <!--Main-->
+      <main
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 20px;
+        "
+      >
+        <h1 style="text-align: center">Reserva</h1>
+        <!--Formulario-->
+        <form style="width: 100%; max-width: 400px" id="reserva">
+          <fieldset style="border: 2px solid black; border-radius: 3%">
+            <!--Nombre-->
+            <label for="name">Nombre</label>
+            <br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ingrese su Nombre"
+              required
+            />
+            <br />
+            <br />
+            <!--Apellido-->
+            <label for="apellido">Apellido</label>
+            <br />
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              placeholder="Ingrese su Apellido"
+              required
+            />
+            <br />
+            <br />
+            <!--Email-->
+            <label for="email">Email</label>
+            <br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ingrese su email"
+              required
+            />
+            <br />
+            <br />
+            <!--Teléfono-->
+            <label for="telefono">Teléfono</label>
+            <br />
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Ingrese su teléfono"
+              required
+            />
+            <br />
+            <br />
+            <!--Tipo de documento-->
+            <label for="type_document">Tipo de documento</label>
+            <br />
+            <select id="document" name="document" required>
+              <option value="" disabled selected>Seleccione una opción</option>
+              <option value="dni">DNI</option>
+              <option value="ce">CE</option>
+              <option value="ruc">RUC</option>
+            </select>
+            <br />
+            <br />
+            <!--Documento-->
+            <label for="document">Número de documento</label>
+            <br />
+            <input
+              type="text"
+              id="document"
+              name="document"
+              pattern="\d{}"
+              placeholder="Ingrese el n° del documento"
+              required
+            />
+            <br />
+            <br />
+            <!--Cantidad de personas-->
+            <label for="cantidad_personas">Cantidad de personas</label><br />
+            <select id="cantidad_personas" name="cantidad_personas" required>
+              <option value="" disabled selected>Seleccione la cantidad</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+              <option value="7">7 personas</option>
+              <option value="8">8 personas</option>
+              <option value="9">9 personas</option>
+              <option value="10">10 personas</option>
+              <option value="otro">-----Otro-----</option>
+            </select>
+            <br />
+            <br />
+            <!--Fecha-->
+            <label for="fechaNacimiento"> Elija una fecha</label>
+            <br />
+            <input type="date" id="fecha" name="fecha" />
+            <br />
+            <br />
+            <!--Hora -->
+            <label for="hora">Hora</label>
+            <br />
+            <input type="time" id="hora" name="hora" required />
+            <br />
+            <br />
+            <!--Observaciones-->
+            <label for="observaciones">Observaciones</label><br />
+            <textarea
+              id="observaciones"
+              name="observaciones"
+              rows="5"
+              cols="40"
+              placeholder="Ingrese observaciones o comentarios"
+              style="resize: none"
+            ></textarea>
+            <!--Boton-->
+            <br />
+            <br />
+            <button type="submit">Reservar</button>
+          </fieldset>
+        </form>
+      </main>
+      <!--Footer-->
+      <footer class="footer-pagina">
+        <div class="contenedor-footer">
+          <!-- Col 1: Logo + descripción -->
+          <div class="footer-logo">
+            <img
+              src="../assets/images/logo/marca.webp"
+              alt="logo Brami"
+              class="pie-logo"
+            />
+            <div class="pie-contacto">
+              <p>Brami restobar es más que un</p>
+              <p>restobar donde podrás crear recuerdos</p>
+              <p>con tu familia o amigos.</p>
+              <p>¡Te esperamos!</p>
+            </div>
+          </div>
+
+          <!-- Col 2: Navegación -->
+          <div class="footer-nav">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/botella.svg" alt="icono navegación" />
+                Navegación
+              </span>
+            </h4>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./reservas.html">Reservar</a></li>
+              <li><a href="./carta.html">Carta</a></li>
+              <li><a href="./promociones.html">Promociones</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Ubícanos -->
+          <div class="Ubicacion">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/ubicacion.svg" alt="icono ubicación" />
+                Ubícanos en
+              </span>
+            </h4>
+            <p>Av. Los Fresnos 123, Santiago de Surco, Lima</p>
+            <iframe
+              src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
+              width="360"
+              height="220"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+
+          <!-- Col 4: Horarios + contacto -->
+          <div class="footer-horarios">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/reloj.svg" alt="icono reloj" />
+                HORARIOS
+              </span>
+            </h4>
+            <p>Lunes a viernes 05:00 p.m. a 02:00 a.m.</p>
+            <p>Sábado : 5 p.m. - 4 a.m.</p>
+            <p>Domingo : 4 p.m. - 12 a.m.</p>
+
+            <div class="footer-contacto">
+              <p>
+                <img
+                  src="../assets/svg/telf.svg"
+                  alt="Teléfono"
+                  class="icono-contacto"
+                />
+                Telf: 987654321
+              </p>
+              <p>
+                <img
+                  src="../assets/svg/email.svg"
+                  alt="Correo"
+                  class="icono-contacto"
+                />
+                Email: info@bramirestobar.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Col 5: Métodos de pago -->
+          <div class="footer-metodos-pago">
+            <h4>
+              <span class="footer-icon-title">
+                <img
+                  src="../assets/svg/metpago.svg"
+                  alt="icono métodos de pago"
+                />
+                Métodos de pago:
+              </span>
+            </h4>
+            <div class="footer-iconos-pago">
+              <img src="../assets/svg/visa.svg" alt="Visa" />
+              <img src="../assets/svg/mastercard.svg" alt="MasterCard" />
+              <img src="../assets/svg/amex.svg" alt="Amex" />
+              <img src="../assets/svg/billteras.svg" alt="Billeteras" />
+            </div>
+          </div>
+
+          <!-- Col 6: Síguenos + Libro de reclamaciones -->
+          <div class="footer-siguenos">
+            <h4>Síguenos a través de</h4>
+            <div class="footer-redes">
+              <a href="#" aria-label="Instagram"
+                ><img src="../assets/svg/instagram.svg" alt="Instagram"
+              /></a>
+              <a href="#" aria-label="Facebook"
+                ><img src="../assets/svg/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="Twitter"
+                ><img src="../assets/svg/twitter.svg" alt="Twitter"
+              /></a>
+            </div>
+
+            <div class="footer-reclamaciones">
+              <a href="#" class="footer-enlace-reclamaciones">
+                <p><strong>Libro de reclamaciones</strong></p>
+                <img
+                  src="../assets/svg/libro-reclamaciones.svg"
+                  alt="Libro de reclamaciones"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
