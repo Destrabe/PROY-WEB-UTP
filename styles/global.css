@@ -1,0 +1,21 @@
+/*Estilos basicos*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.order {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+:root {
+  --footer-bg: #121212;
+  --footer-accent: #ffc857;
+  --footer-text: #f5f5f5;
+  --footer-muted: #b5b5b5;
+  --footer-line: rgba(255, 255, 255, 0.15);
+  --footer-wine: #8b1e2d;
+}
