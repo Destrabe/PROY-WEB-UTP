@@ -4,25 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Carta</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/estiloCarta.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <style>
+    header{
+  display: flex;
+  height: 70px;
+  padding: auto;
+  left: 0;
+  margin: auto;
+  background-color: rgb(28, 28, 32);
+  justify-content: space-between;/*espacio entre el contenido*/
+  align-items: center;
+  width: 100%;
+  position: fixed;/*hace que el header no se mueva*/
+  top: 0;/*lo fija en la parte superior*/
+  display: flex;
+}
+h1{
+  padding: 15px;
+  color: white;
+  letter-spacing: 3px;
+}
+nav, a{ 
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+  font-weight: bold;
+}
+a{
+  display: inline;
+  margin:5px;
+  font-size: 25px;
+}
+a:hover{
+  color: orangered;
+}
+</style>
   </head>
   <body>
     <!--Header-->
     <header style="text-align: center">
       <h1>BRAMI</h1>
       <nav>
-        <a style="color: black" href="/index.html">Inicio</a>
-        <a style="color: black" href="/pages/carta.html">Carta</a>
-        <a style="color: black" href="/pages/promociones.html">Promociones</a>
-        <a style="color: black" href="/pages/reservas.html">Reservas</a>
+        <a href="/index.html">Inicio</a>
+        <a href="/pages/carta.html">Carta</a>
+        <a href="/pages/promociones.html">Promociones</a>
+        <a href="/pages/reservas.html">Reservas</a>
       </nav>
     </header>
     <!--Main-->
     <main>
       <div class="carta" style="text-align: center">
         <div class="platos">
-          <h1 id="platos-carta">PLATOS A LA CARTA</h1>
+          <h2 id="platos-carta">PLATOS A LA CARTA</h2>
           <div class="item">
             <img
               src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp"
@@ -95,7 +129,7 @@
           </div>
         </div>
         <div class="piqueos">
-          <h1 id="piqueos">PIQUEOS</h1>
+          <h2 id="piqueos">PIQUEOS</h2>
           <div class="item">
             <img
               src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg"
@@ -177,8 +211,8 @@
             </div>
           </div>
         </div>
-        <div class="PARRILLAS">
-          <h1 id="parrillas">PARRILLAS</h1>
+        <div class="parrillas">
+          <h2 id="parrillas">PARRILLAS</h2>
           <div class="item">
             <img
               src="https://peru21.pe/sites/default/efsfiles/2023-11/75XZKEFCCJET3BEJVKAUL6JZUE.jpeg"
@@ -211,7 +245,7 @@
           </div>
         </div>
         <div class="tragos">
-          <h1 id="cocktails">COCTELES / TRAGOS</h1>
+          <h2 id="cocktails">COCTELES / TRAGOS</h2>
           <div class="item">
             <img
               src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg"
