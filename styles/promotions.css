@@ -1,0 +1,21 @@
+header {
+  text-align: center;
+}
+
+nav a {
+  color: black;
+}
+
+.title {
+  text-align: center;
+}
+
+table {
+  text-align: center;
+}
+
+.item img {
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+}

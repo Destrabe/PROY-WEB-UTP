@@ -1,0 +1,35 @@
+header {
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+nav a {
+  color: black;
+}
+
+.title {
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+fieldset {
+  border: 2px solid black;
+  border-radius: 3%;
+}
+
+textarea {
+  resize: none;
+}
+
+iframe {
+  border: 0;
+}

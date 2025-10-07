@@ -11,6 +11,11 @@ main {
   justify-content: center;
   padding-top: 20px;
 }
+
+.carta {
+  text-align: center;
+}
+
 #logo {
   letter-spacing: 3px;
   font-size: 0;
