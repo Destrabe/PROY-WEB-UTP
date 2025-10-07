@@ -4,28 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Inicio</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="./styles/stylesIndex.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
     <!--Header-->
-    <header>
-      <h1>BRAMI</h1>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <label for="menu-toggle" class="overlay"></label>
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h1>BRAMI</h1>
+        <p>RESTOBAR</p>
+      </div>
+
       <nav>
-        <a href="/index.html">Inicio</a>
-        <a href="/pages/carta.html">Carta</a>
-        <a href="/pages/promociones.html">Promociones</a>
-        <a href="/pages/reservas.html">Reservas</a>
+        <ul class="nav-list">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/pages/carta.html">Carta</a></li>
+          <li><a href="/pages/promociones.html">Promociones</a></li>
+          <li><a href="/pages/reservas.html">Reservas</a></li>
+        </ul>
       </nav>
-    </header>
+
+      <div class="sidebar-footer">
+        <p>Síguenos en redes</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Tiktok">🎶</a>
+        </div>
+      </div>
+    </aside>
+
     <!--Main-->
     <main>
-      <h2>Bienvenido a Brami</h2>
-      <p>Contenido principal de la página de inicio.</p>
+      <section>
+        <h1>EXPERIENCIA BRAMI</h1>
+        <p>
+          <center>
+            Donde el sabor se encuentra con la diversión: come, brinda y
+            disfruta como nunca
+          </center>
+        </p>
+        <center>
+          <img
+            src="https://media.istockphoto.com/id/1504400558/es/foto/joven-grupo-multirracial-de-amigos-con-ropa-casual-riendo-alrededor-de-la-mesa-con-comida-y.jpg?s=612x612&w=0&k=20&c=JswGubvDqJdL0FtrvBR3wgUlbUL2C9MwBKipbi2xF3M="
+            alt="fondo"
+            height="300"
+            width="450"
+          />
+        </center>
+      </section>
+      <section>
+        <center>
+          <h1>Lo que ofrecemos</h1>
+        </center>
+
+        <div class="carousel-container">
+          <!-- Inputs radio ocultos para controlar slides (6 slides) -->
+          <input type="radio" id="slide1" name="carousel" checked />
+          <input type="radio" id="slide2" name="carousel" />
+          <input type="radio" id="slide3" name="carousel" />
+          <input type="radio" id="slide4" name="carousel" />
+          <input type="radio" id="slide5" name="carousel" />
+          <input type="radio" id="slide6" name="carousel" />
+
+          <div class="carousel-gallery">
+            <!-- Platos a la carta -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/lomosaltado.webp" alt="Lomo" />
+              <a href="./pages/carta.html#platos-carta">Platos a la carta</a>
+            </div>
+
+            <!-- Piqueos -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/tequeños.webp" alt="tequeños" />
+              <a href="./pages/carta.html#piqueos">Piqueos</a>
+            </div>
+
+            <!-- Parrillas -->
+            <div class="carousel-item">
+              <img src="./assets/images/home/parrilla.webp" alt="parrilla" />
+              <a href="./pages/carta.html#parrillas">Parrillas</a>
+            </div>
+
+            <!-- Cocktails -->
+            <div class="carousel-item">
+              <img src="./assets/images/home/cocteles.webp" alt="cocteles" />
+              <a href="./pages/carta.html#cocktails">Cocktails</a>
+            </div>
+
+            <!-- Refrescos -->
+            <div class="carousel-item">
+              <img src="./assets/images/home/refrescos.webp" alt="refrescos" />
+              <a href="refrescos">Refrescos</a>
+            </div>
+
+            <!-- Cervezas -->
+            <div class="carousel-item">
+              <img src="./assets/images/home/cervezas.webp" alt="cervezas" />
+              <a href="cervezas">Cervezas</a>
+            </div>
+          </div>
+          <label for="slide6" class="carousel-prev">&#8249;</label>
+          <!-- Prev: Va al slide anterior -->
+          <label for="slide2" class="carousel-next">&#8250;</label>
+          <!-- Next: Va al siguiente -->
+
+          <div class="carousel-dots">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+            <label for="slide6"></label>
+          </div>
+        </div>
+      </section>
+
+      <section id="eventos" style="margin-top: 2rem">
+        <h2 style="text-align: center; margin-bottom: 1rem">
+          Eventos y promociones
+        </h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 0.8rem">
+          <div class="card" style="text-align: center">
+            <strong>Happy Hour — Miércoles</strong>
+            <p class="muted">2x1 en cocktails de 8pm a 11pm</p>
+          </div>
+          <div class="card" style="text-align: center">
+            <strong>Noche de Salsa</strong>
+            <p class="muted">Viernes con banda en vivo</p>
+          </div>
+          <div class="card" style="text-align: center">
+            <strong>Tarjeta de visitas</strong>
+            <p>
+              Por cada visita recibe un sello y en tu 5ta visita recibe un
+              cocktail o cerveza gratis!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <!--Footer-->
-    <footer>
-      <p>© 2025 Mi Sitio Web - Todos los derechos reservados</p>
+  
+  <!--Footer-->
+  <footer>
+    <img src="./assets/images/home/logo_minimalista.webp" alt="logo" />
+        
+        <div class="footer-section">
+            <h3>Horarios</h3>
+            <p>Lunes - jueves: 5pm - 2am</p>
+            <p>Sábado: 5pm - 4am</p>
+            <p>Domingo: 4pm - 12am</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Métodos de pago</h3>
+            <p>Visa</p>
+            <p>Mastercard</p>
+            <p>Billeteras digitales</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Encuéntranos en:</h3>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Tiktok</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Libro de reclamaciones</h3>
+        </div>
     </footer>
   </body>
 </html>
