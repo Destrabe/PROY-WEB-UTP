@@ -6,31 +6,31 @@
     <title>Brami - Promociones</title>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/promotions.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="order">
       <!--Header-->
-      <header style="text-align: center">
+      <header>
         <h1>BRAMI</h1>
         <nav>
-          <a style="color: black" href="/index.html">Inicio</a>
-          <a style="color: black" href="/pages/carta.html">Carta</a>
-          <a style="color: black" href="/pages/promociones.html">Promociones</a>
-          <a style="color: black" href="/pages/reservas.html">Reservas</a>
+          <a href="/index.html">Inicio</a>
+          <a href="/pages/carta.html">Carta</a>
+          <a href="/pages/promociones.html">Promociones</a>
+          <a href="/pages/reservas.html">Reservas</a>
         </nav>
       </header>
       <!--Main-->
       <main>
-        <h1 style="text-align: center">Promociones</h1>
-        <table style="text-align: center" align="center">
+        <h1 class="title">Promociones</h1>
+        <table>
           <tr>
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoTragos.webp"
                   alt="2x1 en Cócteles"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Happy Hour 2x1</b></small
                 ><br />
@@ -43,13 +43,12 @@
             </td>
 
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoAlitasBBQ.webp"
                   alt="Alitas"
                   width="150"
                   height="110"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Alitas+Salsa BBQ</b></small
                 ><br />
@@ -62,11 +61,10 @@
             </td>
 
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoSandwich.webp"
                   alt="Sandwiches"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Sandwiches</b></small
                 ><br />
@@ -79,11 +77,10 @@
             </td>
 
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoAlitas.webp"
                   alt="Sandwiches"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Alitas+Coctel</b></small
                 ><br />
@@ -96,14 +93,13 @@
             </td>
           </tr>
         </table>
-        <table style="text-align: center" align="center">
+        <table>
           <tr>
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoBurger.webp"
                   alt="Sandwiches"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Hamburguesa</b></small
                 ><br />
@@ -115,11 +111,10 @@
               </div>
             </td>
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoSour.webp"
                   alt="Sandwiches"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Pisco Sour</b></small
                 ><br />
@@ -131,11 +126,10 @@
               </div>
             </td>
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoCervezas.webp"
                   alt="Sandwiches"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Cervezas </b></small><br />
                 <small><small>2x1 </small></small><br />
@@ -144,11 +138,10 @@
               </div>
             </td>
             <td>
-              <div>
+              <div class="item">
                 <img
                   src="../assets/images/promociones/promoMojitos.webp"
                   alt="Sandwiches"
-                  style="border-radius: 10px; width: 120px; height: 120px"
                 /><br />
                 <small><b>Whisky mojito</b></small
                 ><br />
@@ -168,7 +161,7 @@
           <!-- Col 1: Logo + descripción -->
           <div class="footer-logo">
             <img
-              src="../assets/images/logo/marca.webp"
+              src="../assets/images/logo/marcaPng.webp"
               alt="logo Brami"
               class="pie-logo"
             />
@@ -190,9 +183,9 @@
             </h4>
             <ul>
               <li><a href="../index.html">Inicio</a></li>
-              <li><a href="./reservas.html">Reservar</a></li>
               <li><a href="./carta.html">Carta</a></li>
               <li><a href="./promociones.html">Promociones</a></li>
+              <li><a href="./reservas.html">Reservar</a></li>
             </ul>
           </div>
 
@@ -209,7 +202,6 @@
               src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
               width="360"
               height="220"
-              style="border: 0"
               allowfullscreen
               loading="lazy"
             >

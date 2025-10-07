@@ -6,33 +6,27 @@
     <title>Brami - Reservas</title>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/reservations.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="order">
       <!--Header-->
-      <header style="text-align: center">
+      <header>
         <h1>BRAMI</h1>
         <nav>
-          <a style="color: black" href="/index.html">Inicio</a>
-          <a style="color: black" href="/pages/carta.html">Carta</a>
-          <a style="color: black" href="/pages/promociones.html">Promociones</a>
-          <a style="color: black" href="/pages/reservas.html">Reservas</a>
+          <a href="/index.html">Inicio</a>
+          <a href="/pages/carta.html">Carta</a>
+          <a href="/pages/promociones.html">Promociones</a>
+          <a href="/pages/reservas.html">Reservas</a>
         </nav>
       </header>
       <!--Main-->
-      <main
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 20px;
-        "
-      >
-        <h1 style="text-align: center">Reserva</h1>
+      <main>
+        <h1 class="title">Reserva</h1>
         <!--Formulario-->
-        <form style="width: 100%; max-width: 400px" id="reserva">
-          <fieldset style="border: 2px solid black; border-radius: 3%">
+        <form id="reserva">
+          <fieldset>
             <!--Nombre-->
             <label for="name">Nombre</label>
             <br />
@@ -143,7 +137,6 @@
               rows="5"
               cols="40"
               placeholder="Ingrese observaciones o comentarios"
-              style="resize: none"
             ></textarea>
             <!--Boton-->
             <br />
@@ -158,7 +151,7 @@
           <!-- Col 1: Logo + descripción -->
           <div class="footer-logo">
             <img
-              src="../assets/images/logo/marca.webp"
+              src="../assets/images/logo/marcaPng.webp"
               alt="logo Brami"
               class="pie-logo"
             />
@@ -180,9 +173,9 @@
             </h4>
             <ul>
               <li><a href="../index.html">Inicio</a></li>
-              <li><a href="./reservas.html">Reservar</a></li>
               <li><a href="./carta.html">Carta</a></li>
               <li><a href="./promociones.html">Promociones</a></li>
+              <li><a href="./reservas.html">Reservar</a></li>
             </ul>
           </div>
 
@@ -199,7 +192,6 @@
               src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
               width="360"
               height="220"
-              style="border: 0"
               allowfullscreen
               loading="lazy"
             >
