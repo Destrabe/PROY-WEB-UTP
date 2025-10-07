@@ -19,3 +19,7 @@ table {
   width: 120px;
   height: 120px;
 }
+
+iframe {
+  border: 0;
+}

@@ -6,18 +6,19 @@
     <title>Brami - Inicio</title>
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="order">
       <!--Header-->
-      <header style="text-align: center">
+      <header>
         <h1>BRAMI</h1>
         <nav>
-          <a style="color: black" href="/index.html">Inicio</a>
-          <a style="color: black" href="/pages/carta.html">Carta</a>
-          <a style="color: black" href="/pages/promociones.html">Promociones</a>
-          <a style="color: black" href="/pages/reservas.html">Reservas</a>
+          <a href="/index.html">Inicio</a>
+          <a href="/pages/carta.html">Carta</a>
+          <a href="/pages/promociones.html">Promociones</a>
+          <a href="/pages/reservas.html">Reservas</a>
         </nav>
       </header>
       <!--Main-->
@@ -41,7 +42,7 @@
         </section>
         <section>
           <center><h1>Lo que ofrecemos</h1></center>
-          <div class="container" style="text-align: center">
+          <div class="container">
             <!--Platos a la carta-->
             <img
               src="./assets/images/home/lomosaltado.webp"
@@ -94,19 +95,17 @@
         </section>
 
         <section id="eventos" style="margin-top: 2rem">
-          <h2 style="text-align: center; margin-bottom: 1rem">
-            Eventos y promociones
-          </h2>
-          <div style="display: grid; grid-template-columns: 1fr; gap: 0.8rem">
-            <div class="card" style="text-align: center">
+          <h2 class="sub-title">Eventos y promociones</h2>
+          <div class="promotions">
+            <div class="card">
               <strong>Happy Hour — Miércoles</strong>
               <p class="muted">2x1 en cocktails de 8pm a 11pm</p>
             </div>
-            <div class="card" style="text-align: center">
+            <div class="card">
               <strong>Noche de Salsa</strong>
               <p class="muted">Viernes con banda en vivo</p>
             </div>
-            <div class="card" style="text-align: center">
+            <div class="card">
               <strong>Tarjeta de visitas</strong>
               <p>
                 Por cada visita recibe un sello y en tu 5ta visita recibe un
@@ -122,7 +121,7 @@
           <!-- Col 1: Logo + descripción -->
           <div class="footer-logo">
             <img
-              src="./assets/images/logo/marca.webp"
+              src="./assets/images/logo/marcaPng.webp"
               alt="logo Brami"
               class="pie-logo"
             />
@@ -163,7 +162,6 @@
               src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
               width="360"
               height="220"
-              style="border: 0"
               allowfullscreen
               loading="lazy"
             >

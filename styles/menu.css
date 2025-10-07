@@ -16,6 +16,10 @@ main {
   text-align: center;
 }
 
+iframe {
+  border: 0;
+}
+
 #logo {
   letter-spacing: 3px;
   font-size: 0;
