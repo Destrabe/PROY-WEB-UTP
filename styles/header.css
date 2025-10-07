@@ -1,0 +1,87 @@
+@import url("https://use.typekit.net/yro8ahy.css");
+
+/* HEADER */
+header {
+  font-family: "castoro-titling", sans-serif;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(18, 18, 18, 0.4); /* transparencia*/
+  backdrop-filter: blur(12px); /* efecto vidrio */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoBrami {
+  width: 70px;
+  height: auto;
+}
+
+h1 {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-left: 0;
+  letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Línea inferior animada */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+nav a:hover {
+  color: var(--color-accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Enlace activo */
+nav a.active {
+  color: var(--color-highlight);
+}
+
+nav a.active::after {
+  width: 100%;
+  background-color: var(--color-highlight);
+}

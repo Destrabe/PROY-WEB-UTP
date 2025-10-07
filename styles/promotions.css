@@ -1,13 +1,9 @@
-header {
-  text-align: center;
-}
-
-nav a {
-  color: black;
-}
-
 .title {
   text-align: center;
+}
+
+main {
+  margin-top: 130px;
 }
 
 table {
