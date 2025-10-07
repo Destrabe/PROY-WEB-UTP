@@ -1,94 +1,134 @@
 main img {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: 250px;
   border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Efecto al pasar el mouse por la imagen */
+main img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
 body {
-  background-color: rgb(44, 44, 46);
+  background: url(https://www.restobarneptuno.com/wp-content/uploads/2024/10/slider-restobar-neptuno-2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #222;
 }
+
 main {
   margin-top: 55px;
   justify-content: center;
   padding-top: 20px;
 }
 
-.carta {
-  text-align: center;
-}
-
-iframe {
-  border: 0;
-}
-
 #logo {
   letter-spacing: 3px;
   font-size: 0;
-}
+} 
+ 
 .platos,
 .piqueos,
 .parrillas,
-.tragos {
-  background-color: azure;
+.tragos,
+.jugos,
+.cervezas {
+  background-color: rgba(0, 0, 0, 0.7);
   width: 80%;
   text-align: center;
-  padding: 10px;
-  display: block;
-  border: 2px solid black;
+  padding: 20px;
+  border-radius: 15px;
   margin: 40px auto;
-  justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/* Título principal */
 h2 {
-  grid-column: 1/ -1;
-  text-align: center; /* Centra el título */
-  font-size: 48px; /* Tamaño más grande */
-  font-weight: bold; /* Negrita */
-  color: #333; /* Color gris oscuro elegante */
-  margin-bottom: 30px; /* Espacio entre el título y la grilla */
-  position: relative; /* Necesario para el diseño decorativo */
-  margin: auto;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: white; /*#333*/
+  margin: 20px 0 30px 0;
+  position: relative;
 }
-h2:after {
-  content: ""; /* Crea un elemento vacío */
-  display: block; /* Se comporta como un bloque */
-  width: 80px; /* Largo de la línea decorativa */
-  height: 5px; /* Grosor de la línea */
-  background: orangered; /* Color naranja decorativo (puedes cambiarlo) */
-  margin: 8px auto 0; /* Centra la línea debajo del título */
-  border-radius: 2px; /* Redondea los bordes de la línea */
+.price{
+  color: white;
+  font-weight: bold;
 }
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: orangered;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Tarjeta de cada producto */
+.item {
+  background: transparent; /*#fff*/
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por la tarjeta */
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Nombre del producto */
+.item h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+}
+
+/* Precio */
+.item p {
+  color: orangered;
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
   .platos,
   .piqueos,
   .parrillas,
-  .tragos {
+  .tragos,
+  .jugos,
+  .cervezas {
     grid-template-columns: repeat(2, 1fr);
   }
-  .platos h2,
-  .piqueos h2,
-  .parrillas h2,
-  .tragos h2 {
-    font-size: 28px;
+
+  h2 {
+    font-size: 32px;
   }
 }
 
-/* Celulares (máx 600px) → 1 columna */
 @media (max-width: 600px) {
   .platos,
   .piqueos,
   .parrillas,
-  .tragos {
+  .tragos,
+  .jugos,
+  .cervezas {
     grid-template-columns: 1fr;
   }
-  .platos h2,
-  .piqueos h2,
-  .parrillas h2,
-  .tragos h2 {
-    font-size: 20px;
+
+  h2 {
+    font-size: 24px;
   }
-}
-.item {
-  padding: 15px;
 }
