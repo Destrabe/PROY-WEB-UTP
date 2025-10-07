@@ -1,11 +1,3 @@
-header {
-  text-align: center;
-}
-
-nav a {
-  color: black;
-}
-
 .container {
   text-align: center;
 }
@@ -27,4 +19,8 @@ nav a {
 
 iframe {
   border: 0;
+}
+
+main {
+  margin-top: 150px;
 }
