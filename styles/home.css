@@ -1,0 +1,26 @@
+.container {
+  text-align: center;
+}
+
+.sub-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.promotions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.card {
+  text-align: center;
+}
+
+iframe {
+  border: 0;
+}
+
+main {
+  margin-top: 150px;
+}

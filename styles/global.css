@@ -1,0 +1,20 @@
+/*Estilos basicos*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.order {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+:root {
+  --color-bg-dark: #121212;
+  --color-bg-secondary: #2e2e2e;
+  --color-text: #f5f5f5;
+  --color-accent: #ffc857;
+  --color-highlight: #8b1e2d;
+}

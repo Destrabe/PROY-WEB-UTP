@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+}
+
+main {
+  margin-top: 130px;
+}
+
+table {
+  text-align: center;
+}
+
+.item img {
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+iframe {
+  border: 0;
+}
