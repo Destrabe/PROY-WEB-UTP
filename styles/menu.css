@@ -46,10 +46,7 @@ main {
   gap: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-#bistec, #mojito{
-  grid-column: 2 / 3; /* centra en una cuadrícula de 3 columnas */
-  justify-self: center;
-}
+
 
 /* Título principal */
 h2 {
