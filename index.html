@@ -10,7 +10,6 @@
 
   <body>
     <!--Header-->
-
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
     <label for="menu-toggle" class="hamburger">
@@ -63,7 +62,7 @@
       <section>
         <h1>Lo que ofrecemos</h1>
         <div class="carousel-container">
-          <!-- Inputs radio ocultos para controlar slides (6 slides) -->
+
           <input type="radio" id="slide1" name="carousel" checked />
           <input type="radio" id="slide2" name="carousel" />
           <input type="radio" id="slide3" name="carousel" />
@@ -108,8 +107,45 @@
               <a href="cervezas">Cervezas</a>
             </div>
           </div>
-          <label for="slide6" class="carousel-prev">&#8249;</label>
-          <label for="slide2" class="carousel-next">&#8250;</label>
+          
+          <!-- Navegación por cada slide -->
+          <div class="nav-arrows">
+            <!-- Slide 1 -->
+            <div class="slide1-nav">
+              <label for="slide6" class="carousel-prev">❮</label>
+              <label for="slide2" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide2-nav">
+              <label for="slide1" class="carousel-prev">❮</label>
+              <label for="slide3" class="carousel-next">❯</label>
+            </div>
+            
+            <!--  3 -->
+            <div class="slide3-nav">
+              <label for="slide2" class="carousel-prev">❮</label>
+              <label for="slide4" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slide4-nav">
+              <label for="slide3" class="carousel-prev">❮</label>
+              <label for="slide5" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="slide5-nav">
+              <label for="slide4" class="carousel-prev">❮</label>
+              <label for="slide6" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 6 -->
+            <div class="slide6-nav">
+              <label for="slide5" class="carousel-prev">❮</label>
+              <label for="slide1" class="carousel-next">❯</label>
+            </div>
+          </div>
 
           <div class="carousel-dots">
             <label for="slide1"></label>
