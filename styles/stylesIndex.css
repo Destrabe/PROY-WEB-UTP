@@ -17,14 +17,29 @@
   --transition: all 0.3s ease;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap");
-
 body {
-  font-family: "Lato", sans-serif;
-  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  background-attachment: fixed;
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 200, 87, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 30, 45, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 200, 87, 0.05) 0%, transparent 40%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* ========== SIDEBAR Y NAVEGACIÓN ========== */
@@ -67,7 +82,7 @@ body {
 
 .menu-toggle:checked ~ .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(10px, 10px);
-  background-color: #fff;
+  background-color: #a86f6f;
 }
 
 .menu-toggle:checked ~ .hamburger span:nth-child(2) {
@@ -256,14 +271,53 @@ min-width: none;
 main {
   min-height: 100vh;
   padding: 90px 20px 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  background: rgba(192, 183, 183, 0.95);
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(110, 106, 106, 0.3);
 }
 
 /* ========== SECCIONES ========== */
-section {
+.hero-section {
   margin-bottom: 80px;
   animation: fadeIn 0.8s ease-in-out;
+  text-align: center;
+}
+
+.central-image{
+  height: 800px;
+  width: 1100px;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  min-height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(18, 18, 18, 0.3);
+  transition: var(--transition);
+  border: 5px solid #fff;
+  object-fit: cover;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 
+    0 20px 60px rgba(255, 200, 87, 0.4),
+    0 0 0 1px var(--color-primary);
 }
 
 @keyframes fadeIn {
@@ -356,18 +410,20 @@ section > center > img:hover {
 }
 
 /* ========== CARRUSEL ========== */
+
 .carousel-container {
   position: relative;
-  max-width: 900px;
-  margin: 50px auto;
+  max-width: 800px;
+  margin: 60px auto;
   overflow: hidden;
-  padding: 80px 100px;
+  padding: 60px 80px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 30px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  min-height: 400px;
+  min-height: 500px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .carousel-container input[type="radio"] {
@@ -376,56 +432,53 @@ section > center > img:hover {
 
 .carousel-gallery {
   display: flex;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Suave deslizamiento */
-  width: 600%; /* 100% * 6 slides para mover todo */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 700%;
   height: 100%;
 }
 
 .carousel-item {
   flex: 0 0 100%;
-  min-width: 100%;
+  width: 100%;
   text-align: center;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .carousel-item img {
-  max-width: 100%; /* Fix: Responsive, no fijo enorme */
-  height: auto;
-  max-height: 250px; /* Límite para consistencia */
-  object-fit: cover; /* Cubre sin distorsión */
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  object-fit: cover;
   margin: 0 auto 35px;
-  border-radius: 15px; /* Bordes redondeados opcionales */
+  border-radius: 15px;
   transition: var(--transition);
-  position: relative
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-item:hover img {
   transform: scale(1.05);
   box-shadow: 
     0 20px 60px rgba(255, 200, 87, 0.3),
-    0 0 0 20px rgba(255, 200, 87, 0.25),
-    0 0 0 21px var(--color-primary);
+    0 0 0 3px var(--color-primary);
 }
-
 
 .carousel-item a {
   display: block;
   color: var(--color-dark);
   text-decoration: none;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 26px;
   transition: var(--transition);
   font-family: "Playfair Display", serif;
   letter-spacing: 1px;
 }
 
 .carousel-item a:hover {
-   color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 #slide1:checked ~ .carousel-gallery {
@@ -433,23 +486,23 @@ section > center > img:hover {
 }
 
 #slide2:checked ~ .carousel-gallery {
-  transform: translateX(-100%);
+  transform: translateX(-11.111%);
 }
 
 #slide3:checked ~ .carousel-gallery {
-  transform: translateX(-200%);
+  transform: translateX(-22.222%);
 }
 
 #slide4:checked ~ .carousel-gallery {
-  transform: translateX(-300%);
+  transform: translateX(-33.333%);
 }
 
 #slide5:checked ~ .carousel-gallery {
-  transform: translateX(-400%);
+  transform: translateX(-44.444%);
 }
 
 #slide6:checked ~ .carousel-gallery {
-  transform: translateX(-500%);
+  transform: translateX(-55.555%);
 }
 
 .carousel-prev,
@@ -682,13 +735,17 @@ center {
 }
 
 /* ========== RESPONSIVE ========== */
-@media (min-width: 1024px) {
-  .hamburger {
-    display: none;
-  }
+@media (min-width:760) {
 
   .sidebar {
     transform: translateX(0);
+  }
+  .menu-toggle:checked ~ .hamburger {
+    left: calc(var(--sidebar-width) + 20px);
+  }
+  
+  .hamburger {
+    left: calc(var(--sidebar-width) + 20px);
   }
 
   main {
@@ -704,8 +761,17 @@ center {
     display: none !important;
   }
 
+  .carousel-container {
+    padding: 60px 40px;
+    min-height: 450px;
+  }
+  .carousel-gallery {
+    width: 900%; 
+  }
+
   .carousel-item {
-    flex: 0 0 50%;
+    flex: 0 0 11.111%;
+    padding: 30px;
   }
 
   #slide1:checked ~ .carousel-gallery {
@@ -713,39 +779,56 @@ center {
   }
 
   #slide2:checked ~ .carousel-gallery {
-    transform: translateX(-50%);
+    transform: translateX(-11.111%);
   }
 
   #slide3:checked ~ .carousel-gallery {
-    transform: translateX(-100%);
+    transform: translateX(-22.222%);
   }
 
   #slide4:checked ~ .carousel-gallery {
-    transform: translateX(-150%);
+    transform: translateX(-33.333%);
   }
 
   #slide5:checked ~ .carousel-gallery {
-    transform: translateX(-200%);
+    transform: translateX(-44.444%);
   }
 
   #slide6:checked ~ .carousel-gallery {
-    transform: translateX(-250%);
+    transform: translateX(-55.555%);
   }
 
   .carousel-item img {
-    width: 160px;
-    height: 160px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
   }
 
   #eventos > div {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-}
 
 @media (min-width: 1024px) {
+  
+  .central-image {
+    width: 1100px;
+    height: 800px;
+  }
   .carousel-item {
-    flex: 0 0 33.333%;
+    flex: 0 0 11.111%;
+    padding: 30%;
+  }  
+
+  .carousel-item img {
+    width: 180px;
+    height: 180px;
+    max-height: 300px;
+    object-fit: cover;
+    margin: 0 auto 35px;
+    border-radius: 15px;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   #slide1:checked ~ .carousel-gallery {
@@ -753,30 +836,24 @@ center {
   }
 
   #slide2:checked ~ .carousel-gallery {
-    transform: translateX(-33.333%);
+    transform: translateX(-11.111%);
   }
 
   #slide3:checked ~ .carousel-gallery {
-    transform: translateX(-66.666%);
+    transform: translateX(-22.222%);
   }
 
   #slide4:checked ~ .carousel-gallery {
-    transform: translateX(-100%);
+    transform: translateX(-33.333%);
   }
 
   #slide5:checked ~ .carousel-gallery {
-    transform: translateX(-133.333%);
+    transform: translateX(-44.444%);
   }
 
   #slide6:checked ~ .carousel-gallery {
-    transform: translateX(-166.666%);
+    transform: translateX(-55.555%);
   }
-
-  .carousel-item img {
-    width: 180px;
-    height: 180px;
-  }
-
   #eventos > div {
     grid-template-columns: repeat(3, 1fr);
   }
