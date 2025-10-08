@@ -1,0 +1,28 @@
+.main {
+  margin-bottom: 100px;
+}
+
+.title {
+  text-align: center;
+}
+
+main {
+  margin-top: 130px;
+}
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+fieldset {
+  border: 2px solid black;
+  border-radius: 3%;
+}
+
+textarea {
+  resize: none;
+}
+
+iframe {
+  border: 0;
+}
