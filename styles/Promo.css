@@ -5,6 +5,7 @@ body {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        margin: 0;
         
     
 }
@@ -107,8 +108,3 @@ small {
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-footer p {
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-}
