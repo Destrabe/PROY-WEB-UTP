@@ -10,97 +10,156 @@
     <link rel="stylesheet" href="/styles/home.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
-    <div class="order">
-      <!--Header-->
-      <header>
-        <div class="header-brand">
-          <img
-            src="./assets/images/logo/favicon.webp"
-            alt="logo"
-            class="logoBrami"
-          />
-          <h1>BRAMI</h1>
+    <!--Header-->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <label for="menu-toggle" class="overlay"></label>
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="./assets/images/favicon.ico" alt=> 
+      <div class="sidebar-text">
+          <span class="sidebar-title">BRAMI</span>
+          <span class="sidebar-sub">Restobar</span>
+      </div>
+      </div>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/pages/carta.html">Carta</a></li>
+          <li><a href="/pages/promociones.html">Promociones</a></li>
+          <li><a href="/pages/reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Síguenos en redes</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Tiktok">🎶</a>
         </div>
-        <nav>
-          <a href="/index.html">Inicio</a>
-          <a href="/pages/carta.html">Carta</a>
-          <a href="/pages/promociones.html">Promociones</a>
-          <a href="/pages/reservas.html">Reservas</a>
-        </nav>
-      </header>
-      <!--Main-->
-      <main>
-        <section>
-          <h1><center>EXPERIENCIA BRAMI</center></h1>
-          <p>
-            <center>
-              Donde el sabor se encuentra con la diversión: come, brinda y
-              disfruta como nunca
-            </center>
-          </p>
-          <center>
-            <img
-              src="https://media.istockphoto.com/id/1504400558/es/foto/joven-grupo-multirracial-de-amigos-con-ropa-casual-riendo-alrededor-de-la-mesa-con-comida-y.jpg?s=612x612&w=0&k=20&c=JswGubvDqJdL0FtrvBR3wgUlbUL2C9MwBKipbi2xF3M="
-              alt="fondo"
-              height="300"
-              width="450"
-            />
-          </center>
-        </section>
-        <section>
-          <center><h1>Lo que ofrecemos</h1></center>
-          <div class="container">
-            <!--Platos a la carta-->
-            <img
-              src="./assets/images/home/lomosaltado.webp"
-              alt="Lomo"
-              width="80"
-            />
-            <br />
-            <a href="./pages/carta.html#platos-carta">Platos a la carta</a>
-            <!--Piqueos-->
-            <br /><img
-              src="./assets/images/home/tequeños.webp"
-              alt="tequeños"
-              width="80"
-            />
-            <br />
-            <a href="./pages/carta.html#piqueos">Piqueos</a>
-            <!--Parrillas-->
-            <br /><img
-              src="./assets/images/home/parrilla.webp"
-              alt="parrilla"
-              width="80"
-            />
-            <br />
-            <a href="./pages/carta.html#parrillas">Parrillas</a>
-            <!--Cocktails / Tragos-->
-            <br /><img
-              src="./assets/images/home/cocteles.webp"
-              alt="cocteles"
-              width="80"
-            />
-            <br />
-            <a href="./pages/carta.html#cocktails">Cocktails</a>
-            <!--Refrescos-->
-            <br /><img
-              src="./assets/images/home/refrescos.webp"
-              alt="refrescos"
-              width="80"
-            />
-            <br />
-            <a href="refrescos">Refrescos</a>
-            <!--Cervezas-->
-            <br /><img
-              src="./assets/images/home/cervezas.webp"
-              alt="cervezas"
-              width="80"
-            />
-            <br />
-            <a href="cervezas">Cervezas</a>
+      </div>
+    </aside>
+
+    <!--Main-->
+    <main>
+      <section>
+        <h1>EXPERIENCIA BRAMI</h1>
+        <p>Donde el sabor se encuentra con la diversión: 
+          come, brinda y disfruta como nunca.</p>
+          <img class="central-image"
+            src="https://media.istockphoto.com/id/1504400558/es/foto/joven-grupo-multirracial-de-amigos-con-ropa-casual-riendo-alrededor-de-la-mesa-con-comida-y.jpg?s=612x612&w=0&k=20&c=JswGubvDqJdL0FtrvBR3wgUlbUL2C9MwBKipbi2xF3M="
+            alt="fondo" 
+          />
+      </section>
+      <section>
+        <h1>Lo que ofrecemos</h1>
+        <div class="carousel-container">
+
+          <input type="radio" id="slide1" name="carousel" checked />
+          <input type="radio" id="slide2" name="carousel" />
+          <input type="radio" id="slide3" name="carousel" />
+          <input type="radio" id="slide4" name="carousel" />
+          <input type="radio" id="slide5" name="carousel" />
+          <input type="radio" id="slide6" name="carousel" />
+
+          <div class="carousel-gallery">
+            <!-- Platos a la carta -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/lomosaltado.webp" alt="Lomo" />
+              <a href="./pages/carta.html#platos-carta">Platos a la carta</a>
+            </div>
+
+            <!-- Piqueos -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/tequeños.webp" alt="tequeños" />
+              <a href="./pages/carta.html#piqueos">Piqueos</a>
+            </div>
+
+            <!-- Parrillas -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/parrilla.webp" alt="parrilla" />
+              <a href="./pages/carta.html#parrillas">Parrillas</a>
+            </div>
+
+            <!-- Cocktails -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/cocteles.webp" alt="cocteles" />
+              <a href="./pages/carta.html#cocktails">Cocktails</a>
+            </div>
+
+            <!-- Refrescos -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/refrescos.webp" alt="refrescos" />
+              <a href="refrescos">Refrescos</a>
+            </div>
+
+            <!-- Cervezas -->
+            <div class="carousel-item">
+              <img src="./assets/images/index/cervezas.webp" alt="cervezas" />
+              <a href="cervezas">Cervezas</a>
+            </div>
           </div>
-        </section>
+          
+          <!-- Navegación por cada slide -->
+          <div class="nav-arrows">
+            <!-- Slide 1 -->
+            <div class="slide1-nav">
+              <label for="slide6" class="carousel-prev">❮</label>
+              <label for="slide2" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide2-nav">
+              <label for="slide1" class="carousel-prev">❮</label>
+              <label for="slide3" class="carousel-next">❯</label>
+            </div>
+            
+            <!--  3 -->
+            <div class="slide3-nav">
+              <label for="slide2" class="carousel-prev">❮</label>
+              <label for="slide4" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slide4-nav">
+              <label for="slide3" class="carousel-prev">❮</label>
+              <label for="slide5" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="slide5-nav">
+              <label for="slide4" class="carousel-prev">❮</label>
+              <label for="slide6" class="carousel-next">❯</label>
+            </div>
+            
+            <!-- Slide 6 -->
+            <div class="slide6-nav">
+              <label for="slide5" class="carousel-prev">❮</label>
+              <label for="slide1" class="carousel-next">❯</label>
+            </div>
+          </div>
+
+          <div class="carousel-dots">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+            <label for="slide6"></label>
+          </div>
+        </div>
+      </section>
 
         <section id="eventos" style="margin-top: 2rem">
           <h2 class="sub-title">Eventos y promociones</h2>
@@ -253,7 +312,37 @@
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
+  
+  <!--Footer-->
+  <footer>
+    <img src="./assets/images/home/logo_minimalista.webp" alt="logo" />
+        
+        <div class="footer-section">
+            <h3>Horarios</h3>
+            <p>Lunes - jueves: 5pm - 2am</p>
+            <p>Sábado: 5pm - 4am</p>
+            <p>Domingo: 4pm - 12am</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Métodos de pago</h3>
+            <p>Visa</p>
+            <p>Mastercard</p>
+            <p>Billeteras digitales</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Encuéntranos en:</h3>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Tiktok</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Libro de reclamaciones</h3>
+        </div>
+    </footer>
   </body>
 </html>
