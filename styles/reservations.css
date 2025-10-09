@@ -1,28 +1,177 @@
-.main {
-  margin-bottom: 100px;
+/* ====== Página ====== */
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  min-height: 100vh;
+  padding: 100px 20px 40px;
+  font-family: 'Inter', sans-serif;
+  color: #1e1e1e;
 }
 
+/* ====== Main ====== */
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  animation: fadeIn 0.7s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+main:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== Título ====== */
 .title {
   text-align: center;
+  padding: 30px;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #8B1E2D;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  margin-bottom: 10px;
 }
 
-main {
-  margin-top: 130px;
-}
-form {
-  width: 100%;
-  max-width: 400px;
+/* ====== Cuerpo del formulario ====== */
+#reserva {
+  padding: 38px 50px 32px;
 }
 
 fieldset {
-  border: 2px solid black;
-  border-radius: 3%;
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+/* ====== Etiquetas ====== */
+label {
+  display: block;
+  color: #1e1e1e;
+  font-weight: 600;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+/* ====== Campos ====== */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.8px solid #e3e3e3;
+  border-radius: 12px;
+  font-size: 1em;
+  font-family: inherit;
+  background: #fdfdfd;
+  color: #1e1e1e;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7c340a;
+  box-shadow: 0 0 0 4px rgba(139, 30, 45, 0.22);
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7a7a7a;
+  font-style: italic;
 }
 
 textarea {
-  resize: none;
+  min-height: 110px;
+  resize: vertical;
 }
 
-iframe {
-  border: 0;
+/* ====== Select ====== */
+select {
+  cursor: pointer;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 14px;
+  padding-right: 40px;
+}
+
+/* ====== Botón ====== */
+button[type="submit"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #7c340a 0%, #FFC857 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 22px rgba(139, 30, 45, 0.45);
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(139, 30, 45, 0.55);
+}
+
+button[type="submit"]:active {
+  transform: translateY(-1px);
+}
+
+/* ====== Centracion de boton ====== */
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group.full-width button[type="submit"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  #reserva {
+    padding: 24px;
+  }
+
+  fieldset {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 1.7em;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* ====== Animación ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
