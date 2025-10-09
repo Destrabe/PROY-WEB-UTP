@@ -34,10 +34,21 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 200, 87, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(139, 30, 45, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(255, 200, 87, 0.05) 0%, transparent 40%);
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 200, 87, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(139, 30, 45, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(255, 200, 87, 0.05) 0%,
+      transparent 40%
+    );
   z-index: -1;
   pointer-events: none;
 }
@@ -119,7 +130,7 @@ body::before {
   transform: translateX(0);
 }
 
-.sidebar-logo img{
+.sidebar-logo img {
   height: auto;
   width: 80px;
   flex-shrink: 0;
@@ -132,16 +143,20 @@ body::before {
   padding: 5px 2px 5px;
   text-align: center;
   border-bottom: 2px solid rgba(255, 200, 87, 0.3);
-  background: linear-gradient(135deg, rgba(255, 200, 87, 0.1) 0%, transparent 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 200, 87, 0.1) 0%,
+    transparent 100%
+  );
   height: 100px;
   width: auto;
 }
-.sidebar-text{
-display: flex;
-flex-direction: column;
-justify-content: center;
-line-height: 1;
-min-width: none;
+.sidebar-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  min-width: none;
 }
 
 .sidebar-title {
@@ -196,14 +211,22 @@ min-width: none;
   transform: translateY(-50%);
   width: 4px;
   height: 0;
-  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
   transition: height 0.3s ease;
 }
 
 .nav-list a:hover {
   color: var(--color-primary);
   padding-left: 45px;
-  background: linear-gradient(90deg, rgba(255, 200, 87, 0.1) 0%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 200, 87, 0.1) 0%,
+    transparent 100%
+  );
 }
 
 .nav-list a:hover::before {
@@ -214,7 +237,11 @@ min-width: none;
   padding: 30px;
   text-align: center;
   border-top: 2px solid rgba(255, 200, 87, 0.3);
-  background: linear-gradient(135deg, transparent 0%, rgba(255, 200, 87, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(255, 200, 87, 0.05) 100%
+  );
 }
 
 .sidebar-footer p {
@@ -285,7 +312,7 @@ main {
   text-align: center;
 }
 
-.central-image{
+.central-image {
   height: 800px;
   width: 1100px;
   border-radius: 20px;
@@ -315,8 +342,7 @@ main {
 
 .hero-image img:hover {
   transform: scale(1.03) translateY(-5px);
-  box-shadow: 
-    0 20px 60px rgba(255, 200, 87, 0.4),
+  box-shadow: 0 20px 60px rgba(255, 200, 87, 0.4),
     0 0 0 1px var(--color-primary);
 }
 
@@ -352,7 +378,13 @@ section h1::after {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-secondary), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary),
+    var(--color-secondary),
+    transparent
+  );
 }
 
 section h2 {
@@ -376,7 +408,11 @@ section h2::after {
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   border-radius: 2px;
 }
 
@@ -397,15 +433,13 @@ section > center > img {
   height: auto;
   margin-top: 20px;
   border: 5px solid #fff;
-  box-shadow: 
-    0 15px 50px rgba(18, 18, 18, 0.2),
+  box-shadow: 0 15px 50px rgba(18, 18, 18, 0.2),
     0 0 0 1px rgba(255, 200, 87, 0.3);
 }
 
 section > center > img:hover {
   transform: scale(1.03) translateY(-5px);
-  box-shadow: 
-    0 20px 60px rgba(255, 200, 87, 0.4),
+  box-shadow: 0 20px 60px rgba(255, 200, 87, 0.4),
     0 0 0 1px var(--color-primary);
 }
 
@@ -463,8 +497,7 @@ section > center > img:hover {
 
 .carousel-item:hover img {
   transform: scale(1.05);
-  box-shadow: 
-    0 20px 60px rgba(255, 200, 87, 0.3),
+  box-shadow: 0 20px 60px rgba(255, 200, 87, 0.3),
     0 0 0 3px var(--color-primary);
 }
 
@@ -605,7 +638,11 @@ section > center > img:hover {
 /* ========== EVENTOS Y PROMOCIONES ========== */
 #eventos {
   padding: 40px 20px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, var(--color-light) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    var(--color-light) 100%
+  );
   border-radius: 20px;
 }
 
@@ -635,7 +672,11 @@ section > center > img:hover {
   right: -50px;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255, 200, 87, 0.15) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 200, 87, 0.15) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
 }
 
@@ -646,7 +687,11 @@ section > center > img:hover {
   left: -30px;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(139, 30, 45, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(139, 30, 45, 0.1) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
 }
 
@@ -699,7 +744,12 @@ footer::before {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 50%, var(--color-secondary) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary) 0%,
+    var(--color-primary) 50%,
+    var(--color-secondary) 100%
+  );
 }
 
 footer img {
@@ -756,15 +806,14 @@ center {
 }
 
 /* ========== RESPONSIVE ========== */
-@media (min-width:760) {
-
+@media (min-width: 760) {
   .sidebar {
     transform: translateX(0);
   }
   .menu-toggle:checked ~ .hamburger {
     left: calc(var(--sidebar-width) + 20px);
   }
-  
+
   .hamburger {
     left: calc(var(--sidebar-width) + 20px);
   }
@@ -787,7 +836,7 @@ center {
     min-height: 450px;
   }
   .carousel-gallery {
-    width: 900%; 
+    width: 900%;
   }
 
   .carousel-item {
@@ -828,9 +877,9 @@ center {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+}
 
 @media (min-width: 1024px) {
-  
   .central-image {
     width: 1100px;
     height: 800px;
@@ -838,7 +887,7 @@ center {
   .carousel-item {
     flex: 0 0 11.111%;
     padding: 30%;
-  }  
+  }
 
   .carousel-item img {
     width: 180px;
@@ -889,7 +938,11 @@ center {
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
   border-radius: 10px;
 }
 
