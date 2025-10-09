@@ -9,6 +9,9 @@
   --footer-wine: #8b1e2d;
 }
 
+footer {
+  margin-top: 50px;
+}
 /* ===== FOOTER BASE ===== */
 .footer-pagina {
   background-color: var(--footer-bg);
