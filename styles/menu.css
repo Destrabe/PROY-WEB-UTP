@@ -1,34 +1,74 @@
-main img {
-  width: 100%;
-  height: 250px;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto al pasar el mouse por la imagen */
-main img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
 }
 
 body {
-  background: url(https://www.restobarneptuno.com/wp-content/uploads/2024/10/slider-restobar-neptuno-2.jpg) no-repeat center center fixed;
+  background: url(https://www.restobarneptuno.com/wp-content/uploads/2024/10/slider-restobar-neptuno-2.jpg)
+    no-repeat center center fixed;
   background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #222;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*MINI MENÚ*/
+.mini-barra {
+  position: fixed;
+  top: 100px; /*ajusta a la altura real de tu header*/
+  transform: translateX(-50%); /*centra horizontalmente*/
+  width: 100%;
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 999; /*por debajo del header, por encima del contenido*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mini-barra ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.mini-barra a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mini-barra a:hover {
+  background: orangered;
+  color: #000;
 }
 
 main {
-  margin-top: 55px;
-  justify-content: center;
-  padding-top: 20px;
+  padding-top: 100px;
 }
 
-#logo {
-  letter-spacing: 3px;
-  font-size: 0;
-} 
- 
+.carta {
+  margin: 0 auto;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
 .platos,
 .piqueos,
 .parrillas,
@@ -36,58 +76,61 @@ main {
 .jugos,
 .cervezas {
   background-color: rgba(0, 0, 0, 0.7);
-  width: 80%;
-  text-align: center;
-  padding: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
   border-radius: 15px;
-  margin: 40px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
-
-/* Título principal */
 h2 {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
-  color: white; /*#333*/
-  margin: 20px 0 30px 0;
+  color: white;
+  margin: 10px 0 30px;
   position: relative;
 }
-.price{
-  color: white;
-  font-weight: bold;
-}
+
 h2::after {
   content: "";
   display: block;
   width: 80px;
-  height: 5px;
+  height: 4px;
   background: orangered;
   margin: 8px auto 0;
   border-radius: 2px;
 }
 
-/* Tarjeta de cada producto */
 .item {
-  background: transparent; /*#fff*/
+  background: transparent;
   border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  padding: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por la tarjeta */
 .item:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Nombre del producto */
+.item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover; /* mantiene proporción sin deformar */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
 .item h3 {
   margin-top: 10px;
   font-size: 1.2em;
@@ -95,22 +138,42 @@ h2::after {
   font-weight: bold;
 }
 
-/* Precio */
-.item p {
+.price {
   color: orangered;
   font-weight: bold;
-  margin: 5px 0 10px;
+  margin-top: 5px;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
+  html, body {
+    max-width: 100%;
+  }
+  
+  body {
+    overflow-x: hidden; /* evita scroll lateral */
+  }
+
   .platos,
   .piqueos,
   .parrillas,
   .tragos,
   .jugos,
   .cervezas {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 25px;
+    gap: 25px;
+    width: 95%;
+    margin: 40px auto;
+    box-sizing: border-box;
+  }
+
+  .item img {
+    height: 200px;
+    object-fit: cover;
   }
 
   h2 {
@@ -118,7 +181,85 @@ h2::after {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 180px;
+  }
+
+  body {
+    overflow-x: hidden; /* evita scroll lateral */
+    background-position: center top;
+  }
+
+  .carta {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .platos,
+  .piqueos,
+  .parrillas,
+  .tragos,
+  .jugos,
+  .cervezas {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .item img {
+    height: 180px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  .mini-barra {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .mini-barra ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mini-barra a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-position: top center;
+  }
+
+  main {
+    padding-top: 75px;
+  }
+
+  .carta {
+    padding: 15px;
+    width: 100%;
+  }
+
   .platos,
   .piqueos,
   .parrillas,
@@ -126,9 +267,34 @@ h2::after {
   .jugos,
   .cervezas {
     grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 15px;
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .item img {
+    height: 160px;
+    object-fit: cover;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 22px;
+  }
+
+  .mini-barra {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 5px;
+  }
+
+  .mini-barra ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mini-barra a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
   }
 }
