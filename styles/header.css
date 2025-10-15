@@ -15,15 +15,17 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(18, 18, 18, 0.4); /* transparencia*/
-  backdrop-filter: blur(12px); /* efecto vidrio */
+  background-color: rgba(18, 18, 18, 0.4);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
 }
 
 .header-brand {
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 101;
 }
 
 .logoBrami {
@@ -55,7 +57,6 @@ nav a {
   transition: all 0.3s ease;
 }
 
-/* Línea inferior animada */
 nav a::after {
   content: "";
   position: absolute;
@@ -67,7 +68,6 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-/* Hover */
 nav a:hover {
   color: var(--color-accent);
 }
@@ -76,7 +76,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Enlace activo */
 nav a.active {
   color: var(--color-highlight);
 }
@@ -84,4 +83,62 @@ nav a.active {
 nav a.active::after {
   width: 100%;
   background-color: var(--color-highlight);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logoBrami {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem 1rem;
+  }
+
+  .logoBrami {
+    width: 40px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    gap: 0.75rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
 }
