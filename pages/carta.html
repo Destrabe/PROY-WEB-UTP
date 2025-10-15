@@ -4,341 +4,604 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Carta</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/menu.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <!--Header-->
-    <header>
-      <h1>BRAMI</h1>
-      <nav>
-        <a href="/index.html">Inicio</a>
-        <a href="/pages/carta.html">Carta</a>
-        <a href="/pages/promociones.html">Promociones</a>
-        <a href="/pages/reservas.html">Reservas</a>
-      </nav>
-    </header>
-    <!--Main-->
-    <main>
-      <div class="platos">
-        <h2>PLATOS A LA CARTA</h2>
-        <div class="item">
+    <div class="order">
+      <!--Header-->
+      <header>
+        <div class="header-brand">
           <img
-            src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp"
-            alt="Lomo Saltado"
+            src="../assets/images/logo/favicon.webp"
+            alt="logo"
+            class="logoBrami"
           />
-          <div class="info">
-            <h3>LOMO SALTADO</h3>
-            <div class="price">S/19</div>
+          <h1>BRAMI</h1>
+        </div>
+        <nav>
+          <a href="/index.html">Inicio</a>
+          <a href="/pages/carta.html">Carta</a>
+          <a href="/pages/promociones.html">Promociones</a>
+          <a href="/pages/reservas.html">Reservas</a>
+        </nav>
+      </header>
+      <!--Main-->
+      <main>
+        <div class="carta" style="text-align: center">
+          <div class="platos">
+            <h2 id="platos-carta">PLATOS A LA CARTA</h2>
+            <div class="item">
+              <img
+                src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp"
+                alt="Lomo Saltado"
+              />
+              <div class="info">
+                <h3>LOMO SALTADO</h3>
+                <div class="price">S/19</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEht6ZPJNHd0IKuXmkPM_c4_UhFGoJD8qYg&s"
+                alt="Pollo a la plancha"
+              />
+              <div class="info">
+                <h3>POLLO A LA PLANCHA (Pollo o Carne)</h3>
+                <div class="price">S/17</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/06/19/6490842c015fab27f801c3f6.png"
+                alt="Tallarin Verde"
+              />
+              <div class="info">
+                <h3>TALLARIN VERDE (Bistec o Milanesa)</h3>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Arroz_chaufa_simple.JPG/960px-Arroz_chaufa_simple.JPG"
+                alt="Arroz Chaufa"
+              />
+              <div class="info">
+                <h3>ARROZ CHAUFA (Pollo o Carne)</h3>
+                <div class="price">S/14</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://larepublica.cronosmedia.glr.pe/original/2021/11/30/61a6937c280736437576cb49.jpg"
+                alt="Arroz a la Cubana"
+              />
+              <div class="info" id="cubana">
+                <h3>ARROZ A LA CUBANA</h3>
+                <div class="price">S/13</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://storage.googleapis.com/fitia_public_images/recipes%2FPE-R-V-00000054_py9v6w9ivzx8yjhaqa2y8z53_large.jpeg"
+                alt="Chicharron de Pollo"
+              />
+              <div class="info">
+                <h3>CHICHARRON DE POLLO</h3>
+                <div class="price">S/19</div>
+              </div>
+            </div>
+            <div class="item" id="bistec">
+              <img
+                src="https://iperu.pe/assets/images/bistec-a-lo-pobre_800x534.webp"
+                alt="Bistec a lo Pobre"
+              />
+              <div class="info">
+                <h3>BISTEC A LO POBRE</h3>
+                <div class="price">S/23</div>
+              </div>
+            </div>
+          </div>
+          <!--PIQUEOS-->
+          <div class="piqueos">
+            <h2 id="piqueos">PIQUEOS</h2>
+            <div class="item">
+              <img
+                src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg"
+                alt="Alitas a la BBQ"
+              />
+              <div class="info">
+                <h3>ALITAS A LA BBQ (6 Piezas)</h3>
+                <div class="price">S/19</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://wongfood.vtexassets.com/arquivos/ids/458566/Alitas-de-Pollo-a-La-Barbecue-Wong-Bolsa-x-1-Kg-2-155646680.jpg?v=637625172660400000"
+                alt="Alitas a la BBQ"
+              />
+              <div class="info">
+                <h3>ALITAS A LA BBQ (12 Piezas)</h3>
+                <div class="price">S/38</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://www.salsasangucheria.com/wp-content/uploads/2022/03/alitasdoce.png"
+                alt="Alitas picantes"
+              />
+              <div class="info">
+                <h3>ALITAS PICANTES</h3>
+                <div class="price">S/19</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://imag.bonviveur.com/pollo-broaster.jpg"
+                alt="Alitas broaster"
+              />
+              <div class="info">
+                <h3>ALITAS BROASTER</h3>
+                <div class="price">S/14</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://polleriabrasasdelcentro.wordpress.com/wp-content/uploads/2021/07/broster.png?w=1024"
+                alt="pierna broaster"
+              />
+              <div class="info">
+                <h3>PIERNA BROASTER</h3>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://panaderialalos.com/wp-content/uploads/2021/03/Tequenos-1.jpg"
+                alt="Tequeños"
+              />
+              <div class="info">
+                <h3>TEQUEÑOS (10 unidades)</h3>
+                <div class="price">S/14</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://tofuu.getjusto.com/orioneat-local/resized2/27tqswvGa7hJn5PHS-2400-x.webp"
+                alt="Salchipapa clásica"
+              />
+              <div class="info">
+                <h3>SALCHIPAPA CLASICA</h3>
+                <div class="price">S/12</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://tofuu.getjusto.com/orioneat-local/resized2/4RFnRWb4G3PpJF2y3-2400-x.webp"
+                alt="Salchipapa royal"
+              />
+              <div class="info">
+                <h3>SALCHIPAPA ROYAL</h3>
+                <div class="price">S/18</div>
+              </div>
+            </div>
+          </div>
+          <!--PARRILLAS-->
+          <div class="parrillas">
+            <h2 id="parrillas">PARRILLAS</h2>
+            <div class="item">
+              <img
+                src="https://peru21.pe/sites/default/efsfiles/2023-11/75XZKEFCCJET3BEJVKAUL6JZUE.jpeg"
+                alt="Chancho a la caja china"
+              />
+              <div class="info">
+                <h3>CHANCHO A LA CAJA CHINA</h3>
+                <div class="price">S/22</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://loopbar.pe/images/al-cilindro/pollo-ahumado-familiar.png"
+                alt="Pollo al cilindro"
+              />
+              <div class="info">
+                <h3>POLLO AL CILINDRO</h3>
+                <div class="price">S/22</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://i.ytimg.com/vi/howBchjxNBk/maxresdefault.jpg"
+                alt="Chancho al cilindro"
+              />
+              <div class="info">
+                <h3>CHANCHO AL CILINDRO</h3>
+                <div class="price">S/22</div>
+              </div>
+            </div>
+          </div>
+          <!--COCTELES / TRAGOS-->
+          <div class="tragos">
+            <h2 id="cocktails">COCTELES / TRAGOS</h2>
+            <div class="item">
+              <img
+                src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg"
+                alt="Pisco sour"
+              />
+              <div class="info">
+                <h3>PISCO SOUR</h3>
+                <p class="ingredientes">
+                  Pisco quebranta, Jarabe de Goma, Limón, Amargo de Angostura
+                </p>
+                <div class="price">S/18</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0f/dd/2a/ea/machu-picchu-drink-yum.jpg"
+                alt="Machu Picchu"
+              />
+              <div class="info">
+                <h3>MACHU PICCHU</h3>
+                <p class="ingredientes">
+                  Menta, Zumo de naranja, Granadina, Pisco
+                </p>
+                <div class="price">S/20</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://www.casasauza.com/hubfs/Blog_Todo_sobre_el_Tequila/Cocktails/Tequila-Sunrise.jpg"
+                alt="Tequila Sunrise"
+              />
+              <div class="info">
+                <h3>TEQUILA SUNRISE</h3>
+                <p class="ingredientes">Tequila, Zumo de naranja, Granadina</p>
+                <div class="price">S/18</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://live.staticflickr.com/650/21845693136_817fbb6268_b.jpg"
+                alt="Baileys Frozen"
+              />
+              <div class="info">
+                <h3>BAILEYS FROZEN</h3>
+                <p class="ingredientes">
+                  Baileys, Vodka, Leche Condensada, Salsa de Chocolate
+                </p>
+                <div class="price">S/22</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://diariocorreo.pe/resizer/LX7RWLPcN5YBkQHevPQB_MfEmjY=/1200x1200/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NGBMGGMMVBF5VHUFFP4B6TBOPM.jpg"
+                alt="Chilcano"
+              />
+              <div class="info">
+                <h3>CHILCANO</h3>
+                <p class="ingredientes">
+                  Clásico, Mango, Fresa, Maracuya, Maracumango
+                </p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://foodmetamorphosis.com/wp-content/uploads/2023/01/pina-colada-mocktail-1.jpg"
+                alt="Piña Colada"
+              />
+              <div class="info">
+                <h3>PIÑA COLADA</h3>
+                <p class="ingredientes">
+                  Ron Blanco, Crema de Coco,Piña, Jarabe de Goma
+                </p>
+                <div class="price">S/20</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://img-global.cpcdn.com/recipes/6722e3db42d12974/680x781cq80/coctel-barbados-surprise-foto-principal.jpg"
+                alt="Barbados"
+              />
+              <div class="info">
+                <h3>BARBADOS</h3>
+                <p class="ingredientes">
+                  Blue Curacao, Jugo de Naranja, Granadina, Ron Blanco
+                </p>
+                <div class="price">S/20</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://www.pequerecetas.com/wp-content/uploads/2020/09/coctel-margarita.jpg"
+                alt="Margarita"
+              />
+              <div class="info">
+                <h3>MARGARITA</h3>
+                <p class="ingredientes">Tequila, Triple Seco, Zumo de Limón</p>
+                <div class="price">S/18</div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://cf.ltkcdn.net/cocktails/images/orig/307663-1600x1066-three-frozen-daiquiris.jpg"
+                alt="Daikiri Frozen"
+              />
+              <div class="info">
+                <h3>DAIKIRI FROZEN</h3>
+                <p class="ingredientes">
+                  Ron Blanco, Azucar Blanca, Zumo de Limón, Fresa/Mango/Maracuya
+                </p>
+                <div class="price">S/20</div>
+              </div>
+            </div>
+            <div class="item" id="mojito">
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0c/ef/1a/25/mojito-sabores.jpg"
+                alt="Mojito"
+              />
+              <div class="info">
+                <h3>MOJITO</h3>
+                <p class="ingredientes">
+                  Clásico/Mango/Fresa/Maracuya/Maracumango
+                </p>
+                <div class="price">S/19</div>
+              </div>
+            </div>
+          </div>
+          <!--JUGOS-->
+          <div class="jugos">
+            <h2 id="jugos">JUGOS</h2>
+            <!--Limonada Frozen-->
+            <div class="item">
+              <img
+                src="https://losmaderos.pe/public/img/products/prd_wc60e4ba747b51a.jpg"
+                alt="Jugo limonada frozen"
+              />
+              <div class="info">
+                <h3>JUGO LIMONADA FROZEN</h3>
+                <p class="ingredientes">
+                  Limones, Tazas de hielo, Agua fria, Cucharadas de azúcar,
+                  Limon, Hojas de menta
+                </p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <!--Jugo de mango-->
+            <div class="item">
+              <img
+                src="https://www.cocina-cubana.com/base/stock/Recipe/jugo-de-mango/jugo-de-mango_web.jpg"
+                alt="Jugo de mango"
+              />
+              <div class="info">
+                <h3>JUGO DE MANGO</h3>
+                <p class="ingredientes">Mangos frescos, Azucar, Agua fria</p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <!--Jugo de fresa-->
+            <div class="item">
+              <img
+                src="https://nutrichefpty.com/wp-content/uploads/2025/04/jugode-fresa-en-eche-.jpg"
+                alt="Jugo de fresa"
+              />
+              <div class="info">
+                <h3>JUGO DE FRESA</h3>
+                <p class="ingredientes">Fresas frescas, Azucar, Agua fria</p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <!--Jugo de Piña-->
+            <div class="item">
+              <img
+                src="https://www.laylita.com/recetas/wp-content/uploads/2016/09/Jugo-de-pina-casero.jpg"
+                alt="Jugo de Piña"
+              />
+              <div class="info">
+                <h3>JUGO DE PIÑA</h3>
+                <p class="ingredientes">Piñas frescas, Azucar, Agua fria</p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <!--Jugo de Naranja-->
+            <div class="item">
+              <img
+                src="https://media.gq.com.mx/photos/5e31d403309f5700081fc82c/master/pass/GettyImages-909604746.jpg"
+                alt="Jugo de Naranja"
+              />
+              <div class="info">
+                <h3>JUGO DE NARANJA</h3>
+                <p class="ingredientes">Naranjas frescas, Azucar, Agua fria</p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+            <!--Jugo de Sandia-->
+            <div class="item">
+              <img
+                src="https://misuperjugo.com/images/jugo-sandia.jpg"
+                alt="Jugo de Sandia"
+              />
+              <div class="info">
+                <h3>JUGO DE SANDIA</h3>
+                <p class="ingredientes">Sandia fresca, Azucar, Agua fria</p>
+                <div class="price">S/16</div>
+              </div>
+            </div>
+          </div>
+          <!--CERVEZAS-->
+          <div class="cervezas">
+            <h2 id="">CERVEZAS</h2>
+            <!--Cerveza Pilsen-->
+            <div class="item">
+              <img
+                src="https://i.pinimg.com/736x/8b/9a/7f/8b9a7f30f080c2ba04453cad460518ad.jpg"
+                alt="Cerveza Pilsen"
+              />
+              <div class="info">
+                <h3>CERVEZA PILSEN</h3>
+                <div class="price">S/10</div>
+              </div>
+            </div>
+            <!--Cerveza Cusqueña-->
+            <div class="item">
+              <img
+                src="https://www.cusquena.com/sites/g/files/seuoyk771/files/2023-04/variedaeds.png.webp"
+                alt="Cerveza Cusqueña"
+              />
+              <div class="info">
+                <h3>CERVEZA CUSQUEÑA</h3>
+                <div class="price">S/12</div>
+              </div>
+            </div>
+            <!--Cerveza Cristal-->
+            <div class="item">
+              <img
+                src="https://static.mercadonegro.pe/wp-content/uploads/2019/11/22202556/Screenshot_2-1.jpg"
+                alt="Cerveza Cristal"
+              />
+              <div class="info">
+                <h3>CERVEZA CRISTAL</h3>
+                <div class="price">S/12</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="item">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEht6ZPJNHd0IKuXmkPM_c4_UhFGoJD8qYg&s"
-            alt="Pollo a la plancha"
-          />
-          <div class="info">
-            <h3>POLLO A LA PLANCHA (Pollo o Carne)</h3>
-            <div class="price">S/17</div>
+      </main>
+      <!--Footer-->
+      <footer class="footer-pagina">
+        <div class="contenedor-footer">
+          <!-- Col 1: Logo + descripción -->
+          <div class="footer-logo">
+            <img
+              src="../assets/images/logo/marcaPng.webp"
+              alt="logo Brami"
+              class="pie-logo"
+            />
+            <div class="pie-contacto">
+              <p>Brami restobar es más que un</p>
+              <p>restobar donde podrás crear recuerdos</p>
+              <p>con tu familia o amigos.</p>
+              <p>¡Te esperamos!</p>
+            </div>
+          </div>
+
+          <!-- Col 2: Navegación -->
+          <div class="footer-nav">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/botella.svg" alt="icono navegación" />
+                Navegación
+              </span>
+            </h4>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./carta.html">Carta</a></li>
+              <li><a href="./promociones.html">Promociones</a></li>
+              <li><a href="./reservas.html">Reservar</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Ubícanos -->
+          <div class="Ubicacion">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/ubicacion.svg" alt="icono ubicación" />
+                Ubícanos en
+              </span>
+            </h4>
+            <p>Av. Los Fresnos 123, Santiago de Surco, Lima</p>
+            <iframe
+              src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
+              width="360"
+              height="220"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+
+          <!-- Col 4: Horarios + contacto -->
+          <div class="footer-horarios">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/reloj.svg" alt="icono reloj" />
+                HORARIOS
+              </span>
+            </h4>
+            <p>Lunes a viernes 05:00 p.m. a 02:00 a.m.</p>
+            <p>Sábado : 5 p.m. - 4 a.m.</p>
+            <p>Domingo : 4 p.m. - 12 a.m.</p>
+
+            <div class="footer-contacto">
+              <p>
+                <img
+                  src="../assets/svg/telf.svg"
+                  alt="Teléfono"
+                  class="icono-contacto"
+                />
+                Telf: 987654321
+              </p>
+              <p>
+                <img
+                  src="../assets/svg/email.svg"
+                  alt="Correo"
+                  class="icono-contacto"
+                />
+                Email: info@bramirestobar.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Col 5: Métodos de pago -->
+          <div class="footer-metodos-pago">
+            <h4>
+              <span class="footer-icon-title">
+                <img
+                  src="../assets/svg/metpago.svg"
+                  alt="icono métodos de pago"
+                />
+                Métodos de pago:
+              </span>
+            </h4>
+            <div class="footer-iconos-pago">
+              <img src="../assets/svg/visa.svg" alt="Visa" />
+              <img src="../assets/svg/mastercard.svg" alt="MasterCard" />
+              <img src="../assets/svg/amex.svg" alt="Amex" />
+              <img src="../assets/svg/billteras.svg" alt="Billeteras" />
+            </div>
+          </div>
+
+          <!-- Col 6: Síguenos + Libro de reclamaciones -->
+          <div class="footer-siguenos">
+            <h4>Síguenos a través de</h4>
+            <div class="footer-redes">
+              <a href="#" aria-label="Instagram"
+                ><img src="../assets/svg/instagram.svg" alt="Instagram"
+              /></a>
+              <a href="#" aria-label="Facebook"
+                ><img src="../assets/svg/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="Twitter"
+                ><img src="../assets/svg/twitter.svg" alt="Twitter"
+              /></a>
+            </div>
+
+            <div class="footer-reclamaciones">
+              <a href="#" class="footer-enlace-reclamaciones">
+                <p><strong>Libro de reclamaciones</strong></p>
+                <img
+                  src="../assets/svg/libro-reclamaciones.svg"
+                  alt="Libro de reclamaciones"
+                />
+              </a>
+            </div>
           </div>
         </div>
-        <div class="item">
-          <img
-            src="https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/06/19/6490842c015fab27f801c3f6.png"
-            alt="Tallarin Verde"
-          />
-          <div class="info">
-            <h3>TALLARIN VERDE (Bistec o Milanesa)</h3>
-            <div class="price">S/16</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Arroz_chaufa_simple.JPG/960px-Arroz_chaufa_simple.JPG"
-            alt="Arroz Chaufa"
-          />
-          <div class="info">
-            <h3>ARROZ CHAUFA (Pollo o Carne)</h3>
-            <div class="price">S/14</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://larepublica.cronosmedia.glr.pe/original/2021/11/30/61a6937c280736437576cb49.jpg"
-            alt="Arroz a la Cubana"
-          />
-          <div class="info">
-            <h3>ARROZ A LA CUBANA</h3>
-            <div class="price">S/13</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://storage.googleapis.com/fitia_public_images/recipes%2FPE-R-V-00000054_py9v6w9ivzx8yjhaqa2y8z53_large.jpeg"
-            alt="Chicharron de Pollo"
-          />
-          <div class="info">
-            <h3>CHICHARRON DE POLLO</h3>
-            <div class="price">S/19</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://iperu.pe/assets/images/bistec-a-lo-pobre_800x534.webp"
-            alt="Bistec a lo Pobre"
-          />
-          <div class="info">
-            <h3>BISTEC A LO POBRE</h3>
-            <div class="price">S/23</div>
-          </div>
-        </div>
-      </div>
-      <div class="piqueos">
-        <h2>PIQUEOS</h2>
-        <div class="item">
-          <img
-            src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg"
-            alt="Alitas a la BBQ"
-          />
-          <div class="info">
-            <h3>ALITAS A LA BBQ (6 Piezas)</h3>
-            <div class="price">S/19</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://wongfood.vtexassets.com/arquivos/ids/458566/Alitas-de-Pollo-a-La-Barbecue-Wong-Bolsa-x-1-Kg-2-155646680.jpg?v=637625172660400000"
-            alt="Alitas a la BBQ"
-          />
-          <div class="info">
-            <h3>ALITAS A LA BBQ (12 Piezas)</h3>
-            <div class="price">S/38</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://www.salsasangucheria.com/wp-content/uploads/2022/03/alitasdoce.png"
-            alt="Alitas picantes"
-          />
-          <div class="info">
-            <h3>ALITAS PICANTES</h3>
-            <div class="price">S/19</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://imag.bonviveur.com/pollo-broaster.jpg"
-            alt="Alitas broaster"
-          />
-          <div class="info">
-            <h3>ALITAS BROASTER</h3>
-            <div class="price">S/14</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://polleriabrasasdelcentro.wordpress.com/wp-content/uploads/2021/07/broster.png?w=1024"
-            alt="pierna broaster"
-          />
-          <div class="info">
-            <h3>PIERNA BROASTER</h3>
-            <div class="price">S/16</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://panaderialalos.com/wp-content/uploads/2021/03/Tequenos-1.jpg"
-            alt="Tequeños"
-          />
-          <div class="info">
-            <h3>TEQUEÑOS (10 unidades)</h3>
-            <div class="price">S/14</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://tofuu.getjusto.com/orioneat-local/resized2/27tqswvGa7hJn5PHS-2400-x.webp"
-            alt="Salchipapa clásica"
-          />
-          <div class="info">
-            <h3>SALCHIPAPA CLASICA</h3>
-            <div class="price">S/12</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://tofuu.getjusto.com/orioneat-local/resized2/4RFnRWb4G3PpJF2y3-2400-x.webp"
-            alt="Salchipapa royal"
-          />
-          <div class="info">
-            <h3>SALCHIPAPA ROYAL</h3>
-            <div class="price">S/18</div>
-          </div>
-        </div>
-      </div>
-      <div class="PARRILLAS">
-        <h2>PARRILLAS</h2>
-        <div class="item">
-          <img
-            src="https://peru21.pe/sites/default/efsfiles/2023-11/75XZKEFCCJET3BEJVKAUL6JZUE.jpeg"
-            alt="Chancho a la caja china"
-          />
-          <div class="info">
-            <h3>CHANCHO A LA CAJA CHINA</h3>
-            <div class="price">S/22</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://loopbar.pe/images/al-cilindro/pollo-ahumado-familiar.png"
-            alt="Pollo al cilindro"
-          />
-          <div class="info">
-            <h3>POLLO AL CILINDRO</h3>
-            <div class="price">S/22</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://i.ytimg.com/vi/howBchjxNBk/maxresdefault.jpg"
-            alt="Chancho al cilindro"
-          />
-          <div class="info">
-            <h3>CHANCHO AL CILINDRO</h3>
-            <div class="price">S/22</div>
-          </div>
-        </div>
-      </div>
-      <div class="tragos">
-        <h2>COCTELES / TRAGOS</h2>
-        <div class="item">
-          <img
-            src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg"
-            alt="Pisco sour"
-            width="400"
-          />
-          <div class="info">
-            <h3>PISCO SOUR</h3>
-            <p class="ingredientes">
-              Pisco quebranta, Jarabe de Goma, Limón, Amargo de Angostura
-            </p>
-            <div class="price">S/18</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://media-cdn.tripadvisor.com/media/photo-s/0f/dd/2a/ea/machu-picchu-drink-yum.jpg"
-            alt="Machu Picchu"
-          />
-          <div class="info">
-            <h3>MACHU PICCHU</h3>
-            <p class="ingredientes">Menta, Zumo de naranja, Granadina, Pisco</p>
-            <div class="price">S/20</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://www.casasauza.com/hubfs/Blog_Todo_sobre_el_Tequila/Cocktails/Tequila-Sunrise.jpg"
-            alt="Tequila Sunrise"
-          />
-          <div class="info">
-            <h3>TEQUILA SUNRISE</h3>
-            <p class="ingredientes">Tequila, Zumo de naranja, Granadina</p>
-            <div class="price">S/18</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://live.staticflickr.com/650/21845693136_817fbb6268_b.jpg"
-            alt="Baileys Frozen"
-          />
-          <div class="info">
-            <h3>BAILEYS FROZEN</h3>
-            <p class="ingredientes">
-              Baileys, Vodka, Leche Condensada, Salsa de Chocolate
-            </p>
-            <div class="price">S/22</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://diariocorreo.pe/resizer/LX7RWLPcN5YBkQHevPQB_MfEmjY=/1200x1200/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NGBMGGMMVBF5VHUFFP4B6TBOPM.jpg"
-            alt="Chilcano"
-          />
-          <div class="info">
-            <h3>CHILCANO</h3>
-            <p class="ingredientes">
-              Clásico, Mango, Fresa, Maracuya, Maracumango
-            </p>
-            <div class="price">S/16</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://foodmetamorphosis.com/wp-content/uploads/2023/01/pina-colada-mocktail-1.jpg"
-            alt="Piña Colada"
-          />
-          <div class="info">
-            <h3>PIÑA COLADA</h3>
-            <p class="ingredientes">
-              Ron Blanco, Crema de Coco,Piña, Jarabe de Goma
-            </p>
-            <div class="price">S/20</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://img-global.cpcdn.com/recipes/6722e3db42d12974/680x781cq80/coctel-barbados-surprise-foto-principal.jpg"
-            alt="Barbados"
-          />
-          <div class="info">
-            <h3>BARBADOS</h3>
-            <p class="ingredientes">
-              Blue Curacao, Jugo de Naranja, Granadina, Ron Blanco
-            </p>
-            <div class="price">S/20</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://www.pequerecetas.com/wp-content/uploads/2020/09/coctel-margarita.jpg"
-            alt="Margarita"
-          />
-          <div class="info">
-            <h3>MARGARITA</h3>
-            <p class="ingredientes">Tequila, Triple Seco, Zumo de Limón</p>
-            <div class="price">S/18</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://cf.ltkcdn.net/cocktails/images/orig/307663-1600x1066-three-frozen-daiquiris.jpg"
-            alt="Daikiri Frozen"
-          />
-          <div class="info">
-            <h3>DAIKIRI FROZEN</h3>
-            <p class="ingredientes">
-              Ron Blanco, Azucar Blanca, Zumo de Limón, Fresa/Mango/Maracuya
-            </p>
-            <div class="price">S/20</div>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="https://media-cdn.tripadvisor.com/media/photo-s/0c/ef/1a/25/mojito-sabores.jpg"
-            alt="Mojito"
-          />
-          <div class="info">
-            <h3>MOJITO</h3>
-            <p class="ingredientes">Clásico/Mango/Fresa/Maracuya/Maracumango</p>
-            <div class="price">S/19</div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!--Footer-->
-    <footer>
-      <p>© 2025 Mi Sitio Web - Todos los derechos reservados</p>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
