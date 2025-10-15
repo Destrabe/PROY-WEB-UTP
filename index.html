@@ -4,52 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Inicio</title>
-    <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/home.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <header>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <!--Header-->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-      <label for="menu-toggle" class="overlay"></label>
+    <label for="menu-toggle" class="overlay"></label>
 
-      <aside class="sidebar">
-        <div class="sidebar-logo">
-          <img src="./assets/images/logo/favicon.webp" alt="Logo" />
-          <div class="sidebar-text">
-            <span class="sidebar-title">BRAMI</span>
-            <span class="sidebar-sub">Restobar</span>
-          </div>
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="./assets/images/favicon.ico" alt=>
+        <div class="sidebar-text">
+          <span class="sidebar-title">BRAMI</span>
+          <span class="sidebar-sub">Restobar</span>
         </div>
+      </div>
 
-        <nav>
-          <ul class="nav-list">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/pages/carta.html">Carta</a></li>
-            <li><a href="/pages/promociones.html">Promociones</a></li>
-            <li><a href="/pages/reservas.html">Reservas</a></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="./pages/carta.html">Carta</a></li>
+          <li><a href="./pages/promociones.html">Promociones</a></li>
+          <li><a href="./pages/reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
 
-        <div class="sidebar-footer">
-          <p>Síguenos en redes</p>
-          <div class="social-links">
-            <a href="#" title="Facebook">f</a>
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="Tiktok">🎶</a>
-          </div>
+      <div class="sidebar-footer">
+        <p>Síguenos en redes</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Tiktok">🎶</a>
         </div>
-      </aside>
-    </header>
+      </div>
+    </aside>
+
     <!--Main-->
     <main>
       <section>
@@ -64,6 +65,8 @@
           alt="fondo"
         />
       </section>
+      <br />
+
       <section>
         <h1>Lo que ofrecemos</h1>
         <div class="carousel-container">
@@ -102,13 +105,13 @@
             <!-- Refrescos -->
             <div class="carousel-item">
               <img src="./assets/images/index/refrescos.webp" alt="refrescos" />
-              <a href="#">Refrescos</a>
+              <a href="refrescos">Refrescos</a>
             </div>
 
             <!-- Cervezas -->
             <div class="carousel-item">
               <img src="./assets/images/index/cervezas.webp" alt="cervezas" />
-              <a href="#">Cervezas</a>
+              <a href="cervezas">Cervezas</a>
             </div>
           </div>
 
@@ -183,134 +186,6 @@
         </div>
       </section>
     </main>
-
-    <!--Footer-->
-    <footer class="footer-pagina">
-      <div class="contenedor-footer">
-        <!-- Col 1: Logo + descripción -->
-        <div class="footer-logo">
-          <img
-            src="./assets/images/logo/marcaPng.webp"
-            alt="logo Brami"
-            class="pie-logo"
-          />
-          <div class="pie-contacto">
-            <p>Brami restobar es más que un</p>
-            <p>restobar donde podrás crear recuerdos</p>
-            <p>con tu familia o amigos.</p>
-            <p>¡Te esperamos!</p>
-          </div>
-        </div>
-
-        <!-- Col 2: Navegación -->
-        <div class="footer-nav">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/botella.svg" alt="icono navegación" />
-              Navegación
-            </span>
-          </h4>
-          <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./pages/carta.html">Carta</a></li>
-            <li><a href="./pages/promociones.html">Promociones</a></li>
-            <li><a href="./pages/reservas.html">Reservar</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Ubícanos -->
-        <div class="Ubicacion">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/ubicacion.svg" alt="icono ubicación" />
-              Ubícanos en
-            </span>
-          </h4>
-          <p>Av. Los Fresnos 123, Santiago de Surco, Lima</p>
-          <iframe
-            src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
-            width="360"
-            height="220"
-            allowfullscreen
-            loading="lazy"
-          >
-          </iframe>
-        </div>
-
-        <!-- Col 4: Horarios + contacto -->
-        <div class="footer-horarios">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/reloj.svg" alt="icono reloj" />
-              HORARIOS
-            </span>
-          </h4>
-          <p>Lunes a viernes 05:00 p.m. a 02:00 a.m.</p>
-          <p>Sábado : 5 p.m. - 4 a.m.</p>
-          <p>Domingo : 4 p.m. - 12 a.m.</p>
-
-          <div class="footer-contacto">
-            <p>
-              <img
-                src="./assets/svg/telf.svg"
-                alt="Teléfono"
-                class="icono-contacto"
-              />
-              Telf: 987654321
-            </p>
-            <p>
-              <img
-                src="./assets/svg/email.svg"
-                alt="Correo"
-                class="icono-contacto"
-              />
-              Email: info@bramirestobar.com
-            </p>
-          </div>
-        </div>
-
-        <!-- Col 5: Métodos de pago -->
-        <div class="footer-metodos-pago">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/metpago.svg" alt="icono métodos de pago" />
-              Métodos de pago:
-            </span>
-          </h4>
-          <div class="footer-iconos-pago">
-            <img src="./assets/svg/visa.svg" alt="Visa" />
-            <img src="./assets/svg/mastercard.svg" alt="MasterCard" />
-            <img src="./assets/svg/amex.svg" alt="Amex" />
-            <img src="./assets/svg/billteras.svg" alt="Billeteras" />
-          </div>
-        </div>
-
-        <!-- Col 6: Síguenos + Libro de reclamaciones -->
-        <div class="footer-siguenos">
-          <h4>Síguenos a través de</h4>
-          <div class="footer-redes">
-            <a href="#" aria-label="Instagram"
-              ><img src="./assets/svg/instagram.svg" alt="Instagram"
-            /></a>
-            <a href="#" aria-label="Facebook"
-              ><img src="./assets/svg/facebook.svg" alt="Facebook"
-            /></a>
-            <a href="#" aria-label="Twitter"
-              ><img src="./assets/svg/twitter.svg" alt="Twitter"
-            /></a>
-          </div>
-
-          <div class="footer-reclamaciones">
-            <a href="#" class="footer-enlace-reclamaciones">
-              <p><strong>Libro de reclamaciones</strong></p>
-              <img
-                src="./assets/svg/libro-reclamaciones.svg"
-                alt="Libro de reclamaciones"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <br />
   </body>
 </html>
