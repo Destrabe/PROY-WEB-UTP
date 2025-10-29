@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/menu.css" />
+    <script src="../scripts/header.js"></script>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="order">
       <!--Header-->
       <header>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="header-brand">
           <img
             src="../assets/images/logo/favicon.webp"
@@ -22,7 +28,7 @@
           />
           <h1>BRAMI</h1>
         </div>
-        <nav>
+        <nav id="nav-menu">
           <a href="/index.html">Inicio</a>
           <a href="/pages/carta.html">Carta</a>
           <a href="/pages/promociones.html">Promociones</a>
@@ -32,17 +38,17 @@
       <!--Main-->
       <main>
         <nav class="mini-barra">
-    <ul>
-      <li><a href="#platos-carta">Platos a la Carta</a></li>
-      <li><a href="#piqueos">Piqueos</a></li>
-      <li><a href="#parrillas">Parrillas</a></li>
-      <li><a href="#cocktails">Cócteles</a></li>
-      <li><a href="#jugos">Jugos</a></li>
-      <li><a href="#cervezas">Cervezas</a></li>
-    </ul>
-  </nav>
+          <ul>
+            <li><a href="#platos-carta">Platos a la Carta</a></li>
+            <li><a href="#piqueos">Piqueos</a></li>
+            <li><a href="#parrillas">Parrillas</a></li>
+            <li><a href="#cocktails">Cócteles</a></li>
+            <li><a href="#jugos">Jugos</a></li>
+            <li><a href="#cervezas">Cervezas</a></li>
+          </ul>
+        </nav>
 
-  <div class="carta" style="text-align: center">
+        <div class="carta" style="text-align: center">
           <div class="platos">
             <h2 id="platos-carta">PLATOS A LA CARTA</h2>
             <div class="item">
@@ -357,9 +363,7 @@
               />
               <div class="info">
                 <h3>MOJITO</h3>
-                <p class="ingredientes">
-                  Clásico/Mango/Fresa/Maracuya
-                </p>
+                <p class="ingredientes">Clásico/Mango/Fresa/Maracuya</p>
                 <div class="price">S/19</div>
               </div>
             </div>
