@@ -103,22 +103,22 @@ main h1 {
 }
 
 h3 {
-  color: white;
+  color: #F5F5F5;
   margin: 10px 0 5px;
 }
 
 p {
-  color: black;
+  color: #FF3B3B;
   margin: 5px 0;
 }
 
 .precio {
   font-weight: bold;
-  color: #c62828;
+  color: #CCCCCC;
 }
 
 small {
-  color: gray;
+  color: #F0F0F0;
   display: block;
   margin-top: 5px;
 }
