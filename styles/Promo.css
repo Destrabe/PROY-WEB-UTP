@@ -1,10 +1,11 @@
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/assets/images/restobar.webp);
+   background-color: #1b1b1b; 
+    color: #ffffff;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #0d0d0d, #2e1f14);
 }
 
 .title {
