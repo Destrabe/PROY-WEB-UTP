@@ -10,8 +10,9 @@
 }
 
 footer {
-  margin-top: 50px;
+  background: linear-gradient(to top, #121212 90%, #1a1a1a 100%);
 }
+
 /* ===== FOOTER BASE ===== */
 .footer-pagina {
   background-color: var(--footer-bg);
@@ -30,7 +31,7 @@ footer {
 
 /* Divisores entre columnas (se ocultan en responsive) */
 .contenedor-footer > *:not(:first-child) {
-  border-left: 1px solid var(--footer-line);
+  /*border-left: 1px solid var(--footer-line);*/
   padding-left: 60px;
 }
 
@@ -223,7 +224,7 @@ footer {
   .contenedor-footer > *:not(:first-child) {
     border-left: none;
     padding-left: 0;
-    border-top: 1px solid var(--footer-line);
+    border-top: none;
     padding-top: 25px;
   }
 }
