@@ -6,16 +6,16 @@ form.addEventListener("submit", async (e) => {
   const formData = Object.fromEntries(new FormData(form));
 
   const data = {
-    nombre: formData.name,
-    apellido: formData.apellido,
-    email: formData.email,
-    telefono: formData.telefono,
-    tipo_documento: formData.tipo_documento,
-    numero_documento: formData.numero_documento,
+    nombre: formData.name.trim(),
+    apellido: formData.apellido.trim(),
+    email: formData.email.trim(),
+    telefono: formData.telefono.trim(),
+    tipo_documento: formData.tipo_documento.trim(),
+    numero_documento: formData.numero_documento.trim(),
     cantidad_personas: parseInt(formData.cantidad_personas),
-    fecha: formData.fecha,
+    fecha: new Date(formData.fecha),
     hora: formData.hora,
-    observaciones: formData.observaciones || null,
+    observaciones: formData.observaciones.trim() || null,
   };
 
   try {
