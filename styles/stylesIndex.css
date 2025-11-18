@@ -15,7 +15,7 @@
   --color-text-light: #666;
   --sidebar-width: 280px;
   --transition: all 0.3s ease;
-  
+
   /* Footer variables */
   --footer-bg: #121212;
   --footer-accent: #ffc857;
@@ -23,7 +23,6 @@
   --footer-muted: #b5b5b5;
   --footer-line: rgba(255, 255, 255, 0.15);
   --footer-wine: #8b1e2d;
-
 }
 
 body {
@@ -185,7 +184,6 @@ body::before {
   display: block;
 }
 
-
 .sidebar-text {
   text-align: center;
   color: #ccc;
@@ -268,7 +266,7 @@ nav {
 /* ========== MAIN CONTENT ========== */
 main {
   min-height: max-content;
-  margin-left: 360px ;
+  margin-left: 360px;
   background: transparent;
   border-radius: 30px;
   box-shadow: none;
@@ -290,7 +288,7 @@ main > section {
   position: relative;
   width: 100%;
   text-align: center;
-  color: white
+  color: white;
 }
 
 .central-image {
@@ -309,17 +307,17 @@ main > section {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(18, 18, 18, 0.3);   
+  box-shadow: 0 15px 50px rgba(18, 18, 18, 0.3);
   transition: var(--transition);
 }
 
-.hero h1{
+.hero h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   color: var(--color-secondary);
-  text-shadow:  2px 2px 4px;
+  text-shadow: 2px 2px 4px;
 }
 
 .hero p {
@@ -336,10 +334,10 @@ main > section {
 }
 
 .hero p {
-  top: 35%; 
+  top: 35%;
   font-size: 1.5rem;
   width: 80%;
-} 
+}
 
 .hero-image {
   display: flex;
@@ -671,7 +669,6 @@ section > center > img:hover {
   max-width: 100%;
   margin: 0 auto;
 }
-
 
 .promotions {
   display: grid;
@@ -1021,9 +1018,8 @@ section > center > img:hover {
   background: var(--color-secondary);
 }
 
-
 /* ========== RESPONSIVE ========== */
- /* DESKTOP EXTRA GRANDE (2560px+) 4K, 5K Monitors*/
+/* DESKTOP EXTRA GRANDE (2560px+) 4K, 5K Monitors*/
 @media (min-width: 2560px) {
   main {
     max-width: 1800px;
@@ -1069,34 +1065,34 @@ section > center > img:hover {
   main {
     max-width: 1600px;
     padding: 80px 60px;
-}
-/* ========== SCROLLBAR ========== */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--sidebar-width);
-  height: 100vh;
-  background: linear-gradient(180deg, var(--color-dark) 0%, #0a0a0a 100%);
-  z-index: 1500;
-}
+  }
+  /* ========== SCROLLBAR ========== */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: linear-gradient(180deg, var(--color-dark) 0%, #0a0a0a 100%);
+    z-index: 1500;
+  }
 
-.sidebar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-}
+  .sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
 
-.sidebar::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    180deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 100%
-  );
-  border-radius: 10px;
-}
+  .sidebar::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      var(--color-primary) 0%,
+      var(--color-secondary) 100%
+    );
+    border-radius: 10px;
+  }
 
-.sidebar::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary);
-}
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+  }
 }
 /* ========== RESPONSIVE ========== */
 
@@ -1140,7 +1136,6 @@ section > center > img:hover {
 
 /*DESKTOP ESTÁNDAR (1440px - 1919px) MacBook Pro 16", Laptops grandes*/
 @media (min-width: 1440px) and (max-width: 1919px) {
-  
   main {
     max-width: 1300px;
     padding: 70px 50px;
@@ -1178,7 +1173,7 @@ section > center > img:hover {
     gap: 30px;
   }
 }
-  
+
 /* DESKTOP PEQUEÑO (1200px - 1439px) Laptops estándar, MacBook Air 13"*/
 @media (min-width: 1280px) and (max-width: 1439px) {
   /* Sidebar visible */
@@ -1375,7 +1370,7 @@ section > center > img:hover {
     padding: 30px 20px;
     margin-top: 40px;
   }
-  
+
   .contenedor-footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
@@ -1405,11 +1400,11 @@ section > center > img:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
   }
-  
+
   .footer-pagina {
     padding: 40px 30px;
   }
-  
+
   .Ubicacion iframe {
     max-width: 100%;
     height: 200px;
@@ -1431,12 +1426,12 @@ section > center > img:hover {
     border-top: 1px solid var(--footer-line);
     padding-top: 25px;
   }
-  
+
   .footer-logo img,
   .pie-logo {
     width: 120px;
   }
-  
+
   .pie-contacto p {
     font-size: 0.85rem;
   }
@@ -1493,131 +1488,217 @@ section > center > img:hover {
   }
 }
 
-  /* FOOTER RESPONSIVE */
-  .footer-pagina {
-    padding: 30px 20px;
-    margin-top: 40px;
-  }
-  .Ubicacion iframe {
-    max-width: 100%;
-    height: 180px;
-  }
-  
-  .footer-iconos-pago {
-    justify-content: center;
-  }
-  
-  .contenedor-footer {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .footer-redes {
-    gap: 15px;
-  }
-  
-  .contenedor-footer > *:not(:first-child) {
-    border-left: none;
-    padding-left: 0;
-    border-top: 1px solid var(--footer-line);
-    padding-top: 25px;
-  }
-  
-  .footer-logo img,
-  .pie-logo {
-    width: 120px;
-  }
-  
-  .pie-contacto p {
-    font-size: 0.85rem;
-  }
-  
-  .footer-nav h4,
-  .footer-horarios h4,
-  .Ubicacion h4,
-  .footer-metodos-pago h4,
-  .footer-siguenos h4 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .Ubicacion iframe {
-    max-width: 100%;
-    height: 180px;
-  }
-  
-  .footer-iconos-pago {
-    justify-content: center;
-  }
-  
-  .footer-redes {
-    gap: 15px;
-  }
-  
-  .footer-enlace-reclamaciones {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+/* FOOTER RESPONSIVE */
 
+.footer-pagina {
+  position: relative;
+  z-index: 2000;
+  padding: 30px 20px;
+  margin-top: 40px;
+  background-color: var(--footer-bg);
+}
 
-  /* CARRUSEL RESPONSIVE */
-  
-  .footer-enlace-reclamaciones {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+.Ubicacion iframe {
+  max-width: 100%;
+  height: 180px;
+}
 
-  /* CARRUSEL RESPONSIVE */
-  .carousel-container {
-    padding: 40px 20px;
-    min-height: 400px;
-    padding: 40px 20px;
-    min-height: 400px;
-  }
+.footer-iconos-pago {
+  justify-content: center;
+}
 
-  .carousel-item img {
-    max-width: 280px;
-    height: 200px;
-    max-width: 280px;
-    height: 200px;
-  }
+/*GRID / LAYOUT */
+.contenedor-footer {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr 0.8fr;
+  gap: 60px;
+  position: relative;
+}
 
-  .carousel-prev,
-  .carousel-next {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-  }
+.footer-redes {
+  gap: 15px;
+}
 
+/*Divisores entre columnas*/
+.contenedor-footer > *:not(:first-child) {
+  border-left: 1px solid var(--footer-line);
+  padding-left: 60px;
+}
 
-  /* PROMOCIONES RESPONSIVE */
-  .promotions {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .card {
-    padding: 25px;
-  }
-  
-  .card strong {
-    font-size: 20px;
-  }
-  
-  .card p {
-    font-size: 14px;
-  }
+/* COLUMNA 1: LOGO + TEXTO */
 
-  .card strong {
-    font-size: 20px;
-  }
-  
-  .card p {
-    font-size: 14px;
-  }
+.footer-logo {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  text-align: center;
+}
 
+.footer-logo img,
+.pie-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.pie-contacto p {
+  color: var(--footer-muted);
+  font-size: 0.95rem;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* TITULARES CON ICONO */
+.footer-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon-title img {
+  width: 28px;
+  height: 28px;
+}
+
+/* TITULOS */
+.footer-nav h4,
+.footer-horarios h4,
+.Ubicacion h4,
+.footer-metodos-pago h4,
+.footer-siguenos h4 {
+  color: var(--footer-accent);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* COLUMNA 2: NAVEGACIÓN */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a{
+color: #ccc;
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+  display: inline-block;
+  color: var(--footer-text);
+  text-decoration: none;
+  padding: 2px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--footer-wine), var(--footer-accent));
+  transition: width 0.25s ease;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.footer-nav a:focus-visible {
+  color: var(--footer-accent);
+  transform: translateX(2px);
+}
+
+.footer-nav a:focus-visible::after {
+  width: 100%;
+}
+
+.Ubicacion iframe {
+  max-width: 100%;
+  height: 180px;
+}
+
+.footer-iconos-pago {
+  justify-content: center;
+}
+
+.footer-redes {
+  gap: 15px;
+}
+
+.footer-enlace-reclamaciones {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+/* CARRUSEL RESPONSIVE */
+
+.footer-enlace-reclamaciones {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+/* CARRUSEL RESPONSIVE */
+.carousel-container {
+  padding: 40px 20px;
+  min-height: 400px;
+  padding: 40px 20px;
+  min-height: 400px;
+}
+
+.carousel-item img {
+  max-width: 280px;
+  height: 200px;
+  max-width: 280px;
+  height: 200px;
+}
+
+.carousel-prev,
+.carousel-next {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+}
+
+/* PROMOCIONES RESPONSIVE */
+.promotions {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+}
+
+.card strong {
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card strong {
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 14px;
+}
 
 /* Mobile Extra Small (menos de 400px) */
 @media (max-width: 399px) {
@@ -1631,42 +1712,42 @@ section > center > img:hover {
   .footer-pagina {
     padding: 25px 15px;
   }
-  
+
   .footer-logo img,
   .pie-logo {
     width: 100px;
   }
-  
+
   .footer-iconos-pago img {
     width: 38px;
   }
-  
+
   .footer-redes img {
     width: 30px;
     height: 30px;
   }
-  
+
   .carousel-prev,
   .carousel-next {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
-  
+
   .footer-logo img,
   .pie-logo {
     width: 100px;
   }
-  
+
   .footer-iconos-pago img {
     width: 38px;
   }
-  
+
   .footer-redes img {
     width: 30px;
     height: 30px;
   }
-  
+
   .carousel-prev,
   .carousel-next {
     width: 40px;
