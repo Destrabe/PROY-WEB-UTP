@@ -23,6 +23,7 @@
   --footer-muted: #b5b5b5;
   --footer-line: rgba(255, 255, 255, 0.15);
   --footer-wine: #8b1e2d;
+
 }
 
 body {
@@ -183,6 +184,7 @@ body::before {
   line-height: 1.2;
   display: block;
 }
+
 
 .sidebar-text {
   text-align: center;
@@ -670,6 +672,7 @@ section > center > img:hover {
   margin: 0 auto;
 }
 
+
 .promotions {
   display: grid;
   grid-template-columns: 1fr;
@@ -990,13 +993,6 @@ section > center > img:hover {
 .footer-enlace-reclamaciones p {
   margin: 0;
 }
-
-/* ========== UTILIDADES ========== */
-center {
-  display: block;
-  text-align: center;
-}
-
 /* ========== SCROLLBAR ========== */
 .sidebar {
   position: fixed;
@@ -1073,14 +1069,59 @@ center {
   main {
     max-width: 1600px;
     padding: 80px 60px;
+}
+/* ========== SCROLLBAR ========== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: linear-gradient(180deg, var(--color-dark) 0%, #0a0a0a 100%);
+  z-index: 1500;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+}
+/* ========== RESPONSIVE ========== */
+
+/* Tablets y Desktop pequeño (600px - 1024px) */
+@media (max-width: 1024px) {
+  .contenedor-footer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
   }
 
   .central-image {
     max-width: 1400px;
   }
 
+  .contenedor-footer > *:not(:first-child) {
+    border-left: none;
+    padding-left: 0;
+  }
+
   .carousel-container {
     max-width: 1000px;
+  }
+
+  .footer-pagina {
+    padding: 50px 40px;
   }
 
   .contenedor-footer {
@@ -1089,8 +1130,17 @@ center {
   }
 }
 
+/* Tablets (600px - 900px) */
+@media (max-width: 900px) {
+  .contenedor-footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
 /*DESKTOP ESTÁNDAR (1440px - 1919px) MacBook Pro 16", Laptops grandes*/
 @media (min-width: 1440px) and (max-width: 1919px) {
+  
   main {
     max-width: 1300px;
     padding: 70px 50px;
@@ -1098,6 +1148,10 @@ center {
 
   .central-image {
     max-width: 1200px;
+  }
+
+  .footer-pagina {
+    padding: 40px 30px;
   }
 
   .carousel-container {
@@ -1108,6 +1162,10 @@ center {
   .carousel-item img {
     max-width: 600px;
     height: 380px;
+  }
+  .Ubicacion iframe {
+    max-width: 100%;
+    height: 200px;
   }
 
   .contenedor-footer {
@@ -1120,7 +1178,7 @@ center {
     gap: 30px;
   }
 }
-
+  
 /* DESKTOP PEQUEÑO (1200px - 1439px) Laptops estándar, MacBook Air 13"*/
 @media (min-width: 1280px) and (max-width: 1439px) {
   /* Sidebar visible */
@@ -1173,6 +1231,13 @@ center {
 
   .promotions {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Small (menos de 600px) */
+@media (max-width: 599px) {
+  body {
+    margin-top: 80px;
   }
 }
 
@@ -1272,9 +1337,13 @@ center {
     max-width: 100%;
     padding: 80px 40px 50px;
     border-radius: 25px;
+    padding: 60px 15px 30px;
+    border-radius: 20px;
   }
 
   .central-image {
+    height: auto;
+    width: 100%;
     max-width: 100%;
     height: auto;
   }
@@ -1301,6 +1370,12 @@ center {
     padding: 70px 40px 45px;
   }
 
+  /* FOOTER RESPONSIVE */
+  .footer-pagina {
+    padding: 30px 20px;
+    margin-top: 40px;
+  }
+  
   .contenedor-footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
@@ -1319,6 +1394,8 @@ center {
   .promotions {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
@@ -1348,6 +1425,22 @@ center {
     height: auto;
   }
 
+  .contenedor-footer > *:not(:first-child) {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--footer-line);
+    padding-top: 25px;
+  }
+  
+  .footer-logo img,
+  .pie-logo {
+    width: 120px;
+  }
+  
+  .pie-contacto p {
+    font-size: 0.85rem;
+  }
+
   .carousel-container {
     padding: 40px 30px;
   }
@@ -1375,6 +1468,14 @@ center {
   .menu-toggle:checked ~ .sidebar {
     transform: translateX(0);
   }
+  .footer-nav h4,
+  .footer-horarios h4,
+  .Ubicacion h4,
+  .footer-metodos-pago h4,
+  .footer-siguenos h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
 
   .menu-toggle:checked ~ .overlay {
     display: block;
@@ -1390,16 +1491,28 @@ center {
     width: 100%;
     max-width: 100%;
   }
+}
 
   /* FOOTER RESPONSIVE */
   .footer-pagina {
     padding: 30px 20px;
     margin-top: 40px;
   }
+  .Ubicacion iframe {
+    max-width: 100%;
+    height: 180px;
+  }
+  
+  .footer-iconos-pago {
+    justify-content: center;
+  }
   
   .contenedor-footer {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .footer-redes {
+    gap: 15px;
   }
   
   .contenedor-footer > *:not(:first-child) {
@@ -1445,13 +1558,25 @@ center {
     font-size: 0.9rem;
   }
 
+
+  /* CARRUSEL RESPONSIVE */
+  
+  .footer-enlace-reclamaciones {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
   /* CARRUSEL RESPONSIVE */
   .carousel-container {
+    padding: 40px 20px;
+    min-height: 400px;
     padding: 40px 20px;
     min-height: 400px;
   }
 
   .carousel-item img {
+    max-width: 280px;
+    height: 200px;
     max-width: 280px;
     height: 200px;
   }
@@ -1461,7 +1586,11 @@ center {
     width: 45px;
     height: 45px;
     font-size: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
   }
+
 
   /* PROMOCIONES RESPONSIVE */
   .promotions {
@@ -1480,12 +1609,48 @@ center {
   .card p {
     font-size: 14px;
   }
+
+  .card strong {
+    font-size: 20px;
+  }
+  
+  .card p {
+    font-size: 14px;
+  }
+
+
+/* Mobile Extra Small (menos de 400px) */
+@media (max-width: 399px) {
+  .footer-pagina {
+    padding: 25px 15px;
+  }
 }
 
 /* Mobile Extra Small (menos de 400px) */
 @media (max-width: 399px) {
   .footer-pagina {
     padding: 25px 15px;
+  }
+  
+  .footer-logo img,
+  .pie-logo {
+    width: 100px;
+  }
+  
+  .footer-iconos-pago img {
+    width: 38px;
+  }
+  
+  .footer-redes img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
   
   .footer-logo img,
