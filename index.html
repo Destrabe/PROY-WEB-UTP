@@ -9,17 +9,37 @@
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/stylesIndex.css" />
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="scripts/indexScripts.js">
   </head>
 
-  <body>
-    <!--Header-->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-    <label for="menu-toggle" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+  <!-- Barra superior de anuncio -->
+  <div class="top-announce">¡Reserva en la mejor experiencia nocturna!</div>
+
+  <header>
+    <div class="header-inner">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <!-- logo centrado -->
+    <a class="logo-center" href="/index.html" aria-label="Inicio">
+      <img src="./assets/images/logo/marcaPng.webp" alt="Brami" />
+    </a>
+
+    </div>
+  </header>
+
+  <!-- Overlay (oscurece fondo en mobile) -->
+  <label for="menu-toggle" class="overlay" aria-hidden="true"></label>
+    
+  <!--Sidebar-->
+    <label for="menu-toggle" class="hamburger"></label>
 
     <label for="menu-toggle" class="overlay"></label>
 
@@ -50,18 +70,15 @@
         </div>
       </div>
     </aside>
-
+    
+<body>
     <!--Main-->
     <main>
       <section class="hero">
-        <h1>EXPERIENCIA BRAMI</h1>
-        <p>
-          Donde el sabor se encuentra con la diversión: come, brinda y disfruta
-          como nunca.
-        </p>
+       
         <img
           class="central-image"
-          src="https://media.istockphoto.com/id/1504400558/es/foto/joven-grupo-multirracial-de-amigos-con-ropa-casual-riendo-alrededor-de-la-mesa-con-comida-y.jpg?s=612x612&w=0&k=20&c=JswGubvDqJdL0FtrvBR3wgUlbUL2C9MwBKipbi2xF3M="
+          src="assets/images/index/MainImage.webp"
           alt="fondo"
         />
       </section>
