@@ -538,13 +538,45 @@ section > center > img:hover {
 }
 
 /* ========== CARRUSEL ========== */
+.ofrecemos-section {
+  background-color: #fff;
+  padding: 60px 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: auto;
+  max-width: 90%;
+  color: var(--color-primary);
+}
+
+.carousel-title h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffc857;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+}
+
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
+  min-height: 600px;
   margin: 60px auto;
   overflow: hidden;
-  padding: 60px 80px;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 30px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -552,6 +584,7 @@ section > center > img:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .carousel-container input[type="radio"] {
@@ -560,15 +593,16 @@ section > center > img:hover {
 
 .carousel-gallery {
   display: flex;
-  transition: transform 1.2s ease-in-out;
+  transition: transform 0.8s ease-in-out;
   width: 600%;
   position: relative;
+  z-index: 1;
 }
 
 .carousel-item {
   width: 100%;
   flex: 0 0 100%;
-  text-align: center;
+  text-align: start;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -578,18 +612,19 @@ section > center > img:hover {
 
 .carousel-item img {
   width: 100%;
-  max-width: 500px;
-  height: 300px;
+  height: 600px;
   object-fit: cover;
-  margin: 0 auto 35px;
+  margin: 0 auto 40px;
   border-radius: 15px;
   transition: var(--transition);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   display: block;
+  transition: transform 0.3s ease;
+  max-width: none;
 }
 
 .carousel-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 20px 60px rgba(255, 200, 87, 0.3),
     0 0 0 3px var(--color-primary);
 }
@@ -1290,8 +1325,8 @@ section > center > img:hover {
   }
 
   .carousel-item img {
-    max-width: 550px;
-    height: 350px;
+    max-width: 1000px;
+    height: 550px;
   }
 
   .footer-pagina {
@@ -1371,8 +1406,8 @@ section > center > img:hover {
   }
 
   .carousel-item img {
-    max-width: 500px !important;
-    height: 320px !important;
+    max-width: 500px;
+    height: 320px ;
   }
 
   /* Footer grid */
