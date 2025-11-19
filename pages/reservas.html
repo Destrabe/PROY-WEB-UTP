@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/reservations.css" />
+    <link rel="stylesheet" href="/styles/alert-card.css" />
+    <link rel="stylesheet" href="/styles/toast-error.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/scripts/reservas.js" defer></script>
+    <script src="../scripts/notificacions.js"></script>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -241,6 +246,27 @@
             </form>
           </div>
         </div>
+        
+        <!--Card-->
+      <div id="alert-card" class="hidden">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" class="check-svg">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <p id="alert-message"></p>
+          <button id="close-card">Cerrar</button>
+        </div>
+      </div>
       </main>
       <!--Footer-->
       <footer class="footer-pagina">
@@ -374,5 +400,6 @@
         </div>
       </footer>
     </div>
+    <div id="toast-container"></div>
   </body>
 </html>

@@ -1,0 +1,93 @@
+/* Fondo oscuro */
+#alert-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#alert-card:not(.hidden) {
+  display: flex !important;
+}
+
+/* === CARD === */
+#alert-card .card {
+  background: white;
+  border-radius: 20px;
+  width: 380px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* === FRANJA VERDE === */
+.card-header {
+  background: #4ed9a7;
+  height: 160px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === CÍRCULO DEL CHECK === */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: #eafff3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-svg {
+  width: 40px;
+  height: 40px;
+  color: #0b773d;
+}
+
+/* === TEXTO === */
+#alert-message {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  font-weight: 700;
+  color: #0b773d;
+}
+
+/* === BOTÓN === */
+#close-card {
+  margin: 20px auto 30px;
+  width: 70%;
+  padding: 12px 20px;
+  background: #0b773d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#close-card:hover {
+  background: #095c2f;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
