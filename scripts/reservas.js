@@ -35,9 +35,9 @@ form.addEventListener("submit", async (e) => {
   } catch (error) {
     console.error(error);
     if (error.response) {
-      alert(`Error: ${error.response.data.message || "Algo salió mal"}`);
+      showToast(`Error: ${error.response.data.message || "Algo salió mal"}`);
     } else {
-      alert("Error de conexión con el servidor");
+      showToast("Error de conexión con el servidor");
     }
   }
 });
