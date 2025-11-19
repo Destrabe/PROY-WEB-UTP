@@ -23,7 +23,7 @@ form.addEventListener("submit", async (e) => {
     cantidad_personas: parseInt(formData.cantidad_personas),
     fecha: new Date(formData.fecha),
     hora: formData.hora,
-    observaciones: formData.observaciones.trim() || null,
+    observaciones: formData.observaciones?.trim() || null,
   };
 
   try {

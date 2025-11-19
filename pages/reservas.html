@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Reservas</title>
-    <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/reservations.css" />
-    <link rel="stylesheet" href="/styles/alert-card.css" />
-    <link rel="stylesheet" href="/styles/toast-error.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reservations.css" />
+    <link rel="stylesheet" href="../styles/alert-card.css" />
+    <link rel="stylesheet" href="../styles/toast-error.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/scripts/reservas.js" defer></script>
+    <script src="../scripts/reservas.js" defer></script>
     <script src="../scripts/notificacions.js"></script>
+    <script src="../scripts/menu.js"></script>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="order">
-      <!--Header-->
       <!--Header-->
       <header>
         <input type="checkbox" id="menu-checkbox" />
@@ -45,41 +45,6 @@
         </nav>
       </header>
 
-      <script>
-        const menuCheckbox = document.getElementById("menu-checkbox");
-        const navLinks = document.querySelectorAll("nav a");
-        const body = document.body;
-
-        // Prevenir scroll cuando el menú está abierto
-        menuCheckbox.addEventListener("change", function () {
-          if (this.checked) {
-            body.classList.add("menu-open");
-          } else {
-            body.classList.remove("menu-open");
-          }
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        navLinks.forEach((link) => {
-          link.addEventListener("click", () => {
-            menuCheckbox.checked = false;
-            body.classList.remove("menu-open");
-          });
-        });
-
-        // Cerrar menú al hacer clic en el overlay
-        body.addEventListener("click", (e) => {
-          if (
-            body.classList.contains("menu-open") &&
-            !e.target.closest("nav") &&
-            !e.target.closest(".menu-toggle")
-          ) {
-            menuCheckbox.checked = false;
-            body.classList.remove("menu-open");
-          }
-        });
-      </script>
-
       <!--Main-->
       <main>
         <!-- Sección Hero -->
@@ -95,7 +60,12 @@
         <!-- Formulario -->
         <div class="seccion-formulario">
           <div class="contenedor">
-            <form id="reserva" class="formulario-oscuro">
+            <form
+              id="reserva"
+              class="formulario-oscuro"
+              method="post"
+              action="javascripts:void(0);"
+            >
               <!-- Información Personal -->
               <div class="bloque-formulario">
                 <div class="encabezado-bloque">
@@ -109,7 +79,7 @@
                     <input
                       type="text"
                       id="nombre"
-                      name="nombre"
+                      name="name"
                       placeholder="Ingresa tu nombre"
                       required
                     />
@@ -150,7 +120,7 @@
 
                   <div class="campo-formulario">
                     <label for="tipo-documento">Tipo de Documento</label>
-                    <select id="tipo-documento" name="tipo-documento" required>
+                    <select id="tipo-documento" name="tipo_documento" required>
                       <option value="" disabled selected>
                         Seleccionar tipo
                       </option>
@@ -165,7 +135,7 @@
                     <input
                       type="text"
                       id="numero-documento"
-                      name="numero-documento"
+                      name="numero_documento"
                       pattern="\d+"
                       placeholder="00000000"
                       required
@@ -186,7 +156,7 @@
                     <label for="cantidad-personas">Cantidad de Personas</label>
                     <select
                       id="cantidad-personas"
-                      name="cantidad-personas"
+                      name="cantidad_personas"
                       required
                     >
                       <option value="" disabled selected>
@@ -230,7 +200,6 @@
                   </div>
                 </div>
 
-                <!-- Caja de Información -->
                 <div class="caja-info">
                   <p>
                     Recibirás una confirmación por correo electrónico dentro de
@@ -239,34 +208,33 @@
                 </div>
               </div>
 
-              <!-- Botón de Envío -->
               <button type="submit" class="boton-enviar">
                 <span>Confirmar Reserva</span>
               </button>
             </form>
           </div>
         </div>
-        
+
         <!--Card-->
-      <div id="alert-card" class="hidden">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" class="check-svg">
-                <path
-                  d="M20 6L9 17l-5-5"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  fill="none"
-                  stroke-linecap="round"
-                />
-              </svg>
+        <div id="alert-card" class="hidden">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" class="check-svg">
+                  <path
+                    d="M20 6L9 17l-5-5"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </div>
+            <p id="alert-message"></p>
+            <button id="close-card">Cerrar</button>
           </div>
-          <p id="alert-message"></p>
-          <button id="close-card">Cerrar</button>
         </div>
-      </div>
       </main>
       <!--Footer-->
       <footer class="footer-pagina">
