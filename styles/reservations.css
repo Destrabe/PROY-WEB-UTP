@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Henny+Penny&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Henny+Penny&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap");
 
 * {
   margin: 0;
@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   background: #121212;
 }
 
@@ -24,20 +24,20 @@ main {
 .seccion-hero {
   position: relative;
   height: 50vh;
+  width: 100vw;
   min-height: 450px;
+  padding-top: 102.8px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
 .seccion-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/assets/images/restobar.webp');
+  background-image: url("/assets/images/restobar.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -49,15 +49,22 @@ main {
 .superposicion-hero {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.6),
+    rgba(18, 18, 18, 0.5)
+  );
   z-index: 1;
 }
 
 .contenido-hero {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
   text-align: center;
-  padding: 0 20px;
+  /* padding: 0 20px;  */
   animation: aparecerDesvaneciendo 1s ease-out;
 }
 
@@ -70,8 +77,8 @@ main {
   background: rgba(255, 200, 87, 0.15);
   border-radius: 50%;
   margin-bottom: 24px;
-  border: 3px solid #FFC857;
-  color: #FFC857;
+  border: 3px solid #ffc857;
+  color: #ffc857;
   backdrop-filter: blur(10px);
   animation: flotar 3s ease-in-out infinite;
 }
@@ -83,7 +90,7 @@ main {
   margin-bottom: 16px;
   letter-spacing: -1px;
   text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .subtitulo-hero {
@@ -91,20 +98,22 @@ main {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
   margin-bottom: 24px;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .divisor-hero {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #FFC857, transparent);
+  background: linear-gradient(90deg, transparent, #ffc857, transparent);
   margin: 0 auto;
 }
 
 /* ====== Sección Formulario ====== */
 .seccion-formulario {
   background: #121212;
-  padding: 60px 20px 100px;
+  width: 100vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -155,20 +164,20 @@ main {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #FFC857, #ffb038);
+  background: linear-gradient(135deg, #ffc857, #ffb038);
   color: #121212;
   border-radius: 12px;
   font-size: 1.1rem;
   font-weight: 800;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   box-shadow: 0 4px 12px rgba(255, 200, 87, 0.3);
 }
 
 .titulo-bloque {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #F5F5F5;
-  font-family: 'Outfit', sans-serif;
+  color: #f5f5f5;
+  font-family: "Outfit", sans-serif;
   letter-spacing: -0.5px;
 }
 
@@ -195,12 +204,12 @@ label {
   gap: 8px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #F5F5F5;
-  font-family: 'Outfit', sans-serif;
+  color: #f5f5f5;
+  font-family: "Outfit", sans-serif;
 }
 
 label svg {
-  color: #FFC857;
+  color: #ffc857;
 }
 
 .opcional {
@@ -218,9 +227,9 @@ textarea {
   border: 2px solid #3a3a3a;
   border-radius: 12px;
   font-size: 1rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   background: #121212;
-  color: #F5F5F5;
+  color: #f5f5f5;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
@@ -235,7 +244,7 @@ textarea:hover {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #FFC857;
+  border-color: #ffc857;
   box-shadow: 0 0 0 4px rgba(255, 200, 87, 0.15);
   background: #121212;
   transform: translateY(-2px);
@@ -256,8 +265,8 @@ select {
 }
 
 select option {
-  background: #2E2E2E;
-  color: #F5F5F5;
+  background: #2e2e2e;
+  color: #f5f5f5;
 }
 
 textarea {
@@ -279,7 +288,7 @@ textarea {
 }
 
 .caja-info svg {
-  color: #FFC857;
+  color: #ffc857;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -288,7 +297,7 @@ textarea {
   color: rgba(245, 245, 245, 0.8);
   font-size: 0.95rem;
   line-height: 1.6;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 /* ====== Botón Enviar ====== */
@@ -301,13 +310,13 @@ textarea {
   gap: 12px;
   margin: 0 auto;
   padding: 16px 36px;
-  background: linear-gradient(135deg, #8B1E2D, #6b1722);
+  background: linear-gradient(135deg, #8b1e2d, #6b1722);
   color: #ffffff;
   border: none;
   border-radius: 14px;
   font-size: 1.05rem;
   font-weight: 700;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 8px 24px rgba(139, 30, 45, 0.4);
@@ -401,7 +410,8 @@ textarea {
 }
 
 @keyframes flotar {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -424,5 +434,5 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFC857;
+  background: #ffc857;
 }
