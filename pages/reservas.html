@@ -13,21 +13,66 @@
   <body>
     <div class="order">
       <!--Header-->
+      <!--Header-->
       <header>
-        <div class="header-brand">
-          <img
-            src="../assets/images/logo/favicon.webp"
-            alt="logo"
-            class="logoBrami"
-          />
-          <h1>BRAMI</h1>
-        </div>
-        <nav>
-          <a href="/index.html">Inicio</a>
-          <a href="/pages/carta.html">Carta</a>
-          <a href="/pages/promociones.html">Promociones</a>
-          <a href="/pages/reservas.html">Reservas</a>
-        </nav>
+  <input type="checkbox" id="menu-checkbox" />
+
+  <label for="menu-checkbox" class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="header-brand">
+    <img
+      src="../assets/images/logo/favicon.webp"
+      alt="logo"
+      class="logoBrami"
+    />
+    <h1>BRAMI</h1>
+  </div>
+
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/pages/carta.html">Carta</a>
+    <a href="/pages/promociones.html">Promociones</a>
+    <a href="/pages/reservas.html">Reservas</a>
+  </nav>
+</header>
+
+<script>
+  const menuCheckbox = document.getElementById('menu-checkbox');
+  const navLinks = document.querySelectorAll('nav a');
+  const body = document.body;
+
+  // Prevenir scroll cuando el menú está abierto
+  menuCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+      body.classList.add('menu-open');
+    } else {
+      body.classList.remove('menu-open');
+    }
+  });
+
+  // Cerrar menú al hacer clic en un enlace
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuCheckbox.checked = false;
+      body.classList.remove('menu-open');
+    });
+  });
+
+  // Cerrar menú al hacer clic en el overlay
+  body.addEventListener('click', (e) => {
+    if (body.classList.contains('menu-open') && 
+        !e.target.closest('nav') && 
+        !e.target.closest('.menu-toggle')) {
+      menuCheckbox.checked = false;
+      body.classList.remove('menu-open');
+    }
+  });
+</script>
+
       </header>
       <!--Main-->
       <main>

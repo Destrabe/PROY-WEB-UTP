@@ -1,6 +1,30 @@
 @import url("https://use.typekit.net/yro8ahy.css");
 
-/* HEADER */
+/* ===============================================
+   RESET BÁSICO
+   =============================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "castoro-titling", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ===============================================
+   HEADER
+   =============================================== */
 header {
   font-family: "castoro-titling", sans-serif;
   background-color: var(--color-bg-dark);
@@ -31,6 +55,8 @@ header {
 .logoBrami {
   width: 70px;
   height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
 }
 
 h1 {
@@ -38,9 +64,68 @@ h1 {
   font-size: 1.5rem;
   margin-left: 0;
   letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
 }
 
-/* NAVIGATION */
+/* ===============================================
+   MENÚ HAMBURGUESA
+   =============================================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 102;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(25, 25, 25, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-toggle:hover {
+  background: rgba(35, 35, 35, 0.9);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: var(--color-accent);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+  display: block;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked + .menu-toggle {
+  background: rgba(40, 40, 40, 0.95);
+}
+
+#menu-checkbox:checked + .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translateY(9px);
+}
+
+#menu-checkbox:checked + .menu-toggle span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+#menu-checkbox:checked + .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px);
+}
+
+/* ===============================================
+   NAVIGATION
+   =============================================== */
 nav {
   display: flex;
   gap: 2rem;
@@ -54,22 +139,26 @@ nav a {
   text-decoration: none;
   font-size: 1rem;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  padding: 0.5rem 0;
 }
 
 nav a::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   width: 0%;
   height: 2px;
   background-color: var(--color-accent);
-  transition: width 0.3s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
 nav a:hover {
   color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
 nav a:hover::after {
@@ -78,6 +167,7 @@ nav a:hover::after {
 
 nav a.active {
   color: var(--color-highlight);
+  font-weight: 600;
 }
 
 nav a.active::after {
@@ -85,17 +175,166 @@ nav a.active::after {
   background-color: var(--color-highlight);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* Overlay oscuro cuando el menú está abierto */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 99;
+}
+
+body.menu-open::before {
+  opacity: 1;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: auto;
+}
+
+/* ===============================================
+   CARD RESPONSIVE
+   =============================================== */
+.card-container {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+/* ===============================================
+   RESPONSIVE - MENÚ HAMBURGUESA 
+   =============================================== */
+@media (max-width: 1000px) {
   header {
     padding: 1rem 1.5rem;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 1.5rem;
   }
 
   .header-brand {
-    width: 100%;
     justify-content: center;
+    margin: 0 auto;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(25, 25, 25, 0.98) 100%);
+    backdrop-filter: blur(30px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    transition: left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-right: 2px solid rgba(212, 175, 55, 0.3);
+    padding: 4rem 2rem;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.6);
+    transform: none;
+  }
+
+  #menu-checkbox:checked ~ nav {
+    left: 0;
+  }
+
+  nav a {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #menu-checkbox:checked ~ nav a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #menu-checkbox:checked ~ nav a:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  #menu-checkbox:checked ~ nav a:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  #menu-checkbox:checked ~ nav a:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  #menu-checkbox:checked ~ nav a:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--color-accent), var(--color-highlight));
+    transform: scaleY(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  }
+
+  nav a::after {
+    display: none;
+  }
+
+  nav a:hover::before {
+    transform: scaleY(1);
+  }
+
+  nav a:hover {
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--color-accent);
+    transform: translateX(10px);
+  }
+
+  nav a.active {
+    background: rgba(212, 175, 55, 0.18);
+    color: var(--color-highlight);
+    font-weight: 600;
+  }
+
+  nav a.active::before {
+    transform: scaleY(1);
+  }
+
+  .card-container {
+    padding: 1rem;
+    margin: 0.75rem;
+  }
+}
+
+/* ===============================================
+   RESPONSIVE - TABLETS
+   =============================================== */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1.5rem;
   }
 
   .logoBrami {
@@ -107,19 +346,18 @@ nav a.active::after {
   }
 
   nav {
-    position: static;
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
+    width: 280px;
   }
 
   nav a {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    padding: 1rem 1.2rem;
   }
 }
 
+/* ===============================================
+   RESPONSIVE - MÓVILES
+   =============================================== */
 @media (max-width: 480px) {
   header {
     padding: 0.75rem 1rem;
@@ -134,11 +372,50 @@ nav a.active::after {
     letter-spacing: 1px;
   }
 
+  .menu-toggle {
+    left: 1rem;
+    padding: 10px;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+  }
+
   nav {
-    gap: 0.75rem;
+    width: 260px;
+    padding: 3rem 1.5rem;
   }
 
   nav a {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
+    padding: 1rem 1rem;
+  }
+
+  .card-container {
+    padding: 0.75rem;
+    margin: 0.5rem;
   }
 }
+
+/* ===============================================
+   ACCESIBILIDAD
+   =============================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
