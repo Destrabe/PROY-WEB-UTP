@@ -1,182 +1,438 @@
-/* ====== Página ====== */
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Henny+Penny&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Outfit", sans-serif;
+  background: #121212;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* ====== Sección Hero ====== */
+.seccion-hero {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  min-height: 450px;
+  padding-top: 102.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.seccion-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/images/restobar.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.superposicion-hero {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.6),
+    rgba(18, 18, 18, 0.5)
+  );
+  z-index: 1;
+}
+
+.contenido-hero {
   display: flex;
   flex-direction: column;
-  font-family: "Inter", sans-serif;
-  color: #1e1e1e;
-  position: relative;
-}
-
-/* ====== Main ====== */
-main {
-  flex: 1;
-  width: 100%;
-  padding-top: 140px;
-  padding-bottom: 40px;
-  box-sizing: border-box;
-  background: #1a1a1a;
-  color: var(--color-text);
-}
-
-.card-reserva {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.4);
-}
-
-/* ====== Título ====== */
-.title {
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
   text-align: center;
-  padding: 30px;
-  font-size: 2.2em;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  /* padding: 0 20px;  */
+  animation: aparecerDesvaneciendo 1s ease-out;
+}
+
+.icono-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 200, 87, 0.15);
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 3px solid #ffc857;
+  color: #ffc857;
+  backdrop-filter: blur(10px);
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.titulo-hero {
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
-  color: #8b1e2d;
-  margin-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: "Outfit", sans-serif;
 }
 
-/* ====== Cuerpo del formulario ====== */
-#reserva {
-  padding: 38px 50px 32px;
-  margin-bottom: 15px;
+.subtitulo-hero {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  margin-bottom: 24px;
+  font-family: "Outfit", sans-serif;
 }
 
-fieldset {
-  border: none;
+.divisor-hero {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ffc857, transparent);
+  margin: 0 auto;
+}
+
+/* ====== Sección Formulario ====== */
+.seccion-formulario {
+  background: #121212;
+  width: 100vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ====== Formulario Oscuro ====== */
+.formulario-oscuro {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid #3a3a3a;
+  margin: 0 auto;
+}
+
+/* ====== Bloques del Formulario ====== */
+.bloque-formulario {
+  margin-bottom: 48px;
+}
+
+.bloque-formulario:last-of-type {
+  margin-bottom: 32px;
+}
+
+.encabezado-bloque {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(255, 200, 87, 0.2);
+}
+
+.numero-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #ffc857, #ffb038);
+  color: #121212;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  box-shadow: 0 4px 12px rgba(255, 200, 87, 0.3);
+}
+
+.titulo-bloque {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ====== Cuadrícula del Formulario ====== */
+.cuadricula-formulario {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
+  gap: 24px;
 }
 
-/* ====== Etiquetas ====== */
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo-formulario.ancho-completo {
+  grid-column: 1 / -1;
+}
+
 label {
-  display: block;
-  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.8em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
+  color: #f5f5f5;
+  font-family: "Outfit", sans-serif;
 }
 
-/* ====== Campos ====== */
+label svg {
+  color: #ffc857;
+}
+
+.opcional {
+  color: #888;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+/* ====== Inputs ====== */
 input,
 select,
 textarea {
   width: 100%;
-  padding: 13px 16px;
-  border: 1.8px solid #e3e3e3;
+  padding: 14px 16px;
+  border: 2px solid #3a3a3a;
   border-radius: 12px;
-  font-size: 1em;
-  font-family: inherit;
-  background: #fdfdfd;
-  color: #1e1e1e;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  background: #121212;
+  color: #f5f5f5;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #4a4a4a;
+  background: rgba(18, 18, 18, 0.8);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: none;
-  border-color: #7c340a;
-  box-shadow: 0 0 0 4px rgba(139, 30, 45, 0.22);
-  background: #fff;
+  border-color: #ffc857;
+  box-shadow: 0 0 0 4px rgba(255, 200, 87, 0.15);
+  background: #121212;
   transform: translateY(-2px);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #7a7a7a;
-  font-style: italic;
+  color: #666;
 }
 
-textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-/* ====== Select ====== */
 select {
   cursor: pointer;
   appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23FFC857' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
-  background-size: 14px;
-  padding-right: 40px;
+  padding-right: 44px;
 }
 
-/* ====== Botón ====== */
-button[type="submit"] {
-  width: 100%;
-  max-width: 300px;
-  padding: 14px 30px;
-  background: linear-gradient(135deg, #7c340a 0%, #ffc857 100%);
-  color: #fff;
+select option {
+  background: #2e2e2e;
+  color: #f5f5f5;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ====== Caja de Información ====== */
+.caja-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: rgba(255, 200, 87, 0.08);
+  border: 2px solid rgba(255, 200, 87, 0.25);
+  border-radius: 14px;
+  margin-top: 24px;
+}
+
+.caja-info svg {
+  color: #ffc857;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.caja-info p {
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ====== Botón Enviar ====== */
+.boton-enviar {
+  width: auto;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #8b1e2d, #6b1722);
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  font-size: 1.05em;
+  border-radius: 14px;
+  font-size: 1.05rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  font-family: "Outfit", sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 22px rgba(139, 30, 45, 0.45);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(139, 30, 45, 0.4);
+  letter-spacing: 0.5px;
 }
 
-button[type="submit"]:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 28px rgba(139, 30, 45, 0.55);
+.boton-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(139, 30, 45, 0.5);
 }
 
-button[type="submit"]:active {
+.boton-enviar:active {
   transform: translateY(-1px);
-}
-
-/* ====== Centración de botón ====== */
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
-
-.form-group.full-width button[type="submit"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
-  #reserva {
-    padding: 24px;
+  .seccion-hero {
+    height: 40vh;
+    min-height: 350px;
   }
 
-  fieldset {
+  .seccion-hero::before {
+    background-attachment: scroll;
+  }
+
+  .seccion-formulario {
+    padding: 40px 20px 80px;
+  }
+
+  .formulario-oscuro {
+    padding: 32px 24px;
+  }
+
+  .bloque-formulario {
+    margin-bottom: 36px;
+  }
+
+  .numero-bloque {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .titulo-bloque {
+    font-size: 1.3rem;
+  }
+
+  .cuadricula-formulario {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .title {
-    font-size: 1.7em;
-  }
-
-  button[type="submit"] {
+  .boton-enviar {
     width: 100%;
+    max-width: 100%;
   }
 }
 
-/* ====== Animación ====== */
-@keyframes fadeIn {
+@media (max-width: 480px) {
+  .icono-hero {
+    width: 64px;
+    height: 64px;
+  }
+
+  .seccion-hero {
+    min-height: 300px;
+  }
+
+  .formulario-oscuro {
+    padding: 28px 20px;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 12px 14px;
+  }
+}
+
+/* ====== Animaciones ====== */
+@keyframes aparecerDesvaneciendo {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ====== Scrollbar ====== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffc857;
 }

@@ -18,7 +18,16 @@
   <body>
     <div class="order">
       <!--Header-->
+      <!--Header-->
       <header>
+        <input type="checkbox" id="menu-checkbox" />
+
+        <label for="menu-checkbox" class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <div class="header-brand">
           <img
             src="../assets/images/logo/favicon.webp"
@@ -27,6 +36,7 @@
           />
           <h1>BRAMI</h1>
         </div>
+
         <nav>
           <a href="/index.html">Inicio</a>
           <a href="/pages/carta.html">Carta</a>
@@ -34,146 +44,210 @@
           <a href="/pages/reservas.html">Reservas</a>
         </nav>
       </header>
+
+      <script>
+        const menuCheckbox = document.getElementById("menu-checkbox");
+        const navLinks = document.querySelectorAll("nav a");
+        const body = document.body;
+
+        // Prevenir scroll cuando el menú está abierto
+        menuCheckbox.addEventListener("change", function () {
+          if (this.checked) {
+            body.classList.add("menu-open");
+          } else {
+            body.classList.remove("menu-open");
+          }
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            menuCheckbox.checked = false;
+            body.classList.remove("menu-open");
+          });
+        });
+
+        // Cerrar menú al hacer clic en el overlay
+        body.addEventListener("click", (e) => {
+          if (
+            body.classList.contains("menu-open") &&
+            !e.target.closest("nav") &&
+            !e.target.closest(".menu-toggle")
+          ) {
+            menuCheckbox.checked = false;
+            body.classList.remove("menu-open");
+          }
+        });
+      </script>
+
       <!--Main-->
       <main>
-        <div class="card-reserva">
-          <h1 class="title">Reserva</h1>
+        <!-- Sección Hero -->
+        <section class="seccion-hero">
+          <div class="superposicion-hero"></div>
+          <div class="contenido-hero">
+            <h1 class="titulo-hero">Reserva tu Mesa</h1>
+            <p class="subtitulo-hero">Una experiencia inolvidable te espera</p>
+            <div class="divisor-hero"></div>
+          </div>
+        </section>
 
-          <!-- Formulario -->
-          <form id="reserva" method="post" action="javascript:void(0);">
-            <fieldset>
-              <!-- Nombre -->
-              <div class="form-group">
-                <label for="name">Nombre</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Ingrese su nombre"
-                  required
-                />
+        <!-- Formulario -->
+        <div class="seccion-formulario">
+          <div class="contenedor">
+            <form id="reserva" class="formulario-oscuro">
+              <!-- Información Personal -->
+              <div class="bloque-formulario">
+                <div class="encabezado-bloque">
+                  <span class="numero-bloque">01</span>
+                  <h2 class="titulo-bloque">Información Personal</h2>
+                </div>
+
+                <div class="cuadricula-formulario">
+                  <div class="campo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Ingresa tu nombre"
+                      required
+                    />
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="apellido">Apellido</label>
+                    <input
+                      type="text"
+                      id="apellido"
+                      name="apellido"
+                      placeholder="Ingresa tu apellido"
+                      required
+                    />
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="email">Correo Electrónico</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="correo@ejemplo.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="telefono">Teléfono</label>
+                    <input
+                      type="tel"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="+51 999 999 999"
+                      required
+                    />
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="tipo-documento">Tipo de Documento</label>
+                    <select id="tipo-documento" name="tipo-documento" required>
+                      <option value="" disabled selected>
+                        Seleccionar tipo
+                      </option>
+                      <option value="dni">DNI</option>
+                      <option value="ce">CE</option>
+                      <option value="ruc">RUC</option>
+                    </select>
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="numero-documento">N° de Documento</label>
+                    <input
+                      type="text"
+                      id="numero-documento"
+                      name="numero-documento"
+                      pattern="\d+"
+                      placeholder="00000000"
+                      required
+                    />
+                  </div>
+                </div>
               </div>
 
-              <!-- Apellido -->
-              <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input
-                  type="text"
-                  name="apellido"
-                  id="apellido"
-                  placeholder="Ingrese su apellido"
-                  required
-                />
+              <!-- Detalles de la Reserva -->
+              <div class="bloque-formulario">
+                <div class="encabezado-bloque">
+                  <span class="numero-bloque">02</span>
+                  <h2 class="titulo-bloque">Detalles de la Reserva</h2>
+                </div>
+
+                <div class="cuadricula-formulario">
+                  <div class="campo-formulario ancho-completo">
+                    <label for="cantidad-personas">Cantidad de Personas</label>
+                    <select
+                      id="cantidad-personas"
+                      name="cantidad-personas"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        ¿Cuántas personas asistirán?
+                      </option>
+                      <option value="1">1 persona</option>
+                      <option value="2">2 personas</option>
+                      <option value="3">3 personas</option>
+                      <option value="4">4 personas</option>
+                      <option value="5">5 personas</option>
+                      <option value="6">6 personas</option>
+                      <option value="7">7 personas</option>
+                      <option value="8">8 personas</option>
+                      <option value="9">9 personas</option>
+                      <option value="10">10 personas</option>
+                      <option value="otro">Más de 10 personas</option>
+                    </select>
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required />
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora" required />
+                  </div>
+
+                  <div class="campo-formulario ancho-completo">
+                    <label for="observaciones"
+                      >Observaciones
+                      <span class="opcional">(Opcional)</span></label
+                    >
+                    <textarea
+                      id="observaciones"
+                      name="observaciones"
+                      rows="4"
+                      placeholder="Alergias alimentarias, preferencias de mesa, ocasión especial..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Caja de Información -->
+                <div class="caja-info">
+                  <p>
+                    Recibirás una confirmación por correo electrónico dentro de
+                    las próximas 24 horas.
+                  </p>
+                </div>
               </div>
 
-              <!-- Email -->
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Ingrese su email"
-                  required
-                />
-              </div>
-
-              <!-- Teléfono -->
-              <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input
-                  type="tel"
-                  id="telefono"
-                  name="telefono"
-                  placeholder="Ingrese su teléfono"
-                  required
-                />
-              </div>
-
-              <!-- Tipo de documento -->
-              <div class="form-group">
-                <label for="tipo_documento">Tipo de documento</label>
-                <select id="tipo_documento" name="tipo_documento" required>
-                  <option value="" disabled selected>
-                    Seleccione documento
-                  </option>
-                  <option value="dni">DNI</option>
-                  <option value="ce">CE</option>
-                  <option value="ruc">RUC</option>
-                </select>
-              </div>
-
-              <!-- Número de documento -->
-              <div class="form-group">
-                <label for="numero_documento">Número de documento</label>
-                <input
-                  type="text"
-                  id="numero_documento"
-                  name="numero_documento"
-                  pattern="\d+"
-                  placeholder="Ingrese el n° del documento"
-                  required
-                />
-              </div>
-
-              <!-- Cantidad de personas -->
-              <div class="form-group">
-                <label for="cantidad_personas">Cantidad de personas</label>
-                <select
-                  id="cantidad_personas"
-                  name="cantidad_personas"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Seleccione la cantidad
-                  </option>
-                  <option value="1">1 persona</option>
-                  <option value="2">2 personas</option>
-                  <option value="3">3 personas</option>
-                  <option value="4">4 personas</option>
-                  <option value="5">5 personas</option>
-                  <option value="6">6 personas</option>
-                  <option value="7">7 personas</option>
-                  <option value="8">8 personas</option>
-                  <option value="9">9 personas</option>
-                  <option value="10">10 personas</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-
-              <!-- Fecha -->
-              <div class="form-group">
-                <label for="fecha">Elija una fecha</label>
-                <input type="date" id="fecha" name="fecha" required />
-              </div>
-
-              <!-- Hora -->
-              <div class="form-group">
-                <label for="hora">Hora</label>
-                <input type="time" id="hora" name="hora" required />
-              </div>
-
-              <!-- Observaciones -->
-              <div class="form-group full-width">
-                <label for="observaciones">Observaciones</label>
-                <textarea
-                  id="observaciones"
-                  name="observaciones"
-                  rows="5"
-                  placeholder="Ingrese observaciones o comentarios"
-                ></textarea>
-              </div>
-
-              <!-- Botón -->
-              <div class="form-group full-width">
-                <button type="submit">Reservar</button>
-              </div>
-            </fieldset>
-          </form>
+              <!-- Botón de Envío -->
+              <button type="submit" class="boton-enviar">
+                <span>Confirmar Reserva</span>
+              </button>
+            </form>
+          </div>
         </div>
-      </main>
-
-      <!--Card-->
+        
+        <!--Card-->
       <div id="alert-card" class="hidden">
         <div class="card">
           <div class="card-header">
@@ -193,7 +267,7 @@
           <button id="close-card">Cerrar</button>
         </div>
       </div>
-
+      </main>
       <!--Footer-->
       <footer class="footer-pagina">
         <div class="contenedor-footer">
@@ -213,7 +287,7 @@
           </div>
 
           <!-- Col 2: Navegación -->
-          <div class="footer-nav">
+          <!-- <div class="footer-nav">
             <h4>
               <span class="footer-icon-title">
                 <img src="../assets/svg/botella.svg" alt="icono navegación" />
@@ -226,7 +300,7 @@
               <li><a href="./promociones.html">Promociones</a></li>
               <li><a href="./reservas.html">Reservar</a></li>
             </ul>
-          </div>
+          </div>  -->
 
           <!-- Col 3: Ubícanos -->
           <div class="Ubicacion">
@@ -315,11 +389,11 @@
 
             <div class="footer-reclamaciones">
               <a href="#" class="footer-enlace-reclamaciones">
-                <p><strong>Libro de reclamaciones</strong></p>
                 <img
                   src="../assets/svg/libro-reclamaciones.svg"
                   alt="Libro de reclamaciones"
                 />
+                <p><strong>Libro de reclamaciones</strong></p>
               </a>
             </div>
           </div>
