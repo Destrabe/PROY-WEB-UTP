@@ -23,12 +23,14 @@ footer {
 
 /* ===== GRID / LAYOUT ===== */
 .contenedor-footer {
+  flex-wrap: wrap;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 45px;
+  justify-content: center;
+  padding-left: 14px;
+  padding-right: 14px;
+  gap: 35px;
   position: relative;
 }
 
@@ -213,21 +215,17 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1100px) {
-  .contenedor-footer {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+
+@media (max-width: 900px) {
+  .contenedor-footer > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-items: center;
   }
-  .contenedor-footer > *:not(:first-child) {
-    border-left: none;
-    padding-left: 0;
-    border-top: none;
-    padding-top: 25px;
-  }
-}
-@media (max-width: 768px) {
-  .contenedor-footer {
-    grid-template-columns: 1fr;
-    gap: 30px;
+
+  .Ubicacion iframe {
+    max-width: 100%-25px;
+    width: 100%;
   }
 }
