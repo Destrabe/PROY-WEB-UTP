@@ -23,9 +23,7 @@ footer {
 
 /* ===== GRID / LAYOUT ===== */
 .contenedor-footer {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr 0.8fr;
-  gap: 60px;
+  display: flex;
   position: relative;
 }
 
