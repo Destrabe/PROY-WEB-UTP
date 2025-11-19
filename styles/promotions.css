@@ -1,10 +1,11 @@
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/assets/images/restobar.webp);
+  background-color: #1b1b1b;
+  color: #ffffff;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #0d0d0d, #2e1f14);
 }
 
 .title {
@@ -103,22 +104,22 @@ main h1 {
 }
 
 h3 {
-  color: white;
+  color: #f5f5f5;
   margin: 10px 0 5px;
 }
 
 p {
-  color: black;
+  color: #ff3b3b;
   margin: 5px 0;
 }
 
 .precio {
   font-weight: bold;
-  color: #c62828;
+  color: #cccccc;
 }
 
 small {
-  color: gray;
+  color: #f0f0f0;
   display: block;
   margin-top: 5px;
 }
