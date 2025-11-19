@@ -6,6 +6,7 @@ body {
   flex-direction: column;
   font-family: "Inter", sans-serif;
   color: #1e1e1e;
+  position: relative;
 }
 
 /* ====== Main ====== */
@@ -37,9 +38,6 @@ main {
   letter-spacing: 3px;
   font-weight: 800;
   color: #8b1e2d;
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
   margin-bottom: 10px;
 }
 
@@ -79,7 +77,6 @@ textarea {
   font-family: inherit;
   background: #fdfdfd;
   color: #1e1e1e;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition: all 0.3s ease;
 }
 
@@ -141,7 +138,7 @@ button[type="submit"]:active {
   transform: translateY(-1px);
 }
 
-/* ====== Centracion de boton ====== */
+/* ====== Centración de botón ====== */
 .form-group.full-width {
   grid-column: 1 / -1;
 }

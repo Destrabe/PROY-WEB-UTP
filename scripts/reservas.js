@@ -1,5 +1,13 @@
 const form = document.getElementById("reserva");
 
+const alertCard = document.getElementById("alert-card");
+const alertMessage = document.getElementById("alert-message");
+const closeCard = document.getElementById("close-card");
+
+closeCard.addEventListener("click", () => {
+  alertCard.classList.add("hidden");
+});
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -20,7 +28,9 @@ form.addEventListener("submit", async (e) => {
 
   try {
     const response = await axios.post("http://localhost:3005/reservas", data);
-    alert("Reserva creada con éxito");
+    console.log("Reserva creada con éxito");
+    alertMessage.textContent = "Reserva creada con éxito";
+    alertCard.classList.remove("hidden");
     form.reset();
   } catch (error) {
     console.error(error);
