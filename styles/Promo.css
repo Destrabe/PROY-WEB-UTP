@@ -1,11 +1,7 @@
 body {
-   background-color: #1b1b1b; 
-    color: #ffffff;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
-  background: black;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #0A0A0F, #1E1E28);
+
 }
 
 .title {
@@ -14,10 +10,6 @@ body {
 
 main {
   margin-top: 130px;
-}
-
-table {
-  text-align: center;
 }
 
 .item img {
@@ -33,23 +25,12 @@ iframe {
 main h1 {
   text-align: center;
   font-weight: 700;
-  color: #ffc857;
+  color: #FFC857; /* Amarillo suave */
   letter-spacing: 2px;
-  text-shadow: 2px 2px 10px rgba(139, 30, 45, 0.6);
+  text-shadow: 2px 2px 10px rgba(255, 200, 87, 0.4);
   margin: 40px 0;
   font-size: clamp(2rem, -1.5rem + 8vw, 3rem);
   animation: zoomIn 1s ease;
-
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
 }
 
 @keyframes zoomIn {
@@ -70,19 +51,26 @@ main h1 {
   padding: 20px;
   max-width: 1000px;
   margin: auto;
+
+  
+  color: #fff;
 }
 
 .tarjeta {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  animation: aparecer 0.8s ease;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  transition: .3s ease;
+  background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.15);
+color: #FFFFFF;
+
+  backdrop-filter: blur(12px);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  
 }
 
 @keyframes aparecer {
@@ -104,24 +92,28 @@ main h1 {
 }
 
 h3 {
-  color: #F5F5F5;
-  margin: 10px 0 5px;
+  color: #F7F7F7; /* Blanco cálido */
+  font-weight: 600;
+  letter-spacing: .5px;
 }
 
 p {
-  color: #FF3B3B;
+  color: #FF6B6B; /* rojo salmón suave para promociones */
+  font-size: 1rem;
   margin: 5px 0;
 }
 
 .precio {
   font-weight: bold;
-  color: #CCCCCC;
+  color: #FFC857; /* amarillo suave */
+  font-size: 1.2rem;
 }
 
 small {
-  color: #F0F0F0;
+   color: #C7D0D9; /* gris suave elegante */
   display: block;
   margin-top: 5px;
+  font-size: .85rem;
 }
 
 .imgAnimacion {
@@ -129,11 +121,6 @@ small {
 }
 
 .imgAnimacion:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-footer p {
-  color: white;
-  text-align: center;
+    transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 200, 87, 0.3); /* sombra amarilla suave */
 }
