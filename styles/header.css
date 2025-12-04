@@ -15,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  padding-top: 90px; /* Espacio para el header fijo */
 }
 
 body.menu-open {
@@ -43,6 +44,7 @@ header {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
+  height: 90px; /* Altura fija del header */
 }
 
 .header-brand {
@@ -124,7 +126,7 @@ h1 {
 }
 
 /* ===============================================
-   NAVIGATION
+   NAVEGACION
    =============================================== */
 nav {
   display: flex;
@@ -175,7 +177,7 @@ nav a.active::after {
   background-color: var(--color-highlight);
 }
 
-/* Overlay oscuro cuando el menú está abierto */
+/* Overlay oscuro cuando el menu está abierto */
 body::before {
   content: '';
   position: fixed;
@@ -211,9 +213,14 @@ body.menu-open::before {
    RESPONSIVE - MENÚ HAMBURGUESA 
    =============================================== */
 @media (max-width: 1000px) {
+  body {
+    padding-top: 80px; 
+  }
+
   header {
     padding: 1rem 1.5rem;
     justify-content: center;
+    height: 80px;
   }
 
   .menu-toggle {
@@ -231,7 +238,8 @@ body.menu-open::before {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 300px;
+    width: 70%;
+    max-width: 500px;
     height: 100vh;
     background: linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(25, 25, 25, 0.98) 100%);
     backdrop-filter: blur(30px);
@@ -333,8 +341,13 @@ body.menu-open::before {
    RESPONSIVE - TABLETS
    =============================================== */
 @media (max-width: 768px) {
+  body {
+    padding-top: 75px;
+  }
+
   header {
     padding: 1rem 1.5rem;
+    height: 75px;
   }
 
   .logoBrami {
@@ -346,7 +359,8 @@ body.menu-open::before {
   }
 
   nav {
-    width: 280px;
+    width: 75%;
+    max-width: 450px;
   }
 
   nav a {
@@ -359,8 +373,13 @@ body.menu-open::before {
    RESPONSIVE - MÓVILES
    =============================================== */
 @media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+
   header {
     padding: 0.75rem 1rem;
+    height: 70px;
   }
 
   .logoBrami {
@@ -382,7 +401,8 @@ body.menu-open::before {
   }
 
   nav {
-    width: 260px;
+    width: 80%;
+    max-width: 400px;
     padding: 3rem 1.5rem;
   }
 
@@ -419,3 +439,15 @@ body.menu-open::before {
   outline: none;
 }
 
+body:has(#menu-checkbox:checked) header {
+    z-index: 9999 !important;
+}
+
+body:has(#menu-checkbox:checked) .filter-container {
+    z-index: 1 !important;
+    pointer-events: none;
+}
+
+body:has(#menu-checkbox:checked) {
+    overflow: hidden;
+}

@@ -11,6 +11,9 @@
 
 footer {
   background: linear-gradient(to top, #121212 40%, #1a1a1a 100%);
+  position: relative;
+  margin-top: 80px;
+  clear: both;
 }
 
 /* ===== FOOTER BASE ===== */
@@ -19,6 +22,7 @@ footer {
   color: var(--footer-text);
   padding: 60px 20px;
   font-family: "Nunito Sans", sans-serif;
+  position: relative;
 }
 
 /* ===== GRID / LAYOUT ===== */
@@ -174,6 +178,17 @@ footer {
 }
 
 /* ===== COLUMNA 6: REDES + LIBRO ===== */
+.footer-redes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.footer-redes a {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
 .footer-redes img {
   width: 35px;
   height: 35px;
@@ -217,6 +232,10 @@ footer {
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
+  footer {
+    margin-top: 60px;
+  }
+
   .contenedor-footer > * {
     flex: 0 0 100%;
     max-width: 100%;
@@ -225,7 +244,26 @@ footer {
   }
 
   .Ubicacion iframe {
-    max-width: 100%-25px;
+    max-width: calc(100% - 25px);
     width: 100%;
+  }
+
+  .footer-redes {
+    justify-content: center;
+  }
+
+  .footer-reclamaciones {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    margin-top: 40px;
+  }
+
+  .footer-pagina {
+    padding: 40px 15px;
   }
 }
