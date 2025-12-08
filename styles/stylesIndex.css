@@ -356,14 +356,14 @@ main > section {
 }
 
 .central-image {
-  width: 100%;       
-  height: auto;      
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  border-radius: 0 ; 
-  border: none;     
-  box-shadow: none; 
-  margin: 0;        
-  position: static; 
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  position: static;
   filter: brightness(0.4);
 }
 
@@ -374,7 +374,7 @@ main > section {
   overflow: hidden;
   background: #000;
   margin: 0;
-} 
+}
 
 .hero-content {
   position: absolute;
@@ -388,9 +388,9 @@ main > section {
 }
 
 .hero-title {
-  font-family: 'Lovelo', Arial, sans-serif;
+  font-family: "Lovelo", Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3.5rem); 
+  font-size: clamp(2rem, 4vw, 3.5rem);
   letter-spacing: 4px;
   line-height: 1;
   margin: 0;
@@ -399,14 +399,14 @@ main > section {
 
 .brami-highlight {
   display: block;
-  font-size: 1.8em; 
+  font-size: 1.8em;
   font-weight: 900;
   letter-spacing: 6px;
   margin-top: 5px;
 }
 
 .hero-subtitle {
-  font-family: 'Lovelo',Arial, Helvetica, sans-serif;
+  font-family: "Lovelo", Arial, Helvetica, sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.3rem);
   font-weight: 400;
   line-height: 1.5;
@@ -427,7 +427,7 @@ main > section {
 }
 
 section h1 {
-  font-family: 'Lovelo',Arial, Helvetica, sans-serif;
+  font-family: "Lovelo", Arial, Helvetica, sans-serif;
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 900;
   color: white;
@@ -617,7 +617,7 @@ section > center > img:hover {
   font-weight: 700;
   font-size: 26px;
   transition: var(--transition);
-  font-family: 'Lovelo', Arial, sans-serif;;
+  font-family: "Lovelo", Arial, sans-serif;
   letter-spacing: 1px;
 }
 
@@ -755,7 +755,7 @@ section > center > img:hover {
   max-width: 100%;
   margin: 0 auto;
 }
-.sub-title{
+.sub-title {
   position: centered;
   top: 20px;
   left: 50%;
@@ -767,7 +767,7 @@ section > center > img:hover {
   max-width: 90%;
   color: var(--color-primary);
 }
-.sub-title h1{
+.sub-title h1 {
   font-size: 36px;
   font-weight: 1000;
   color: white;
@@ -775,6 +775,24 @@ section > center > img:hover {
   text-align: center;
   display: inline-block;
 }
+
+.sub-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary),
+    var(--color-secondary),
+    transparent
+  );
+}
+
 .promotions {
   display: grid;
   grid-template-columns: 1fr;
@@ -843,7 +861,7 @@ section > center > img:hover {
   font-size: 24px;
   color: var(--color-dark);
   margin-bottom: 12px;
-  font-family: 'Lovelo', Arial, sans-serif;;
+  font-family: "Lovelo", Arial, sans-serif;
   font-weight: 700;
   position: relative;
   z-index: 2;
@@ -1869,7 +1887,6 @@ section > center > img:hover {
   }
 }
 
-
 .hero {
   width: 100% !important;
   max-width: 100% !important;
@@ -1880,11 +1897,11 @@ section > center > img:hover {
 }
 
 .central-image {
-  width: 100vw !important;      
-  max-width: none !important;    
-  height: 1000px !important;       
+  width: 100vw !important;
+  max-width: none !important;
+  height: 1000px !important;
   display: block !important;
-  
+
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -1894,4 +1911,36 @@ section > center > img:hover {
 
 body {
   overflow-x: hidden;
+}
+
+.carousel-container {
+  min-height: 75vh !important;
+  padding-top: 40px !important;
+  padding-bottom: 60px !important;
+  max-width: 1400px !important;
+
+  .carousel-item img {
+    width: 100% !important;
+    max-width: 1200px !important;
+    height: 60vh !important;
+    object-fit: cover !important;
+    border-radius: 20px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .carousel-container {
+    min-height: auto !important;
+    padding: 30px 10px !important;
+  }
+
+  .carousel-item img {
+    height: 450px !important;
+    max-width: 100% !important;
+    border-radius: 15px !important;
+  }
+
+  .carousel-item a {
+    font-size: 22px !important;
+  }
 }
