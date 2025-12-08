@@ -427,7 +427,7 @@ main > section {
 }
 
 section h1 {
-  font-family: ;
+  font-family: 'Lovelo',Arial, Helvetica, sans-serif;
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 900;
   color: white;
