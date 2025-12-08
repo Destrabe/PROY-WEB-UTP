@@ -68,7 +68,7 @@ body::before {
 
 .hamburger {
   position: fixed;
-  top: 45px;
+  top: 40px;
   left: 20px;
   z-index: 2000;
   cursor: pointer;
@@ -151,8 +151,8 @@ body::before {
 .site-header {
   background: #000;
   position: relative;
-  top: 20px; /* deja la barra de anuncio arriba */
-  z-index: 1500;
+  top: 20px;
+  z-index: 1000;
   width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
@@ -160,7 +160,7 @@ body::before {
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -351,28 +351,30 @@ main {
 /* ========== SECCIONES ========== */
 main > section {
   width: 100%;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 80px auto;
   text-align: center;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  color: white;
 }
 
 .central-image {
-  height: fit-content;
-  width: fit-content;
-  border-radius: 20px;
-  display: block;
-  margin-left: -var(--sidebar-width);
-  margin-right: auto;
-  display: block;
+  width: 100%;       
+  height: auto;      
   max-width: 100%;
-  height: auto;
+  border-radius: 0 ; 
+  border: none;     
+  box-shadow: none; 
+  margin: 0;        
+  position: static; 
+  filter: none
 }
+
+.hero {
+  width: 100%;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+} 
 
 .hero img {
   width: 100%;
@@ -1868,4 +1870,39 @@ section > center > img:hover {
     height: 40px;
     font-size: 18px;
   }
+}
+
+
+/* ==================================================
+   FUERZA BRUTA PARA ANCHO COMPLETO (SOLUCIÓN FINAL)
+   ================================================== */
+
+/* 1. Quitamos los límites al contenedor de la imagen */
+.hero {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* 2. Forzamos la imagen a ocupar todo el ancho sin excepción */
+.central-image {
+  width: 100vw !important;       /* 100% del ancho de la ventana */
+  max-width: none !important;    /* ESTO ES LA CLAVE: Anula los límites de 1000px/1200px */
+  height: 700px !important;       /* Mantiene la proporción para que no se deforme el texto */
+  display: block !important;
+  
+  /* Reseteamos bordes y sombras antiguas */
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  position: static !important;
+}
+
+/* 3. Evitamos scroll horizontal si la imagen se pasa un píxel */
+body {
+  overflow-x: hidden;
 }
