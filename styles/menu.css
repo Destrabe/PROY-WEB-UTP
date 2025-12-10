@@ -48,12 +48,15 @@
 }
 
 /* ============================================
-   ESTILOS BASE
+   ESTILOS BASE - NUEVO FONDO DEGRADADO
    ============================================ */
 body {
     position: relative;
     min-height: 100vh;
-    background: var(--bg-primary);
+    background: linear-gradient(to bottom, #0d0d0d, #2e1f14);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     font-family: var(--font-main);
 }
 
@@ -61,7 +64,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 50px 20px 120px;
-    background-color: var(--bg-primary);
     position: relative;
     z-index: 1;
 }
@@ -164,7 +166,7 @@ body {
    FILTROS - OPTIMIZADOS
    ============================================ */
 .filter-container {
-    background: var(--bg-primary);
+    background: transparent;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -182,8 +184,9 @@ body {
     padding: var(--spacing-sm) var(--spacing-lg);
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--accent-gold) var(--bg-primary);
-    background: var(--bg-secondary);
+    scrollbar-color: var(--accent-gold) rgba(0, 0, 0, 0.3);
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-pill);
     border: 1px solid var(--border-color);
     transform: translateZ(0);
@@ -194,7 +197,7 @@ body {
 }
 
 .filter-wrapper::-webkit-scrollbar-track {
-    background: var(--bg-primary);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
@@ -261,7 +264,7 @@ body {
     width: 50px;
     height: 50px;
     border: 2px solid var(--accent-gold);
-    background: rgba(15, 15, 15, 0.95);
+    background: rgba(13, 13, 13, 0.95);
     color: var(--accent-gold);
     border-radius: 50%;
     cursor: pointer;
