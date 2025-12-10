@@ -67,6 +67,7 @@ body::before {
 }
 
 .hamburger {
+  display: flex;
   position: fixed;
   top: 40px;
   left: 20px;
