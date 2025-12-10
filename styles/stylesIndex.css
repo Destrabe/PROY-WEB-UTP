@@ -89,12 +89,11 @@ body::before {
 }
 
 .hamburger span {
-  background: var(--color-primary);
   border-radius: 3px;
   display: block;
   width: 28px;
   height: 3px;
-  background-color: var(--color-dark);
+  background-color: #000;
   transition: var(--transition);
   border-radius: 3px;
 }
@@ -1917,7 +1916,7 @@ body {
   min-height: 75vh !important;
   padding-top: 40px !important;
   padding-bottom: 60px !important;
-  max-width: 1400px !important;
+  max-width: 2000px !important;
 
   .carousel-item img {
     width: 100% !important;
