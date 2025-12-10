@@ -6,10 +6,14 @@
     <title>Brami - Inicio</title>
     <link rel="stylesheet" href="/styles/stylesIndex.css" />
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
     <script src="/scripts/order-confirmation.js"></script>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
     <!-- Font Awesome para los iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       /* Estilos para lazy loading */
       .lazy-load {
@@ -22,14 +26,23 @@
       }
 
       .lazy-load:not(.loaded) {
-        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e0e0e0 50%,
+          #f0f0f0 75%
+        );
         background-size: 200% 100%;
         animation: loading 1.5s infinite;
       }
 
       @keyframes loading {
-        0% { background-position: 200% 0; }
-        100% { background-position: -200% 0; }
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
       }
 
       .fade-in {
@@ -61,437 +74,505 @@
   </head>
 
   <body>
-    <!-- HEADER FIJO SUPERIOR -->
-    <header class="main-header">
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+    <div class="order">
+      <!-- HEADER FIJO SUPERIOR -->
+      <header class="main-header">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-      <div class="header-logo">
-        <img src="./assets/images/favicon.ico" alt="Logo Brami" loading="eager" />
-        <div class="header-text">
-          <span class="header-title">BRAMI</span>
-        </div>
-      </div>
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
-      <div class="header-actions">
-        <a href="./pages/carta.html"><button class="order-btn">Ordenar</button></a>
-      </div>
-
-      <label for="menu-toggle" class="overlay"></label>
-
-      <aside class="sidebar">
-        <label for="menu-toggle" class="close-btn">&times;</label>
-        
-        <div class="sidebar-logo">
-          <img src="./assets/images/favicon.ico" alt="Logo Brami" loading="eager">
-          <div class="sidebar-text">
-            <span class="sidebar-title">BRAMI</span>
-            <span class="sidebar-sub">Restobar</span>
+        <div class="header-logo">
+          <img
+            src="./assets/images/favicon.ico"
+            alt="Logo Brami"
+            loading="eager"
+          />
+          <div class="header-text">
+            <span class="header-title">BRAMI</span>
           </div>
         </div>
 
-        <nav>
-          <ul class="nav-list">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="./pages/carta.html">Carta</a></li>
-            <li><a href="./pages/promociones.html">Promociones</a></li>
-            <li><a href="./pages/reservas.html">Reservas</a></li>
-          </ul>
-        </nav>
-      </aside>
-    </header>
+        <!-- <div class="header-actions">
+          <a href="./pages/carta.html"
+            ><button class="order-btn">Ordenar</button></a
+          >
+        </div> -->
 
-    <main>
+        <label for="menu-toggle" class="overlay"></label>
+
+        <aside class="sidebar">
+          <label for="menu-toggle" class="close-btn">&times;</label>
+
+          <div class="sidebar-logo">
+            <img
+              src="./assets/images/favicon.ico"
+              alt="Logo Brami"
+              loading="eager"
+            />
+            <div class="sidebar-text">
+              <span class="sidebar-title">BRAMI</span>
+              <span class="sidebar-sub">Restobar</span>
+            </div>
+          </div>
+
+          <nav>
+            <ul class="nav-list">
+              <li><a href="/index.html">Inicio</a></li>
+              <li><a href="./pages/carta.html">Carta</a></li>
+              <li><a href="./pages/promociones.html">Promociones</a></li>
+              <li><a href="./pages/reservas.html">Reservas</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </header>
+
+      <main>
         <!-- HERO CAROUSEL SIMPLE - SOLO IMÁGENES -->
         <section class="hero-carousel-simple">
-            <div class="carousel-wrapper">
-                <!-- Slides - Solo agrega más divs con tus imágenes -->
-                <div class="carousel-slide-simple active">
-                    <img src="./assets/images/index/flayer1.png" alt="Promoción 1" class="flyer-image">
-                </div>
-
-                <div class="carousel-slide-simple">
-                    <img src="./assets/images/index/flayer2.png" alt="Promoción 2" class="flyer-image">
-                </div>
-
-                <div class="carousel-slide-simple">
-                    <img src="./assets/images/index/flayer3.png" alt="Promoción 3" class="flyer-image">
-                </div>
-
-                <!-- Controles de navegación -->
-                <button class="carousel-btn prev-btn" aria-label="Anterior">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" aria-label="Siguiente">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <!-- Indicadores -->
-                <div class="carousel-dots">
-                    <button class="dot active" data-slide="0"></button>
-                    <button class="dot" data-slide="1"></button>
-                    <button class="dot" data-slide="2"></button>
-                </div>
+          <div class="carousel-wrapper">
+            <!-- Slides - Solo agrega más divs con tus imágenes -->
+            <div class="carousel-slide-simple active">
+              <img
+                src="./assets/images/index/flayer1.png"
+                alt="Promoción 1"
+                class="flyer-image"
+              />
             </div>
+
+            <div class="carousel-slide-simple">
+              <img
+                src="./assets/images/index/flayer2.png"
+                alt="Promoción 2"
+                class="flyer-image"
+              />
+            </div>
+
+            <div class="carousel-slide-simple">
+              <img
+                src="./assets/images/index/flayer3.png"
+                alt="Promoción 3"
+                class="flyer-image"
+              />
+            </div>
+
+            <!-- Controles de navegación -->
+            <button class="carousel-btn prev-btn" aria-label="Anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next-btn" aria-label="Siguiente">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-dots">
+              <button class="dot active" data-slide="0"></button>
+              <button class="dot" data-slide="1"></button>
+              <button class="dot" data-slide="2"></button>
+            </div>
+          </div>
         </section>
 
         <!-- Benefits Banner -->
         <section class="benefits-banner fade-in">
-            <div class="benefits-container">
-                <div class="benefit-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="benefit-text">
-                    <h3>Únete al calor de la familia BRAMI</h3>
-                    <p>y descubre todos nuestros beneficios</p>
-                </div>
-                <div class="benefit-actions">
-                    <button class="btn-benefit-primary" onclick="alert('Funcionalidad de registro próximamente')">Regístrate</button>
-                    <button class="btn-benefit-secondary" onclick="alert('Funcionalidad de inicio de sesión próximamente')">Inicia Sesión</button>
-                </div>
+          <div class="benefits-container">
+            <div class="benefit-icon">
+              <i class="fas fa-heart"></i>
             </div>
+            <div class="benefit-text">
+              <h3>Únete al calor de la familia BRAMI</h3>
+              <p>y descubre todos nuestros beneficios</p>
+            </div>
+            <div class="benefit-actions">
+              <button
+                class="btn-benefit-primary"
+                onclick="alert('Funcionalidad de registro próximamente')"
+              >
+                Regístrate
+              </button>
+              <button
+                class="btn-benefit-secondary"
+                onclick="alert('Funcionalidad de inicio de sesión próximamente')"
+              >
+                Inicia Sesión
+              </button>
+            </div>
+          </div>
         </section>
 
         <!-- Menu Section -->
         <section id="menu" class="menu-section">
-            <div class="section-header fade-in">
-                <div class="section-icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <h2 class="section-title">NUEVOS SABORES AUTÉNTICOS</h2>
-                <p class="section-subtitle">Una selección especialmente diseñada para tu paladar</p>
+          <div class="section-header fade-in">
+            <div class="section-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h2 class="section-title">NUEVOS SABORES AUTÉNTICOS</h2>
+            <p class="section-subtitle">
+              Una selección especialmente diseñada para tu paladar
+            </p>
+          </div>
+
+          <div class="menu-new-layout">
+            <div class="menu-info-panel">
+              <h3 class="panel-title">EN BRAMI<br />DEBES SABER QUE...</h3>
+              <p class="panel-description">
+                ¡NUESTRO INTENSO SABOR, AROMA Y PRESENTACIÓN, NOS HACEN
+                AUTÉNTICOS Y ÚNICOS!
+              </p>
             </div>
 
-            <div class="menu-new-layout">
-                <div class="menu-info-panel">
-                    <h3 class="panel-title">EN BRAMI<br>DEBES SABER QUE...</h3>
-                    <p class="panel-description">¡NUESTRO INTENSO SABOR, AROMA Y PRESENTACIÓN, NOS HACEN AUTÉNTICOS Y ÚNICOS!</p>
+            <div class="menu-cards-grid">
+              <div class="menu-card-new" data-category="platos">
+                <div class="menu-card-image-new">
+                  <img
+                    data-src="./assets/images/index/lomosaltado.webp"
+                    alt="Lomo Saltado"
+                    class="lazy-load"
+                    loading="lazy"
+                  />
                 </div>
-
-                <div class="menu-cards-grid">
-                    <div class="menu-card-new" data-category="platos">
-                        <div class="menu-card-image-new">
-                            <img 
-                              data-src="./assets/images/index/lomosaltado.webp" 
-                              alt="Lomo Saltado"
-                              class="lazy-load"
-                              loading="lazy"
-                            >
-                        </div>
-                        <div class="menu-card-content-new">
-                            <h3>Platos a la Carta</h3>
-                            <p>Exquisitas preparaciones que deleitarán tu paladar</p>
-                            <a href="./pages/carta.html#platos-carta" class="btn-ver-plato">Ver plato</a>
-                        </div>
-                    </div>
-
-                    <div class="menu-card-new" data-category="piqueos">
-                        <div class="menu-card-image-new">
-                            <img 
-                              data-src="./assets/images/index/tequeños.webp" 
-                              alt="Tequeños"
-                              class="lazy-load"
-                              loading="lazy"
-                            >
-                        </div>
-                        <div class="menu-card-content-new">
-                            <h3>Piqueos</h3>
-                            <p>Perfectos para compartir y disfrutar en grupo</p>
-                            <a href="./pages/carta.html#piqueos" class="btn-ver-plato">Ver plato</a>
-                        </div>
-                    </div>
-
-                    <div class="menu-card-new" data-category="parrillas">
-                        <div class="menu-card-image-new">
-                            <img 
-                              data-src="./assets/images/index/parrilla.webp" 
-                              alt="Parrilla"
-                              class="lazy-load"
-                              loading="lazy"
-                            >
-                        </div>
-                        <div class="menu-card-content-new">
-                            <h3>Parrillas</h3>
-                            <p>Carnes selectas preparadas a la perfección</p>
-                            <a href="./pages/carta.html#parrillas" class="btn-ver-plato">Ver plato</a>
-                        </div>
-                    </div>
-
-                    <div class="menu-card-new" data-category="cocktails">
-                        <div class="menu-card-image-new">
-                            <img 
-                              data-src="./assets/images/index/cocteles.webp" 
-                              alt="Cocktails"
-                              class="lazy-load"
-                              loading="lazy"
-                            >
-                        </div>
-                        <div class="menu-card-content-new">
-                            <h3>Cocktails</h3>
-                            <p>Bebidas artesanales preparadas por expertos</p>
-                            <a href="./pages/carta.html#cocktails" class="btn-ver-plato">Ver plato</a>
-                        </div>
-                    </div>
+                <div class="menu-card-content-new">
+                  <h3>Platos a la Carta</h3>
+                  <p>Exquisitas preparaciones que deleitarán tu paladar</p>
+                  <a
+                    href="./pages/carta.html#platos-carta"
+                    class="btn-ver-plato"
+                    >Ver plato</a
+                  >
                 </div>
-            </div>
+              </div>
 
-            <div class="menu-more-btn-container">
-                <a href="./pages/carta.html" class="btn-ver-mas">VER MÁS</a>
+              <div class="menu-card-new" data-category="piqueos">
+                <div class="menu-card-image-new">
+                  <img
+                    data-src="./assets/images/index/tequeños.webp"
+                    alt="Tequeños"
+                    class="lazy-load"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card-content-new">
+                  <h3>Piqueos</h3>
+                  <p>Perfectos para compartir y disfrutar en grupo</p>
+                  <a href="./pages/carta.html#piqueos" class="btn-ver-plato"
+                    >Ver plato</a
+                  >
+                </div>
+              </div>
+
+              <div class="menu-card-new" data-category="parrillas">
+                <div class="menu-card-image-new">
+                  <img
+                    data-src="./assets/images/index/parrilla.webp"
+                    alt="Parrilla"
+                    class="lazy-load"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card-content-new">
+                  <h3>Parrillas</h3>
+                  <p>Carnes selectas preparadas a la perfección</p>
+                  <a href="./pages/carta.html#parrillas" class="btn-ver-plato"
+                    >Ver plato</a
+                  >
+                </div>
+              </div>
+
+              <div class="menu-card-new" data-category="cocktails">
+                <div class="menu-card-image-new">
+                  <img
+                    data-src="./assets/images/index/cocteles.webp"
+                    alt="Cocktails"
+                    class="lazy-load"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card-content-new">
+                  <h3>Cocktails</h3>
+                  <p>Bebidas artesanales preparadas por expertos</p>
+                  <a href="./pages/carta.html#cocktails" class="btn-ver-plato"
+                    >Ver plato</a
+                  >
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="menu-more-btn-container">
+            <a href="./pages/carta.html" class="btn-ver-mas">VER MÁS</a>
+          </div>
         </section>
 
         <!-- Events Section -->
         <section id="eventos" class="eventos-section">
-            <div class="section-header fade-in">
-                <span class="section-badge">Especiales</span>
-                <h2 class="section-title">EVENTOS Y PROMOCIONES</h2>
-                <p class="section-subtitle">No te pierdas nuestras actividades y ofertas especiales</p>
+          <div class="section-header fade-in">
+            <span class="section-badge">Especiales</span>
+            <h2 class="section-title">EVENTOS Y PROMOCIONES</h2>
+            <p class="section-subtitle">
+              No te pierdas nuestras actividades y ofertas especiales
+            </p>
+          </div>
+
+          <div class="eventos-grid">
+            <div class="evento-card">
+              <div class="evento-background">
+                <img src="/assets/images/index/happymiercoles.svg" alt="" />
+              </div>
+              <div class="evento-overlay"></div>
+              <div class="evento-content">
+                <h3 class="evento-nombre">Happy Hour — Miércoles</h3>
+                <p class="evento-descripcion">2x1 en cocktails de 8pm a 11pm</p>
+                <span class="evento-badge popular">Popular</span>
+              </div>
             </div>
 
-            <div class="eventos-grid">
-                <div class="evento-card">
-                    <div class="evento-background"><img src="/assets/images/index/happymiercoles.svg" alt=""></div>
-                    <div class="evento-overlay"></div>
-                    <div class="evento-content">
-                        <h3 class="evento-nombre">Happy Hour — Miércoles</h3>
-                        <p class="evento-descripcion">2x1 en cocktails de 8pm a 11pm</p>
-                        <span class="evento-badge popular">Popular</span>
-                    </div>
-                </div>
-
-                <div class="evento-card">
-                    <div class="evento-background"><img src="/assets/images/index/nochesalsa.svg" alt=""></div>
-                    <div class="evento-overlay"></div>
-                    <div class="evento-content">
-                        <h3 class="evento-nombre">Noche de Salsa</h3>
-                        <p class="evento-descripcion">Viernes con banda en vivo</p>
-                        <span class="evento-badge vivo">En vivo</span>
-                    </div>
-                </div>
-
-                <div class="evento-card">
-                    <div class="evento-background"><img src="/assets/images/index/membresia.png" alt=""></div>
-                    <div class="evento-overlay"></div>
-                    <div class="evento-content">
-                        <h3 class="evento-nombre">Tarjeta de Visitas</h3>
-                        <p class="evento-descripcion">Por cada visita recibe un sello y en tu 5ta visita recibe un cocktail o cerveza gratis!</p>
-                        <span class="evento-badge beneficio">Beneficio</span>
-                    </div>
-                </div>
+            <div class="evento-card">
+              <div class="evento-background">
+                <img src="/assets/images/index/nochesalsa.svg" alt="" />
+              </div>
+              <div class="evento-overlay"></div>
+              <div class="evento-content">
+                <h3 class="evento-nombre">Noche de Salsa</h3>
+                <p class="evento-descripcion">Viernes con banda en vivo</p>
+                <span class="evento-badge vivo">En vivo</span>
+              </div>
             </div>
+
+            <div class="evento-card">
+              <div class="evento-background">
+                <img src="/assets/images/index/membresia.png" alt="" />
+              </div>
+              <div class="evento-overlay"></div>
+              <div class="evento-content">
+                <h3 class="evento-nombre">Tarjeta de Visitas</h3>
+                <p class="evento-descripcion">
+                  Por cada visita recibe un sello y en tu 5ta visita recibe un
+                  cocktail o cerveza gratis!
+                </p>
+                <span class="evento-badge beneficio">Beneficio</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- Community Section -->
         <section class="community-section fade-in">
-            <div class="community-content">
-                <span class="section-badge">Síguenos</span>
-                <h2 class="section-title">NUESTRA COMUNIDAD</h2>
-                <p class="section-subtitle">Únete a nuestra familia y comparte tus momentos especiales</p>
-                
-                <div class="social-proof">
-                    <div class="social-stat">
-                        <i class="fab fa-instagram"></i>
-                        <span class="stat-number">5K+</span>
-                        <span class="stat-label">Seguidores</span>
-                    </div>
-                    <div class="social-stat">
-                        <i class="fas fa-users"></i>
-                        <span class="stat-number">10K+</span>
-                        <span class="stat-label">Clientes felices</span>
-                    </div>
-                    <div class="social-stat">
-                        <i class="fas fa-star"></i>
-                        <span class="stat-number">4.8</span>
-                        <span class="stat-label">Calificación</span>
-                    </div>
-                </div>
+          <div class="community-content">
+            <span class="section-badge">Síguenos</span>
+            <h2 class="section-title">NUESTRA COMUNIDAD</h2>
+            <p class="section-subtitle">
+              Únete a nuestra familia y comparte tus momentos especiales
+            </p>
 
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><button class="btn-primary">Síguenos en Instagram</button></a>
+            <div class="social-proof">
+              <div class="social-stat">
+                <i class="fab fa-instagram"></i>
+                <span class="stat-number">5K+</span>
+                <span class="stat-label">Seguidores</span>
+              </div>
+              <div class="social-stat">
+                <i class="fas fa-users"></i>
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Clientes felices</span>
+              </div>
+              <div class="social-stat">
+                <i class="fas fa-star"></i>
+                <span class="stat-number">4.8</span>
+                <span class="stat-label">Calificación</span>
+              </div>
             </div>
-            
-            <div class="community-gallery">
-                <div class="gallery-item">
-                  <img 
-                    data-src="./assets/images/index/comunidad1.svg" 
-                    alt="Galería 1"
-                    class="lazy-load"
-                    loading="lazy"
-                  >
-                </div>
-                <div class="gallery-item">
-                  <img 
-                    data-src="./assets/images/index/comunidad3.svg" 
-                    alt="Galería 2"
-                    class="lazy-load"
-                    loading="lazy"
-                  >
-                </div>
-                <div class="gallery-item">
-                  <img 
-                    data-src="./assets/images/index/comunidad4.svg" 
-                    alt="Galería 3"
-                    class="lazy-load"
-                    loading="lazy"
-                  >
-                </div>
-                <div class="gallery-item">
-                  <img 
-                    data-src="./assets/images/index/comunidad2.svg" 
-                    alt="Galería 4"
-                    class="lazy-load"
-                    loading="lazy"
-                  >
-                </div>
+
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><button class="btn-primary">Síguenos en Instagram</button></a
+            >
+          </div>
+
+          <div class="community-gallery">
+            <div class="gallery-item">
+              <img
+                data-src="./assets/images/index/comunidad1.svg"
+                alt="Galería 1"
+                class="lazy-load"
+                loading="lazy"
+              />
             </div>
+            <div class="gallery-item">
+              <img
+                data-src="./assets/images/index/comunidad3.svg"
+                alt="Galería 2"
+                class="lazy-load"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                data-src="./assets/images/index/comunidad4.svg"
+                alt="Galería 3"
+                class="lazy-load"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                data-src="./assets/images/index/comunidad2.svg"
+                alt="Galería 4"
+                class="lazy-load"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </section>
-    </main>
+      </main>
 
-    <!--Footer-->
-    <footer class="footer-pagina">
-      <div class="contenedor-footer">
-        <div class="footer-logo">
-          <img
-            data-src="./assets/images/logo/marcaPng.webp"
-            alt="logo Brami"
-            class="pie-logo lazy-load"
-            loading="lazy"
-          />
-          <div class="pie-contacto">
-            <p>Brami restobar es más que un</p>
-            <p>restobar donde podrás crear recuerdos</p>
-            <p>con tu familia o amigos.</p>
-            <p>¡Te esperamos!</p>
-          </div>
-        </div>
-
-        <div class="footer-nav">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/botella.svg" alt="icono navegación" loading="lazy" />
-              Navegación
-            </span>
-          </h4>
-          <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="./pages/carta.html">Carta</a></li>
-            <li><a href="./pages/promociones.html">Promociones</a></li>
-            <li><a href="./pages/reservas.html">Reservar</a></li>
-          </ul>
-        </div>
-
-        <div class="Ubicacion">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/ubicacion.svg" alt="icono ubicación" loading="lazy" />
-              Ubícanos en
-            </span>
-          </h4>
-          <p>Av. Los Fresnos 123, Santiago de Surco, Lima</p>
-          <iframe
-            src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
-            width="360"
-            height="220"
-            allowfullscreen
-            loading="lazy"
-          >
-          </iframe>
-        </div>
-
-        <div class="footer-horarios">
-          <h4>
-            <span class="footer-icon-title">
-              <img src="./assets/svg/reloj.svg" alt="icono reloj" loading="lazy" />
-              HORARIOS
-            </span>
-          </h4>
-          <p>Lunes a viernes 05:00 p.m. a 02:00 a.m.</p>
-          <p>Sábado : 5 p.m. - 4 a.m.</p>
-          <p>Domingo : 4 p.m. - 12 a.m.</p>
-
-          <div class="footer-contacto">
-            <p>
-              <img
-                src="./assets/svg/telf.svg"
-                alt="Teléfono"
-                class="icono-contacto"
-                loading="lazy"
-              />
-              Telf: 987654321
-            </p>
-            <p>
-              <img
-                src="./assets/svg/email.svg"
-                alt="Correo"
-                class="icono-contacto"
-                loading="lazy"
-              />
-              Email: info@bramirestobar.com
-            </p>
-          </div>
-        </div>
-
-        <div class="footer-metodos-pago">
-          <h4>
-            <span class="footer-icon-title">
-              <img
-                src="./assets/svg/metpago.svg"
-                alt="icono métodos de pago"
-                loading="lazy"
-              />
-              Métodos de pago:
-            </span>
-          </h4>
-          <div class="footer-iconos-pago">
-            <img src="./assets/svg/visa.svg" alt="Visa" loading="lazy" />
-            <img src="./assets/svg/mastercard.svg" alt="MasterCard" loading="lazy" />
-            <img src="./assets/svg/amex.svg" alt="Amex" loading="lazy" />
-            <img src="./assets/svg/billteras.svg" alt="Billeteras" loading="lazy" />
-          </div>
-        </div>
-
-        <div class="footer-siguenos">
-          <h4>Síguenos a través de</h4>
-          <div class="footer-redes">
-            <a href="#" aria-label="Instagram"
-              ><img src="./assets/svg/instagram.svg" alt="Instagram" loading="lazy"
-            /></a>
-            <a href="#" aria-label="Facebook"
-              ><img src="./assets/svg/facebook.svg" alt="Facebook" loading="lazy"
-            /></a>
-            <a href="#" aria-label="Twitter"
-              ><img src="./assets/svg/twitter.svg" alt="Twitter" loading="lazy"
-            /></a>
+      <!--Footer-->
+      <footer class="footer-pagina">
+        <div class="contenedor-footer">
+          <!-- Col 1: Logo + descripción -->
+          <div class="footer-logo">
+            <img
+              src="../assets/images/logo/marcaPng.webp"
+              alt="logo Brami"
+              class="pie-logo"
+            />
+            <div class="pie-contacto">
+              <p>Brami restobar es más que un</p>
+              <p>restobar donde podrás crear recuerdos</p>
+              <p>con tu familia o amigos.</p>
+              <p>¡Te esperamos!</p>
+            </div>
           </div>
 
-          <div class="footer-reclamaciones">
-            <a href="#" class="footer-enlace-reclamaciones">
-              <p><strong>Libro de reclamaciones</strong></p>
-              <img
-                src="./assets/svg/libro-reclamaciones.svg"
-                alt="Libro de reclamaciones"
-                loading="lazy"
-              />
-            </a>
+          <!-- Col 2: Navegación -->
+          <!-- <div class="footer-nav">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/botella.svg" alt="icono navegación" />
+                Navegación
+              </span>
+            </h4>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./carta.html">Carta</a></li>
+              <li><a href="./promociones.html">Promociones</a></li>
+              <li><a href="./reservas.html">Reservar</a></li>
+            </ul>
+          </div>  -->
+
+          <!-- Col 3: Ubícanos -->
+          <div class="Ubicacion">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/ubicacion.svg" alt="icono ubicación" />
+                Ubícanos en
+              </span>
+            </h4>
+            <p>Av. Los Fresnos 123, Santiago de Surco, Lima</p>
+            <iframe
+              src="https://www.google.com/maps?q=Av.+Los+Fresnos+123,+Santiago+de+Surco,+Lima&output=embed"
+              width="360"
+              height="220"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+
+          <!-- Col 4: Horarios + contacto -->
+          <div class="footer-horarios">
+            <h4>
+              <span class="footer-icon-title">
+                <img src="../assets/svg/reloj.svg" alt="icono reloj" />
+                HORARIOS
+              </span>
+            </h4>
+            <p>Lunes a viernes 05:00 p.m. a 02:00 a.m.</p>
+            <p>Sábado : 5 p.m. - 4 a.m.</p>
+            <p>Domingo : 4 p.m. - 12 a.m.</p>
+
+            <div class="footer-contacto">
+              <p>
+                <img
+                  src="../assets/svg/telf.svg"
+                  alt="Teléfono"
+                  class="icono-contacto"
+                />
+                Telf: 987654321
+              </p>
+              <p>
+                <img
+                  src="../assets/svg/email.svg"
+                  alt="Correo"
+                  class="icono-contacto"
+                />
+                Email: info@bramirestobar.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Col 5: Métodos de pago -->
+          <div class="footer-metodos-pago">
+            <h4>
+              <span class="footer-icon-title">
+                <img
+                  src="../assets/svg/metpago.svg"
+                  alt="icono métodos de pago"
+                />
+                Métodos de pago:
+              </span>
+            </h4>
+            <div class="footer-iconos-pago">
+              <img src="../assets/svg/visa.svg" alt="Visa" />
+              <img src="../assets/svg/mastercard.svg" alt="MasterCard" />
+              <img src="../assets/svg/amex.svg" alt="Amex" />
+              <img src="../assets/svg/billteras.svg" alt="Billeteras" />
+            </div>
+          </div>
+
+          <!-- Col 6: Síguenos + Libro de reclamaciones -->
+          <div class="footer-siguenos">
+            <h4>Síguenos a través de</h4>
+            <div class="footer-redes">
+              <a href="#" aria-label="Instagram"
+                ><img src="../assets/svg/instagram.svg" alt="Instagram"
+              /></a>
+              <a href="#" aria-label="Facebook"
+                ><img src="../assets/svg/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="Twitter"
+                ><img src="../assets/svg/twitter.svg" alt="Twitter"
+              /></a>
+            </div>
+
+            <div class="footer-reclamaciones">
+              <a href="#" class="footer-enlace-reclamaciones">
+                <img
+                  src="../assets/svg/libro-reclamaciones.svg"
+                  alt="Libro de reclamaciones"
+                />
+                <p><strong>Libro de reclamaciones</strong></p>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script>
       // ============ CAROUSEL SIMPLE FUNCTIONALITY ============
-      
+
       class SimpleCarousel {
         constructor() {
           this.currentSlide = 0;
-          this.slides = document.querySelectorAll('.carousel-slide-simple');
-          this.dots = document.querySelectorAll('.dot');
-          this.prevBtn = document.querySelector('.prev-btn');
-          this.nextBtn = document.querySelector('.next-btn');
+          this.slides = document.querySelectorAll(".carousel-slide-simple");
+          this.dots = document.querySelectorAll(".dot");
+          this.prevBtn = document.querySelector(".prev-btn");
+          this.nextBtn = document.querySelector(".next-btn");
           this.autoPlayInterval = null;
           this.autoPlayDelay = 4000; // 4 segundos
 
@@ -500,18 +581,18 @@
 
         init() {
           // Event listeners para botones
-          this.prevBtn.addEventListener('click', () => this.prevSlide());
-          this.nextBtn.addEventListener('click', () => this.nextSlide());
+          this.prevBtn.addEventListener("click", () => this.prevSlide());
+          this.nextBtn.addEventListener("click", () => this.nextSlide());
 
           // Event listeners para dots
           this.dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => this.goToSlide(index));
+            dot.addEventListener("click", () => this.goToSlide(index));
           });
 
           // Keyboard navigation
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') this.prevSlide();
-            if (e.key === 'ArrowRight') this.nextSlide();
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") this.prevSlide();
+            if (e.key === "ArrowRight") this.nextSlide();
           });
 
           // Touch/swipe support
@@ -521,17 +602,17 @@
           this.startAutoPlay();
 
           // Pause on hover
-          const wrapper = document.querySelector('.carousel-wrapper');
-          wrapper.addEventListener('mouseenter', () => this.stopAutoPlay());
-          wrapper.addEventListener('mouseleave', () => this.startAutoPlay());
+          const wrapper = document.querySelector(".carousel-wrapper");
+          wrapper.addEventListener("mouseenter", () => this.stopAutoPlay());
+          wrapper.addEventListener("mouseleave", () => this.startAutoPlay());
         }
 
         goToSlide(index) {
-          this.slides[this.currentSlide].classList.remove('active');
-          this.dots[this.currentSlide].classList.remove('active');
+          this.slides[this.currentSlide].classList.remove("active");
+          this.dots[this.currentSlide].classList.remove("active");
           this.currentSlide = index;
-          this.slides[this.currentSlide].classList.add('active');
-          this.dots[this.currentSlide].classList.add('active');
+          this.slides[this.currentSlide].classList.add("active");
+          this.dots[this.currentSlide].classList.add("active");
         }
 
         nextSlide() {
@@ -540,12 +621,16 @@
         }
 
         prevSlide() {
-          const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+          const prevIndex =
+            (this.currentSlide - 1 + this.slides.length) % this.slides.length;
           this.goToSlide(prevIndex);
         }
 
         startAutoPlay() {
-          this.autoPlayInterval = setInterval(() => this.nextSlide(), this.autoPlayDelay);
+          this.autoPlayInterval = setInterval(
+            () => this.nextSlide(),
+            this.autoPlayDelay
+          );
         }
 
         stopAutoPlay() {
@@ -558,13 +643,13 @@
         addSwipeSupport() {
           let touchStartX = 0;
           let touchEndX = 0;
-          const wrapper = document.querySelector('.carousel-wrapper');
+          const wrapper = document.querySelector(".carousel-wrapper");
 
-          wrapper.addEventListener('touchstart', (e) => {
+          wrapper.addEventListener("touchstart", (e) => {
             touchStartX = e.changedTouches[0].screenX;
           });
 
-          wrapper.addEventListener('touchend', (e) => {
+          wrapper.addEventListener("touchend", (e) => {
             touchEndX = e.changedTouches[0].screenX;
             this.handleSwipe();
           });
@@ -577,67 +662,75 @@
       }
 
       // ============ LAZY LOADING ============
-      
-      const lazyLoadImages = () => {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-              if (img.tagName === 'IMG' && img.dataset.src) {
-                img.src = img.dataset.src;
-                img.classList.add('loaded');
-                img.removeAttribute('data-src');
-              }
-              observer.unobserve(img);
-            }
-          });
-        }, {
-          rootMargin: '50px',
-          threshold: 0.01
-        });
 
-        document.querySelectorAll('.lazy-load').forEach(img => {
+      const lazyLoadImages = () => {
+        const imageObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.tagName === "IMG" && img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.classList.add("loaded");
+                  img.removeAttribute("data-src");
+                }
+                observer.unobserve(img);
+              }
+            });
+          },
+          {
+            rootMargin: "50px",
+            threshold: 0.01,
+          }
+        );
+
+        document.querySelectorAll(".lazy-load").forEach((img) => {
           imageObserver.observe(img);
         });
       };
 
       const animateOnScroll = () => {
-        const fadeObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, {
-          threshold: 0.1,
-          rootMargin: '0px 0px -100px 0px'
-        });
+        const fadeObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -100px 0px",
+          }
+        );
 
-        document.querySelectorAll('.fade-in, .menu-card, .evento-card, .gallery-item').forEach(el => {
-          fadeObserver.observe(el);
-        });
+        document
+          .querySelectorAll(".fade-in, .menu-card, .evento-card, .gallery-item")
+          .forEach((el) => {
+            fadeObserver.observe(el);
+          });
       };
 
       const addStaggerEffect = () => {
-        const menuCards = document.querySelectorAll('.menu-card');
+        const menuCards = document.querySelectorAll(".menu-card");
         menuCards.forEach((card, index) => {
           card.style.transitionDelay = `${index * 0.1}s`;
         });
 
-        const eventoCards = document.querySelectorAll('.evento-card');
+        const eventoCards = document.querySelectorAll(".evento-card");
         eventoCards.forEach((card, index) => {
           card.style.transitionDelay = `${index * 0.15}s`;
         });
 
-        const galleryItems = document.querySelectorAll('.gallery-item');
+        const galleryItems = document.querySelectorAll(".gallery-item");
         galleryItems.forEach((item, index) => {
           item.style.transitionDelay = `${index * 0.1}s`;
         });
       };
 
       // ============ INIT ============
-      
-      document.addEventListener('DOMContentLoaded', function() {
+
+      document.addEventListener("DOMContentLoaded", function () {
         // Inicializar carousel
         new SimpleCarousel();
 
@@ -646,59 +739,60 @@
         animateOnScroll();
         addStaggerEffect();
 
-        const menuToggle = document.getElementById('menu-toggle');
-        const overlay = document.querySelector('.overlay');
+        const menuToggle = document.getElementById("menu-toggle");
+        const overlay = document.querySelector(".overlay");
         const body = document.body;
 
-        overlay.addEventListener('click', function() {
+        overlay.addEventListener("click", function () {
           menuToggle.checked = false;
-          body.classList.remove('no-scroll');
+          body.classList.remove("no-scroll");
         });
 
-        menuToggle.addEventListener('change', function() {
+        menuToggle.addEventListener("change", function () {
           if (this.checked) {
-            body.classList.add('no-scroll');
+            body.classList.add("no-scroll");
           } else {
-            body.classList.remove('no-scroll');
+            body.classList.remove("no-scroll");
           }
         });
 
-        const navLinks = document.querySelectorAll('.nav-list a');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
+        const navLinks = document.querySelectorAll(".nav-list a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
             menuToggle.checked = false;
-            body.classList.remove('no-scroll');
+            body.classList.remove("no-scroll");
           });
         });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(this.getAttribute("href"));
             if (target) {
-              const headerHeight = document.querySelector('.main-header').offsetHeight;
+              const headerHeight =
+                document.querySelector(".main-header").offsetHeight;
               const targetPosition = target.offsetTop - headerHeight;
               window.scrollTo({
                 top: targetPosition,
-                behavior: 'smooth'
+                behavior: "smooth",
               });
             }
           });
         });
 
         let lastScroll = 0;
-        window.addEventListener('scroll', function() {
-          const header = document.querySelector('.main-header');
+        window.addEventListener("scroll", function () {
+          const header = document.querySelector(".main-header");
           const currentScroll = window.pageYOffset;
-          
+
           if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-            header.style.background = 'rgba(0, 0, 0, 0.98)';
+            header.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.5)";
+            header.style.background = "rgba(0, 0, 0, 0.98)";
           } else {
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-            header.style.background = 'rgba(0, 0, 0, 0.95)';
+            header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.3)";
+            header.style.background = "rgba(0, 0, 0, 0.95)";
           }
-          
+
           lastScroll = currentScroll;
         });
 
@@ -708,25 +802,34 @@
           const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
-              element.textContent = target + (element.textContent.includes('+') ? '+' : '');
+              element.textContent =
+                target + (element.textContent.includes("+") ? "+" : "");
               clearInterval(timer);
             } else {
-              element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '');
+              element.textContent =
+                Math.floor(current) +
+                (element.textContent.includes("+") ? "+" : "");
             }
           }, 30);
         };
 
-        const statsObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-              const target = entry.target.textContent.replace(/[^0-9.]/g, '');
-              animateCounter(entry.target, parseFloat(target));
-              entry.target.classList.add('animated');
-            }
-          });
-        }, { threshold: 0.5 });
+        const statsObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (
+                entry.isIntersecting &&
+                !entry.target.classList.contains("animated")
+              ) {
+                const target = entry.target.textContent.replace(/[^0-9.]/g, "");
+                animateCounter(entry.target, parseFloat(target));
+                entry.target.classList.add("animated");
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
 
-        document.querySelectorAll('.stat-number').forEach(stat => {
+        document.querySelectorAll(".stat-number").forEach((stat) => {
           statsObserver.observe(stat);
         });
       });
