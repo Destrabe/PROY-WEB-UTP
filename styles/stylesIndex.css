@@ -60,6 +60,11 @@ body.no-scroll {
   transition: transform var(--transition-fast);
 }
 
+#menu-toggle:checked + .hamburger {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .menu-toggle {
   display: none;
 }
@@ -353,12 +358,14 @@ main {
   position: relative;
   width: 100%;
   background: #1a1a1a;
+  height: 80vh;
+  min-height: 500px;
 }
 
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  height: 780px;
+  height: 100%;
   overflow: hidden;
   background: #1a1a1a;
 }
@@ -372,7 +379,10 @@ main {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition: opacity 0.5s ease-in-out, visibility 0.8s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-slide-simple.active {
@@ -1370,6 +1380,11 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
+
+  .hero-carousel-simple {
+        height: 50vh;
+        min-height: 400px;
+    }
 }
 
 /* Tablet pequeña */
@@ -1464,6 +1479,11 @@ main {
   .panel-description {
     font-size: 16px;
   }
+
+  .hero-carousel-simple {
+        height: 40vh;
+        min-height: 250px;
+    }
 }
 
 /* Móvil */
