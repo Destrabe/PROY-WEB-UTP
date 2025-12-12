@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brami - Carta</title>
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="preload" href="/styles/global.css" as="style" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/menu.css" />
@@ -47,8 +47,12 @@
     <div class="filter-container">
       <div class="filter-wrapper">
         <button class="filter-btn active" data-category="all">Todos</button>
-        <button class="filter-btn" data-category="best-sellers">Más Vendidos</button>
-        <button class="filter-btn" data-category="platos">Platos a la Carta</button>
+        <button class="filter-btn" data-category="best-sellers">
+          Más Vendidos
+        </button>
+        <button class="filter-btn" data-category="platos">
+          Platos a la Carta
+        </button>
         <button class="filter-btn" data-category="piqueos">Piqueos</button>
         <button class="filter-btn" data-category="parrillas">Parrillas</button>
         <button class="filter-btn" data-category="cocteles">Cócteles</button>
@@ -73,15 +77,20 @@
         <div class="products-grid">
           <div class="product-card">
             <div class="product-image">
-              <img src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp" alt="Lomo Saltado" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍽️</span>
+              <img
+                src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp"
+                alt="Lomo Saltado"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍽️</span>
               </div>
             </div>
             <div class="product-info">
               <h3 class="product-name">Lomo Saltado</h3>
               <p class="product-description">
-                Delicioso lomo saltado con carne de res, cebolla, tomate y papas fritas
+                Delicioso lomo saltado con carne de res, cebolla, tomate y papas
+                fritas
               </p>
               <div class="product-price">S/ 19</div>
               <button class="add-btn">Agregar</button>
@@ -90,9 +99,13 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg" alt="Alitas BBQ" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg"
+                alt="Alitas BBQ"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="product-info">
@@ -107,9 +120,13 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg" alt="Pisco Sour" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍹</span>
+              <img
+                src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg"
+                alt="Pisco Sour"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍹</span>
               </div>
             </div>
             <div class="product-info">
@@ -124,26 +141,35 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="https://iperu.pe/assets/images/bistec-a-lo-pobre_800x534.webp" alt="Bistec a lo Pobre" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🥩</span>
+              <img
+                src="https://iperu.pe/assets/images/bistec-a-lo-pobre_800x534.webp"
+                alt="Bistec a lo Pobre"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🥩</span>
               </div>
             </div>
             <div class="product-info">
               <h3 class="product-name">Bistec a lo Pobre</h3>
               <p class="product-description">
-                Jugoso bistec con arroz, huevo frito, plátano maduro y papas fritas
+                Jugoso bistec con arroz, huevo frito, plátano maduro y papas
+                fritas
               </p>
               <div class="product-price">S/ 23</div>
               <button class="add-btn">Agregar</button>
             </div>
           </div>
-        
+
           <div class="product-card">
             <div class="product-image">
-              <img src="https://storage.googleapis.com/fitia_public_images/recipes%2FPE-R-V-00000054_py9v6w9ivzx8yjhaqa2y8z53_large.jpeg" alt="Chicharrón de Pollo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://storage.googleapis.com/fitia_public_images/recipes%2FPE-R-V-00000054_py9v6w9ivzx8yjhaqa2y8z53_large.jpeg"
+                alt="Chicharrón de Pollo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="product-info">
@@ -158,9 +184,13 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/ef/1a/25/mojito-sabores.jpg" alt="Mojito" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🌿</span>
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0c/ef/1a/25/mojito-sabores.jpg"
+                alt="Mojito"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🌿</span>
               </div>
             </div>
             <div class="product-info">
@@ -175,9 +205,13 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/06/19/6490842c015fab27f801c3f6.png" alt="Tallarin Verde" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍝</span>
+              <img
+                src="https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/06/19/6490842c015fab27f801c3f6.png"
+                alt="Tallarin Verde"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍝</span>
               </div>
             </div>
             <div class="product-info">
@@ -198,22 +232,31 @@
           <div class="category-icon">🍽️</div>
           <div class="category-info">
             <h2 class="category-title">Platos a la Carta</h2>
-            <p class="category-description">Descubre los sabores auténticos de nuestros platos principales</p>
+            <p class="category-description">
+              Descubre los sabores auténticos de nuestros platos principales
+            </p>
           </div>
         </div>
 
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp" alt="Lomo Saltado" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍽️</span>
+              <img
+                src="https://jameaperu.com/assets/images/lomo-saltado_800x534.webp"
+                alt="Lomo Saltado"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍽️</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Lomo Saltado</h3>
-                <p class="menu-description">Tradicional lomo saltado con carne de res, cebolla, tomate, papas fritas y arroz</p>
+                <p class="menu-description">
+                  Tradicional lomo saltado con carne de res, cebolla, tomate,
+                  papas fritas y arroz
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 19</span>
@@ -224,15 +267,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEht6ZPJNHd0IKuXmkPM_c4_UhFGoJD8qYg&s" alt="Pollo a la Plancha" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEht6ZPJNHd0IKuXmkPM_c4_UhFGoJD8qYg&s"
+                alt="Pollo a la Plancha"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Pollo a la Plancha</h3>
-                <p class="menu-description">Pollo o carne a la plancha con guarnición a elección</p>
+                <p class="menu-description">
+                  Pollo o carne a la plancha con guarnición a elección
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 17</span>
@@ -243,15 +292,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/06/19/6490842c015fab27f801c3f6.png" alt="Tallarin Verde" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍝</span>
+              <img
+                src="https://imgmedia.buenazo.pe/1200x660/buenazo/original/2023/06/19/6490842c015fab27f801c3f6.png"
+                alt="Tallarin Verde"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍝</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Tallarin Verde</h3>
-                <p class="menu-description">Tallarines en salsa de albahaca con bistec o milanesa</p>
+                <p class="menu-description">
+                  Tallarines en salsa de albahaca con bistec o milanesa
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -262,15 +317,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Arroz_chaufa_simple.JPG/960px-Arroz_chaufa_simple.JPG" alt="Arroz Chaufa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍚</span>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Arroz_chaufa_simple.JPG/960px-Arroz_chaufa_simple.JPG"
+                alt="Arroz Chaufa"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍚</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Arroz Chaufa</h3>
-                <p class="menu-description">Arroz chaufa con pollo o carne al estilo chifa</p>
+                <p class="menu-description">
+                  Arroz chaufa con pollo o carne al estilo chifa
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 14</span>
@@ -281,15 +342,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://larepublica.cronosmedia.glr.pe/original/2021/11/30/61a6937c280736437576cb49.jpg" alt="Arroz a la Cubana" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍳</span>
+              <img
+                src="https://larepublica.cronosmedia.glr.pe/original/2021/11/30/61a6937c280736437576cb49.jpg"
+                alt="Arroz a la Cubana"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍳</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Arroz a la Cubana</h3>
-                <p class="menu-description">Arroz blanco con huevo frito y plátano maduro frito</p>
+                <p class="menu-description">
+                  Arroz blanco con huevo frito y plátano maduro frito
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 13</span>
@@ -300,15 +367,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://storage.googleapis.com/fitia_public_images/recipes%2FPE-R-V-00000054_py9v6w9ivzx8yjhaqa2y8z53_large.jpeg" alt="Chicharron de Pollo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://storage.googleapis.com/fitia_public_images/recipes%2FPE-R-V-00000054_py9v6w9ivzx8yjhaqa2y8z53_large.jpeg"
+                alt="Chicharron de Pollo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Chicharron de Pollo</h3>
-                <p class="menu-description">Crujiente chicharrón de pollo acompañado de papas y ensalada</p>
+                <p class="menu-description">
+                  Crujiente chicharrón de pollo acompañado de papas y ensalada
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 19</span>
@@ -319,15 +392,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://iperu.pe/assets/images/bistec-a-lo-pobre_800x534.webp" alt="Bistec a lo Pobre" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🥩</span>
+              <img
+                src="https://iperu.pe/assets/images/bistec-a-lo-pobre_800x534.webp"
+                alt="Bistec a lo Pobre"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🥩</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Bistec a lo Pobre</h3>
-                <p class="menu-description">Bistec de res con arroz, huevo frito, plátano y papas fritas</p>
+                <p class="menu-description">
+                  Bistec de res con arroz, huevo frito, plátano y papas fritas
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 23</span>
@@ -344,22 +423,30 @@
           <div class="category-icon">🍴</div>
           <div class="category-info">
             <h2 class="category-title">Piqueos</h2>
-            <p class="category-description">Deliciosos aperitivos para compartir</p>
+            <p class="category-description">
+              Deliciosos aperitivos para compartir
+            </p>
           </div>
         </div>
 
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg" alt="Alitas BBQ 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://tb-static.uber.com/prod/image-proc/processed_images/3af2066bb750569db8996d97e11d785c/bc9c318a9c96996e2d990faf2b0c65f6.jpeg"
+                alt="Alitas BBQ 6"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Alitas a la BBQ (6 Piezas)</h3>
-                <p class="menu-description">Deliciosas alitas bañadas en salsa BBQ con papas fritas</p>
+                <p class="menu-description">
+                  Deliciosas alitas bañadas en salsa BBQ con papas fritas
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 19</span>
@@ -370,15 +457,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://wongfood.vtexassets.com/arquivos/ids/458566/Alitas-de-Pollo-a-La-Barbecue-Wong-Bolsa-x-1-Kg-2-155646680.jpg?v=637625172660400000" alt="Alitas BBQ 12" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://wongfood.vtexassets.com/arquivos/ids/458566/Alitas-de-Pollo-a-La-Barbecue-Wong-Bolsa-x-1-Kg-2-155646680.jpg?v=637625172660400000"
+                alt="Alitas BBQ 12"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Alitas a la BBQ (12 Piezas)</h3>
-                <p class="menu-description">Porción familiar de alitas en salsa BBQ</p>
+                <p class="menu-description">
+                  Porción familiar de alitas en salsa BBQ
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 38</span>
@@ -389,15 +482,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://www.salsasangucheria.com/wp-content/uploads/2022/03/alitasdoce.png" alt="Alitas Picantes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🔥</span>
+              <img
+                src="https://www.salsasangucheria.com/wp-content/uploads/2022/03/alitasdoce.png"
+                alt="Alitas Picantes"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🔥</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Alitas Picantes</h3>
-                <p class="menu-description">Alitas con salsa picante y aderezo ranch</p>
+                <p class="menu-description">
+                  Alitas con salsa picante y aderezo ranch
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 19</span>
@@ -408,15 +507,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://imag.bonviveur.com/pollo-broaster.jpg" alt="Alitas Broaster" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://imag.bonviveur.com/pollo-broaster.jpg"
+                alt="Alitas Broaster"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Alitas Broaster</h3>
-                <p class="menu-description">Crujientes alitas estilo broaster</p>
+                <p class="menu-description">
+                  Crujientes alitas estilo broaster
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 14</span>
@@ -427,15 +532,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://polleriabrasasdelcentro.wordpress.com/wp-content/uploads/2021/07/broster.png?w=1024" alt="Pierna Broaster" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://polleriabrasasdelcentro.wordpress.com/wp-content/uploads/2021/07/broster.png?w=1024"
+                alt="Pierna Broaster"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Pierna Broaster</h3>
-                <p class="menu-description">Pierna de pollo estilo broaster con papas</p>
+                <p class="menu-description">
+                  Pierna de pollo estilo broaster con papas
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -446,15 +557,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://tse1.explicit.bing.net/th/id/OIP.fGyaz3G32eLp6NO6vlEGbAHaE6?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tequeños" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🧀</span>
+              <img
+                src="https://tse1.explicit.bing.net/th/id/OIP.fGyaz3G32eLp6NO6vlEGbAHaE6?rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="Tequeños"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🧀</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Tequeños (10 unidades)</h3>
-                <p class="menu-description">Tequeños rellenos de queso con salsas</p>
+                <p class="menu-description">
+                  Tequeños rellenos de queso con salsas
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 14</span>
@@ -465,15 +582,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://tofuu.getjusto.com/orioneat-local/resized2/27tqswvGa7hJn5PHS-2400-x.webp" alt="Salchipapa Clásica" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🌭</span>
+              <img
+                src="https://tofuu.getjusto.com/orioneat-local/resized2/27tqswvGa7hJn5PHS-2400-x.webp"
+                alt="Salchipapa Clásica"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🌭</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Salchipapa Clásica</h3>
-                <p class="menu-description">Salchichas con papas fritas y salsas</p>
+                <p class="menu-description">
+                  Salchichas con papas fritas y salsas
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 12</span>
@@ -484,15 +607,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://tofuu.getjusto.com/orioneat-local/resized2/4RFnRWb4G3PpJF2y3-2400-x.webp" alt="Salchipapa Royal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">👑</span>
+              <img
+                src="https://tofuu.getjusto.com/orioneat-local/resized2/4RFnRWb4G3PpJF2y3-2400-x.webp"
+                alt="Salchipapa Royal"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">👑</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Salchipapa Royal</h3>
-                <p class="menu-description">Salchipapa especial con ingredientes premium</p>
+                <p class="menu-description">
+                  Salchipapa especial con ingredientes premium
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 18</span>
@@ -509,22 +638,30 @@
           <div class="category-icon">🥩</div>
           <div class="category-info">
             <h2 class="category-title">Parrillas</h2>
-            <p class="category-description">Carnes a la parrilla en su punto perfecto</p>
+            <p class="category-description">
+              Carnes a la parrilla en su punto perfecto
+            </p>
           </div>
         </div>
 
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://peru21.pe/sites/default/efsfiles/2023-11/75XZKEFCCJET3BEJVKAUL6JZUE.jpeg" alt="Chancho a la Caja China" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🐷</span>
+              <img
+                src="https://peru21.pe/sites/default/efsfiles/2023-11/75XZKEFCCJET3BEJVKAUL6JZUE.jpeg"
+                alt="Chancho a la Caja China"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🐷</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Chancho a la Caja China</h3>
-                <p class="menu-description">Chancho asado en caja china, jugoso y crocante</p>
+                <p class="menu-description">
+                  Chancho asado en caja china, jugoso y crocante
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 22</span>
@@ -535,15 +672,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://loopbar.pe/images/al-cilindro/pollo-ahumado-familiar.png" alt="Pollo al Cilindro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍗</span>
+              <img
+                src="https://loopbar.pe/images/al-cilindro/pollo-ahumado-familiar.png"
+                alt="Pollo al Cilindro"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍗</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Pollo al Cilindro</h3>
-                <p class="menu-description">Pollo asado al cilindro con sabor ahumado</p>
+                <p class="menu-description">
+                  Pollo asado al cilindro con sabor ahumado
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 22</span>
@@ -554,15 +697,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://i.ytimg.com/vi/howBchjxNBk/maxresdefault.jpg" alt="Chancho al Cilindro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🐷</span>
+              <img
+                src="https://i.ytimg.com/vi/howBchjxNBk/maxresdefault.jpg"
+                alt="Chancho al Cilindro"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🐷</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Chancho al Cilindro</h3>
-                <p class="menu-description">Chancho asado al cilindro con guarniciones</p>
+                <p class="menu-description">
+                  Chancho asado al cilindro con guarniciones
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 22</span>
@@ -579,22 +728,30 @@
           <div class="category-icon">🍹</div>
           <div class="category-info">
             <h2 class="category-title">Cócteles</h2>
-            <p class="category-description">Bebidas refrescantes preparadas al momento</p>
+            <p class="category-description">
+              Bebidas refrescantes preparadas al momento
+            </p>
           </div>
         </div>
 
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg" alt="Pisco Sour" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍋</span>
+              <img
+                src="https://perupationline.com/wp-content/uploads/2021/02/PISCO-SOUR.jpg"
+                alt="Pisco Sour"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍋</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Pisco Sour</h3>
-                <p class="menu-description">Pisco quebranta, jarabe de goma, limón, amargo de angostura</p>
+                <p class="menu-description">
+                  Pisco quebranta, jarabe de goma, limón, amargo de angostura
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 18</span>
@@ -605,15 +762,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/dd/2a/ea/machu-picchu-drink-yum.jpg" alt="Machu Picchu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🏔️</span>
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0f/dd/2a/ea/machu-picchu-drink-yum.jpg"
+                alt="Machu Picchu"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🏔️</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Machu Picchu</h3>
-                <p class="menu-description">Menta, zumo de naranja, granadina, pisco</p>
+                <p class="menu-description">
+                  Menta, zumo de naranja, granadina, pisco
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 20</span>
@@ -624,15 +787,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://static01.nyt.com/images/2023/08/17/multimedia/ND-Tequila-Sunrise/LH-Sangria-tjvl-jumbo.jpg" alt="Tequila Sunrise" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🌅</span>
+              <img
+                src="https://static01.nyt.com/images/2023/08/17/multimedia/ND-Tequila-Sunrise/LH-Sangria-tjvl-jumbo.jpg"
+                alt="Tequila Sunrise"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🌅</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Tequila Sunrise</h3>
-                <p class="menu-description">Tequila, zumo de naranja, granadina</p>
+                <p class="menu-description">
+                  Tequila, zumo de naranja, granadina
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 18</span>
@@ -643,15 +812,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://live.staticflickr.com/650/21845693136_817fbb6268_b.jpg" alt="Baileys Frozen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍫</span>
+              <img
+                src="https://live.staticflickr.com/650/21845693136_817fbb6268_b.jpg"
+                alt="Baileys Frozen"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍫</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Baileys Frozen</h3>
-                <p class="menu-description">Baileys, vodka, leche condensada, salsa de chocolate</p>
+                <p class="menu-description">
+                  Baileys, vodka, leche condensada, salsa de chocolate
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 22</span>
@@ -662,15 +837,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://diariocorreo.pe/resizer/LX7RWLPcN5YBkQHevPQB_MfEmjY=/1200x1200/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NGBMGGMMVBF5VHUFFP4B6TBOPM.jpg" alt="Chilcano" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍹</span>
+              <img
+                src="https://diariocorreo.pe/resizer/LX7RWLPcN5YBkQHevPQB_MfEmjY=/1200x1200/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NGBMGGMMVBF5VHUFFP4B6TBOPM.jpg"
+                alt="Chilcano"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍹</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Chilcano</h3>
-                <p class="menu-description">Clásico, mango, fresa, maracuyá, maracumango</p>
+                <p class="menu-description">
+                  Clásico, mango, fresa, maracuyá, maracumango
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -681,15 +862,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://foodmetamorphosis.com/wp-content/uploads/2023/01/pina-colada-mocktail-1.jpg" alt="Piña Colada" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍍</span>
+              <img
+                src="https://foodmetamorphosis.com/wp-content/uploads/2023/01/pina-colada-mocktail-1.jpg"
+                alt="Piña Colada"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍍</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Piña Colada</h3>
-                <p class="menu-description">Ron blanco, crema de coco, piña, jarabe de goma</p>
+                <p class="menu-description">
+                  Ron blanco, crema de coco, piña, jarabe de goma
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 20</span>
@@ -700,15 +887,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://img-global.cpcdn.com/recipes/6722e3db42d12974/680x781cq80/coctel-barbados-surprise-foto-principal.jpg" alt="Barbados" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🏝️</span>
+              <img
+                src="https://img-global.cpcdn.com/recipes/6722e3db42d12974/680x781cq80/coctel-barbados-surprise-foto-principal.jpg"
+                alt="Barbados"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🏝️</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Barbados</h3>
-                <p class="menu-description">Blue curacao, jugo de naranja, granadina, ron blanco</p>
+                <p class="menu-description">
+                  Blue curacao, jugo de naranja, granadina, ron blanco
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 20</span>
@@ -719,15 +912,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://www.pequerecetas.com/wp-content/uploads/2020/09/coctel-margarita.jpg" alt="Margarita" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍹</span>
+              <img
+                src="https://www.pequerecetas.com/wp-content/uploads/2020/09/coctel-margarita.jpg"
+                alt="Margarita"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍹</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Margarita</h3>
-                <p class="menu-description">Tequila, triple seco, zumo de limón</p>
+                <p class="menu-description">
+                  Tequila, triple seco, zumo de limón
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 18</span>
@@ -738,15 +937,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://cf.ltkcdn.net/cocktails/images/orig/307663-1600x1066-three-frozen-daiquiris.jpg" alt="Daikiri Frozen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍓</span>
+              <img
+                src="https://cf.ltkcdn.net/cocktails/images/orig/307663-1600x1066-three-frozen-daiquiris.jpg"
+                alt="Daikiri Frozen"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍓</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Daikiri Frozen</h3>
-                <p class="menu-description">Ron blanco, azúcar blanca, zumo de limón, fresa/mango/maracuyá</p>
+                <p class="menu-description">
+                  Ron blanco, azúcar blanca, zumo de limón, fresa/mango/maracuyá
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 20</span>
@@ -757,9 +962,13 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/ef/1a/25/mojito-sabores.jpg" alt="Mojito" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🌿</span>
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0c/ef/1a/25/mojito-sabores.jpg"
+                alt="Mojito"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🌿</span>
               </div>
             </div>
             <div class="menu-info">
@@ -782,22 +991,30 @@
           <div class="category-icon">🥤</div>
           <div class="category-info">
             <h2 class="category-title">Jugos</h2>
-            <p class="category-description">Jugos naturales frescos y saludables</p>
+            <p class="category-description">
+              Jugos naturales frescos y saludables
+            </p>
           </div>
         </div>
 
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://tse4.mm.bing.net/th/id/OIP.LKDWo-JO82Q92dgsehJbhgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Limonada Frozen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍋</span>
+              <img
+                src="https://tse4.mm.bing.net/th/id/OIP.LKDWo-JO82Q92dgsehJbhgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="Limonada Frozen"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍋</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Jugo Limonada Frozen</h3>
-                <p class="menu-description">Limones, tazas de hielo, agua fría, azúcar, hojas de menta</p>
+                <p class="menu-description">
+                  Limones, tazas de hielo, agua fría, azúcar, hojas de menta
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -808,15 +1025,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://www.cocina-cubana.com/base/stock/Recipe/jugo-de-mango/jugo-de-mango_web.jpg" alt="Jugo de Mango" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🥭</span>
+              <img
+                src="https://www.cocina-cubana.com/base/stock/Recipe/jugo-de-mango/jugo-de-mango_web.jpg"
+                alt="Jugo de Mango"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🥭</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Jugo de Mango</h3>
-                <p class="menu-description">Mangos frescos, azúcar, agua fría</p>
+                <p class="menu-description">
+                  Mangos frescos, azúcar, agua fría
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -827,15 +1050,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://nutrichefpty.com/wp-content/uploads/2025/04/jugode-fresa-en-eche-.jpg" alt="Jugo de Fresa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍓</span>
+              <img
+                src="https://nutrichefpty.com/wp-content/uploads/2025/04/jugode-fresa-en-eche-.jpg"
+                alt="Jugo de Fresa"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍓</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Jugo de Fresa</h3>
-                <p class="menu-description">Fresas frescas, azúcar, agua fría</p>
+                <p class="menu-description">
+                  Fresas frescas, azúcar, agua fría
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -846,9 +1075,13 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://www.laylita.com/recetas/wp-content/uploads/2016/09/Jugo-de-pina-casero.jpg" alt="Jugo de Piña" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍍</span>
+              <img
+                src="https://www.laylita.com/recetas/wp-content/uploads/2016/09/Jugo-de-pina-casero.jpg"
+                alt="Jugo de Piña"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍍</span>
               </div>
             </div>
             <div class="menu-info">
@@ -865,15 +1098,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://media.gq.com.mx/photos/5e31d403309f5700081fc82c/master/pass/GettyImages-909604746.jpg" alt="Jugo de Naranja" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍊</span>
+              <img
+                src="https://media.gq.com.mx/photos/5e31d403309f5700081fc82c/master/pass/GettyImages-909604746.jpg"
+                alt="Jugo de Naranja"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍊</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Jugo de Naranja</h3>
-                <p class="menu-description">Naranjas frescas, azúcar, agua fría</p>
+                <p class="menu-description">
+                  Naranjas frescas, azúcar, agua fría
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 16</span>
@@ -884,9 +1123,13 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://misuperjugo.com/images/jugo-sandia.jpg" alt="Jugo de Sandía" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍉</span>
+              <img
+                src="https://misuperjugo.com/images/jugo-sandia.jpg"
+                alt="Jugo de Sandía"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍉</span>
               </div>
             </div>
             <div class="menu-info">
@@ -916,15 +1159,21 @@
         <div class="menu-grid">
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://i.pinimg.com/736x/8b/9a/7f/8b9a7f30f080c2ba04453cad460518ad.jpg" alt="Cerveza Pilsen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍺</span>
+              <img
+                src="https://i.pinimg.com/736x/8b/9a/7f/8b9a7f30f080c2ba04453cad460518ad.jpg"
+                alt="Cerveza Pilsen"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍺</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Cerveza Pilsen</h3>
-                <p class="menu-description">Cerveza Pilsen botella 650ml bien helada</p>
+                <p class="menu-description">
+                  Cerveza Pilsen botella 650ml bien helada
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 10</span>
@@ -935,15 +1184,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://3.bp.blogspot.com/-Xd2Oa0wW0Gw/UncF7W8ZqKI/AAAAAAABH-c/TjMxcb8eguk/s1600/.12.png" alt="Cerveza Cusqueña" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍺</span>
+              <img
+                src="https://3.bp.blogspot.com/-Xd2Oa0wW0Gw/UncF7W8ZqKI/AAAAAAABH-c/TjMxcb8eguk/s1600/.12.png"
+                alt="Cerveza Cusqueña"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍺</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Cerveza Cusqueña</h3>
-                <p class="menu-description">Cerveza Cusqueña botella 650ml bien helada</p>
+                <p class="menu-description">
+                  Cerveza Cusqueña botella 650ml bien helada
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 12</span>
@@ -954,15 +1209,21 @@
 
           <div class="menu-card">
             <div class="menu-image">
-              <img src="https://static.mercadonegro.pe/wp-content/uploads/2019/11/22202556/Screenshot_2-1.jpg" alt="Cerveza Cristal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="placeholder-image" style="display: none;">
-                <span style="font-size: 60px;">🍺</span>
+              <img
+                src="https://static.mercadonegro.pe/wp-content/uploads/2019/11/22202556/Screenshot_2-1.jpg"
+                alt="Cerveza Cristal"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="placeholder-image" style="display: none">
+                <span style="font-size: 60px">🍺</span>
               </div>
             </div>
             <div class="menu-info">
               <div>
                 <h3 class="menu-name">Cerveza Cristal</h3>
-                <p class="menu-description">Cerveza Cristal botella 650ml bien helada</p>
+                <p class="menu-description">
+                  Cerveza Cristal botella 650ml bien helada
+                </p>
               </div>
               <div class="menu-footer">
                 <span class="menu-price">S/ 12</span>
