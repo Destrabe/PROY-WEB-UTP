@@ -1,4 +1,3 @@
-// ============ CAROUSEL SIMPLE FUNCTIONALITY ============
 class SimpleCarousel {
   constructor() {
     this.currentSlide = 0;
@@ -7,34 +6,22 @@ class SimpleCarousel {
     this.prevBtn = document.querySelector(".prev-btn");
     this.nextBtn = document.querySelector(".next-btn");
     this.autoPlayInterval = null;
-    this.autoPlayDelay = 4000; // 4 segundos
-
+    this.autoPlayDelay = 4000;
     this.init();
   }
 
   init() {
-    // Event listeners para botones
     this.prevBtn.addEventListener("click", () => this.prevSlide());
     this.nextBtn.addEventListener("click", () => this.nextSlide());
-
-    // Event listeners para dots
     this.dots.forEach((dot, index) => {
       dot.addEventListener("click", () => this.goToSlide(index));
     });
-
-    // Keyboard navigation
     document.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft") this.prevSlide();
       if (e.key === "ArrowRight") this.nextSlide();
     });
-
-    // Touch/swipe support
     this.addSwipeSupport();
-
-    // Auto play
     this.startAutoPlay();
-
-    // Pause on hover
     const wrapper = document.querySelector(".carousel-wrapper");
     wrapper.addEventListener("mouseenter", () => this.stopAutoPlay());
     wrapper.addEventListener("mouseleave", () => this.startAutoPlay());
@@ -77,24 +64,19 @@ class SimpleCarousel {
     let touchStartX = 0;
     let touchEndX = 0;
     const wrapper = document.querySelector(".carousel-wrapper");
-
     wrapper.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
     });
-
     wrapper.addEventListener("touchend", (e) => {
       touchEndX = e.changedTouches[0].screenX;
       this.handleSwipe();
     });
-
     this.handleSwipe = () => {
       if (touchEndX < touchStartX - 50) this.nextSlide();
       if (touchEndX > touchStartX + 50) this.prevSlide();
     };
   }
 }
-
-// ============ LAZY LOADING ============
 
 const lazyLoadImages = () => {
   const imageObserver = new IntersectionObserver(
@@ -116,7 +98,6 @@ const lazyLoadImages = () => {
       threshold: 0.01,
     }
   );
-
   document.querySelectorAll(".lazy-load").forEach((img) => {
     imageObserver.observe(img);
   });
@@ -136,7 +117,6 @@ const animateOnScroll = () => {
       rootMargin: "0px 0px -100px 0px",
     }
   );
-
   document
     .querySelectorAll(".fade-in, .menu-card, .evento-card, .gallery-item")
     .forEach((el) => {
@@ -149,38 +129,28 @@ const addStaggerEffect = () => {
   menuCards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.1}s`;
   });
-
   const eventoCards = document.querySelectorAll(".evento-card");
   eventoCards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.15}s`;
   });
-
   const galleryItems = document.querySelectorAll(".gallery-item");
   galleryItems.forEach((item, index) => {
     item.style.transitionDelay = `${index * 0.1}s`;
   });
 };
 
-// ============ INIT ============
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Inicializar carousel
   new SimpleCarousel();
-
-  // Inicializar lazy loading
   lazyLoadImages();
   animateOnScroll();
   addStaggerEffect();
-
   const menuToggle = document.getElementById("menu-toggle");
   const overlay = document.querySelector(".overlay");
   const body = document.body;
-
   overlay.addEventListener("click", function () {
     menuToggle.checked = false;
     body.classList.remove("no-scroll");
   });
-
   menuToggle.addEventListener("change", function () {
     if (this.checked) {
       body.classList.add("no-scroll");
@@ -188,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("no-scroll");
     }
   });
-
   const navLinks = document.querySelectorAll(".nav-list a");
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
@@ -196,7 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("no-scroll");
     });
   });
-
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -212,12 +180,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
   let lastScroll = 0;
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".main-header");
     const currentScroll = window.pageYOffset;
-
     if (currentScroll > 100) {
       header.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.5)";
       header.style.background = "rgba(0, 0, 0, 0.98)";
@@ -225,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
       header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.3)";
       header.style.background = "rgba(0, 0, 0, 0.95)";
     }
-
     lastScroll = currentScroll;
   });
 

@@ -1,5 +1,4 @@
 const form = document.getElementById("reserva");
-
 const alertCard = document.getElementById("alert-card");
 const alertMessage = document.getElementById("alert-message");
 const closeCard = document.getElementById("close-card");
@@ -12,7 +11,6 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = Object.fromEntries(new FormData(form));
-
   const data = {
     nombre: formData.name.trim(),
     apellido: formData.apellido.trim(),

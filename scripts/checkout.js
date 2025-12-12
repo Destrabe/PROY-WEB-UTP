@@ -1,17 +1,9 @@
-// ============================================
-// CHECKOUT SYSTEM - VERSION MEJORADA
-// ============================================
-
 document.addEventListener("DOMContentLoaded", function () {
-  // ============================================
-  // ELEMENTOS DEL DOM
-  // ============================================
   const steps = document.querySelectorAll(".step");
   const formSections = document.querySelectorAll(".form-section");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const checkoutBtn = document.querySelector(".checkout-btn");
-
   const deliveryOptions = document.querySelectorAll(".delivery-option");
   const paymentMethods = document.querySelectorAll(".payment-method");
   const direccionSection = document.getElementById("direccion-section");
@@ -21,13 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const qtyBtns = document.querySelectorAll(".qty-btn");
   const promoBtn = document.querySelector(".promo-btn");
   const promoInput = document.querySelector(".promo-input");
-
-  // ============================================
-  // ESTADO DEL CHECKOUT
-  // ============================================
   let currentStep = 1;
   const totalSteps = 3;
-
   let checkoutState = {
     subtotal: 75.0,
     deliveryCost: 5.0,
@@ -44,42 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
       instrucciones: "",
     },
   };
-
-  // ============================================
-  // NAVEGACIÓN ENTRE PASOS
-  // ============================================
   function showStep(step) {
-    // Ocultar todas las secciones
     formSections.forEach((section) => {
       section.classList.remove("active");
     });
-
-    // Mostrar secciones del paso actual
     const currentSections = document.querySelectorAll(
       `[data-step-content="${step}"]`
     );
     currentSections.forEach((section) => {
       section.classList.add("active");
     });
-
-    // Actualizar indicador de pasos
     updateStepsIndicator(step);
-
-    // Actualizar botones de navegación
     updateNavigationButtons(step);
-
-    // Scroll al inicio
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
   function updateStepsIndicator(step) {
     steps.forEach((stepElement, index) => {
       const stepNumber = index + 1;
-
-      // Remover todas las clases
       stepElement.classList.remove("active", "completed");
-
-      // Agregar clases según el estado
       if (stepNumber < step) {
         stepElement.classList.add("completed");
       } else if (stepNumber === step) {
@@ -89,14 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateNavigationButtons(step) {
-    // Botón anterior
     if (step === 1) {
       prevBtn.style.display = "none";
     } else {
       prevBtn.style.display = "flex";
     }
-
-    // Botón siguiente
     if (step === totalSteps) {
       nextBtn.style.display = "none";
     } else {
@@ -104,20 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ============================================
-  // VALIDACIÓN POR PASOS
-  // ============================================
   function validateStep(step) {
     let isValid = true;
     let errorMessage = "";
-
     switch (step) {
       case 1:
-        // Validar información personal
         const nombre = document.getElementById("nombre").value.trim();
         const telefono = document.getElementById("telefono").value.trim();
         const email = document.getElementById("email").value.trim();
-
         if (!nombre) {
           isValid = false;
           errorMessage = "Por favor ingresa tu nombre completo";
@@ -128,8 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
           isValid = false;
           errorMessage = "Por favor ingresa un email válido";
         }
-
-        // Guardar datos
         if (isValid) {
           checkoutState.formData.nombre = nombre;
           checkoutState.formData.telefono = telefono;
@@ -138,11 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
 
       case 2:
-        // Validar entrega
         if (checkoutState.deliveryType === "delivery") {
           const direccion = document.getElementById("direccion").value.trim();
           const distrito = document.getElementById("distrito").value;
-
           if (!direccion) {
             isValid = false;
             errorMessage = "Por favor ingresa tu dirección";
@@ -150,8 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
             errorMessage = "Por favor selecciona tu distrito";
           }
-
-          // Guardar datos
           if (isValid) {
             checkoutState.formData.direccion = direccion;
             checkoutState.formData.distrito = distrito;
@@ -166,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
 
       case 3:
-        // Validar método de pago
         if (checkoutState.paymentMethod === "tarjeta") {
           const cardNumber = document
             .getElementById("card-number")
@@ -175,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .getElementById("card-expiry")
             .value.trim();
           const cardCvv = document.getElementById("card-cvv").value.trim();
-
           if (!cardNumber || cardNumber.replace(/\s/g, "").length < 16) {
             isValid = false;
             errorMessage = "Por favor ingresa un número de tarjeta válido";
@@ -193,18 +145,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isValid) {
       showNotification(errorMessage, "error");
     }
-
     return isValid;
   }
-
   function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
-
-  // ============================================
-  // EVENT LISTENERS - NAVEGACIÓN
-  // ============================================
   nextBtn.addEventListener("click", function () {
     if (validateStep(currentStep)) {
       if (currentStep < totalSteps) {
@@ -214,25 +160,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
   prevBtn.addEventListener("click", function () {
     if (currentStep > 1) {
       currentStep--;
       showStep(currentStep);
     }
   });
-
-  // Click en los círculos de pasos
   steps.forEach((step, index) => {
     step.addEventListener("click", function () {
       const targetStep = index + 1;
-
-      // Solo permitir ir a pasos anteriores o al paso actual
       if (targetStep <= currentStep) {
         currentStep = targetStep;
         showStep(currentStep);
       } else {
-        // Validar pasos intermedios
         let canProceed = true;
         for (let i = 1; i < targetStep; i++) {
           if (!validateStep(i)) {
@@ -240,7 +180,6 @@ document.addEventListener("DOMContentLoaded", function () {
             break;
           }
         }
-
         if (canProceed) {
           currentStep = targetStep;
           showStep(currentStep);
@@ -248,18 +187,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // ============================================
-  // OPCIONES DE ENTREGA
-  // ============================================
   deliveryOptions.forEach((option) => {
     option.addEventListener("click", function () {
       deliveryOptions.forEach((opt) => opt.classList.remove("active"));
       this.classList.add("active");
-
       const deliveryType = this.querySelector('input[type="radio"]').value;
       checkoutState.deliveryType = deliveryType;
-
       if (deliveryType === "delivery") {
         direccionSection.style.display = "block";
         checkoutState.deliveryCost = 5.0;
@@ -267,22 +200,15 @@ document.addEventListener("DOMContentLoaded", function () {
         direccionSection.style.display = "none";
         checkoutState.deliveryCost = 0;
       }
-
       updateTotals();
     });
   });
-
-  // ============================================
-  // MÉTODOS DE PAGO
-  // ============================================
   paymentMethods.forEach((method) => {
     method.addEventListener("click", function () {
       paymentMethods.forEach((m) => m.classList.remove("active"));
       this.classList.add("active");
-
       const paymentType = this.querySelector('input[type="radio"]').value;
       checkoutState.paymentMethod = paymentType;
-
       if (paymentType === "tarjeta") {
         cardDetails.style.display = "block";
       } else {
@@ -290,69 +216,50 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // ============================================
-  // CANTIDADES DE PRODUCTOS
-  // ============================================
   qtyBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-
       const orderItem = this.closest(".order-item");
       const qtyValue = orderItem.querySelector(".qty-value");
       const itemPrice = orderItem.querySelector(".item-price");
       let currentQty = parseInt(qtyValue.textContent);
-
       const totalPrice = parseFloat(
         itemPrice.textContent.replace("S/", "").trim()
       );
       const unitPrice = totalPrice / currentQty;
-
       if (this.textContent.includes("+")) {
         currentQty++;
       } else if (this.textContent.includes("−") && currentQty > 1) {
         currentQty--;
       }
-
       qtyValue.textContent = currentQty;
       itemPrice.textContent = `S/ ${(unitPrice * currentQty).toFixed(2)}`;
-
       recalculateSubtotal();
       updateTotals();
     });
   });
-
-  // ============================================
-  // CÓDIGO PROMOCIONAL
-  // ============================================
   promoBtn.addEventListener("click", function () {
     const promoCode = promoInput.value.trim().toUpperCase();
-
     const promoCodes = {
       BRAMI10: { type: "percentage", value: 10 },
       BRAMI20: { type: "percentage", value: 20 },
       PRIMERA: { type: "fixed", value: 5 },
       BIENVENIDO: { type: "fixed", value: 10 },
     };
-
     if (promoCode && promoCodes[promoCode]) {
       const promo = promoCodes[promoCode];
-
       if (promo.type === "percentage") {
         checkoutState.discount = (checkoutState.subtotal * promo.value) / 100;
       } else {
         checkoutState.discount = promo.value;
       }
-
       showNotification(
         `¡Código aplicado! S/ ${checkoutState.discount.toFixed(
           2
         )} de descuento`,
         "success"
       );
-
       document.querySelector(".total-row.discount").style.display = "flex";
-
       promoInput.disabled = true;
       promoBtn.disabled = true;
       promoBtn.textContent = "Aplicado ✓";
@@ -363,67 +270,47 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       showNotification("Ingresa un código promocional", "error");
     }
-
     updateTotals();
   });
-
-  // ============================================
-  // CÁLCULOS
-  // ============================================
   function recalculateSubtotal() {
     let newSubtotal = 0;
-
     document.querySelectorAll(".order-item").forEach((item) => {
       const price = parseFloat(
         item.querySelector(".item-price").textContent.replace("S/", "").trim()
       );
       newSubtotal += price;
     });
-
     checkoutState.subtotal = newSubtotal;
-
-    // Recalcular descuento porcentual si existe
     if (checkoutState.discount > 0) {
       const promoCode = promoInput.value.trim().toUpperCase();
       const promoCodes = { BRAMI10: 10, BRAMI20: 20 };
-
       if (promoCodes[promoCode]) {
         checkoutState.discount =
           (checkoutState.subtotal * promoCodes[promoCode]) / 100;
       }
     }
   }
-
   function updateTotals() {
     document.querySelector(
       ".total-row:first-child span:last-child"
     ).textContent = `S/ ${checkoutState.subtotal.toFixed(2)}`;
-
     deliveryCostElement.textContent =
       checkoutState.deliveryCost > 0
         ? `S/ ${checkoutState.deliveryCost.toFixed(2)}`
         : "Gratis";
-
     if (checkoutState.discount > 0) {
       document.querySelector(
         ".discount-amount"
       ).textContent = `- S/ ${checkoutState.discount.toFixed(2)}`;
     }
-
     const total =
       checkoutState.subtotal +
       checkoutState.deliveryCost -
       checkoutState.discount;
     totalAmountElement.textContent = `S/ ${total.toFixed(2)}`;
   }
-
-  // ============================================
-  // FINALIZAR PEDIDO
-  // ============================================
   checkoutBtn.addEventListener("click", function (e) {
     e.preventDefault();
-
-    // Validar todos los pasos
     let allStepsValid = true;
     for (let i = 1; i <= totalSteps; i++) {
       if (!validateStep(i)) {
@@ -433,12 +320,9 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       }
     }
-
     if (!allStepsValid) {
       return;
     }
-
-    // Preparar datos del pedido
     const orderData = {
       cliente: checkoutState.formData,
       entrega: {
@@ -460,21 +344,12 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       fecha: new Date().toISOString(),
     };
-
-    // Simular procesamiento
     checkoutBtn.disabled = true;
     checkoutBtn.innerHTML = "<span>Procesando pedido...</span>";
-
     setTimeout(() => {
       console.log("Pedido procesado:", orderData);
-
-      // Guardar en localStorage
       localStorage.setItem("lastOrder", JSON.stringify(orderData));
-
-      // Mostrar modal de confirmación
       showOrderConfirmationModal(orderData);
-
-      // Restaurar botón
       checkoutBtn.disabled = false;
       checkoutBtn.innerHTML =
         '<span>Confirmar Pedido</span><span class="btn-arrow">→</span>';
@@ -494,10 +369,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     return items;
   }
-
-  // ============================================
-  // SISTEMA DE NOTIFICACIONES
-  // ============================================
   function showNotification(message, type = "info") {
     const existingNotification = document.querySelector(".notification");
     if (existingNotification) {
@@ -507,7 +378,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const notification = document.createElement("div");
     notification.className = `notification notification-${type}`;
 
-    // Crear icono según el tipo
     let icon = "";
     if (type === "success") {
       icon =
@@ -556,8 +426,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => notification.remove(), 300);
     }, 3000);
   }
-
-  // Agregar estilos de notificaciones
   const style = document.createElement("style");
   style.textContent = `
         .notification-icon {
@@ -590,11 +458,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   document.head.appendChild(style);
 
-  // ============================================
-  // MODAL DE CONFIRMACIÓN DE PEDIDO
-  // ============================================
   function showOrderConfirmationModal(orderData) {
-    // Crear modal de confirmación
     const modal = document.createElement("div");
     modal.className = "order-confirmation-modal";
     modal.innerHTML = `
@@ -670,8 +534,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 </button>
             </div>
         `;
-
-    // Agregar estilos del modal
     const modalStyle = document.createElement("style");
     modalStyle.textContent = `
             .order-confirmation-modal {
@@ -968,15 +830,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.head.appendChild(modalStyle);
     document.body.appendChild(modal);
-
-    // Manejar click en el botón "Entendido"
     document
       .getElementById("confirmModalBtn")
       .addEventListener("click", function () {
         modal.style.animation = "fadeOut 0.3s ease";
         setTimeout(() => {
           modal.remove();
-          // Redirigir a la página principal
           window.location.href = "/index.html";
         }, 300);
       });
@@ -991,9 +850,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return methods[method] || method;
   }
 
-  // ============================================
-  // FORMATEO DE INPUTS
-  // ============================================
   const cardNumberInput = document.getElementById("card-number");
   if (cardNumberInput) {
     cardNumberInput.addEventListener("input", function (e) {
@@ -1028,12 +884,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ============================================
-  // INICIALIZACIÓN
-  // ============================================
   showStep(currentStep);
   updateTotals();
-
   console.log("Checkout system initialized successfully");
   console.log("Current step:", currentStep);
 });
