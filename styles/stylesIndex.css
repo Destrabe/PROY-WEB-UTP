@@ -634,7 +634,7 @@ main {
 
 .menu-section .section-title,
 .menu-section .section-subtitle {
-  color: var(--color-);
+  color: white;
 }
 
 .menu-section .section-badge {
