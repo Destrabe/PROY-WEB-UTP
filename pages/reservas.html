@@ -24,16 +24,11 @@
   </head>
   <body>
     <div class="order">
-      <!--Header-->
       <header>
         <input type="checkbox" id="menu-checkbox" />
-
-        <label for="menu-checkbox" class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
+        <label for="menu-checkbox" class="menu-toggle"
+          ><span></span><span></span><span></span
+        ></label>
         <div class="header-brand">
           <img
             src="../assets/images/logo/favicon.webp"
@@ -42,7 +37,6 @@
           />
           <h1>BRAMI</h1>
         </div>
-
         <nav>
           <a href="/index.html">Inicio</a>
           <a href="/pages/carta.html">Carta</a>
@@ -50,10 +44,7 @@
           <a href="/pages/reservas.html">Reservas</a>
         </nav>
       </header>
-
-      <!--Main-->
       <main>
-        <!-- Sección Hero -->
         <section class="seccion-hero">
           <div class="superposicion-hero"></div>
           <div class="contenido-hero">
@@ -62,8 +53,6 @@
             <div class="divisor-hero"></div>
           </div>
         </section>
-
-        <!-- Formulario -->
         <div class="seccion-formulario">
           <div class="contenedor">
             <form
@@ -72,13 +61,11 @@
               method="post"
               action="javascripts:void(0);"
             >
-              <!-- Información Personal -->
               <div class="bloque-formulario">
                 <div class="encabezado-bloque">
                   <span class="numero-bloque">01</span>
                   <h2 class="titulo-bloque">Información Personal</h2>
                 </div>
-
                 <div class="cuadricula-formulario">
                   <div class="campo-formulario">
                     <label for="nombre">Nombre</label>
@@ -90,7 +77,6 @@
                       required
                     />
                   </div>
-
                   <div class="campo-formulario">
                     <label for="apellido">Apellido</label>
                     <input
@@ -101,7 +87,6 @@
                       required
                     />
                   </div>
-
                   <div class="campo-formulario">
                     <label for="email">Correo Electrónico</label>
                     <input
@@ -112,7 +97,6 @@
                       required
                     />
                   </div>
-
                   <div class="campo-formulario">
                     <label for="telefono">Teléfono</label>
                     <input
@@ -123,7 +107,6 @@
                       required
                     />
                   </div>
-
                   <div class="campo-formulario">
                     <label for="tipo-documento">Tipo de Documento</label>
                     <select id="tipo-documento" name="tipo_documento" required>
@@ -135,7 +118,6 @@
                       <option value="ruc">RUC</option>
                     </select>
                   </div>
-
                   <div class="campo-formulario">
                     <label for="numero-documento">N° de Documento</label>
                     <input
@@ -149,14 +131,11 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Detalles de la Reserva -->
               <div class="bloque-formulario">
                 <div class="encabezado-bloque">
                   <span class="numero-bloque">02</span>
                   <h2 class="titulo-bloque">Detalles de la Reserva</h2>
                 </div>
-
                 <div class="cuadricula-formulario">
                   <div class="campo-formulario ancho-completo">
                     <label for="cantidad-personas">Cantidad de Personas</label>
@@ -181,17 +160,14 @@
                       <option value="otro">Más de 10 personas</option>
                     </select>
                   </div>
-
                   <div class="campo-formulario">
                     <label for="fecha">Fecha</label>
                     <input type="date" id="fecha" name="fecha" required />
                   </div>
-
                   <div class="campo-formulario">
                     <label for="hora">Hora</label>
                     <input type="time" id="hora" name="hora" required />
                   </div>
-
                   <div class="campo-formulario ancho-completo">
                     <label for="observaciones"
                       >Observaciones
@@ -205,7 +181,6 @@
                     ></textarea>
                   </div>
                 </div>
-
                 <div class="caja-info">
                   <p>
                     Recibirás una confirmación por correo electrónico dentro de
@@ -213,15 +188,12 @@
                   </p>
                 </div>
               </div>
-
               <button type="submit" class="boton-enviar">
                 <span>Confirmar Reserva</span>
               </button>
             </form>
           </div>
         </div>
-
-        <!--Card-->
         <div id="alert-card" class="hidden">
           <div class="card">
             <div class="card-header">
@@ -242,10 +214,8 @@
           </div>
         </div>
       </main>
-      <!--Footer-->
       <footer class="footer-pagina">
         <div class="contenedor-footer">
-          <!-- Col 1: Logo + descripción -->
           <div class="footer-logo">
             <img
               src="../assets/images/logo/marcaPng.webp"
@@ -259,30 +229,14 @@
               <p>¡Te esperamos!</p>
             </div>
           </div>
-
-          <!-- Col 2: Navegación -->
-          <!-- <div class="footer-nav">
-            <h4>
-              <span class="footer-icon-title">
-                <img src="../assets/svg/botella.svg" alt="icono navegación" />
-                Navegación
-              </span>
-            </h4>
-            <ul>
-              <li><a href="../index.html">Inicio</a></li>
-              <li><a href="./carta.html">Carta</a></li>
-              <li><a href="./promociones.html">Promociones</a></li>
-              <li><a href="./reservas.html">Reservar</a></li>
-            </ul>
-          </div>  -->
-
-          <!-- Col 3: Ubícanos -->
           <div class="Ubicacion">
             <h4>
-              <span class="footer-icon-title">
-                <img src="../assets/svg/ubicacion.svg" alt="icono ubicación" />
-                Ubícanos en
-              </span>
+              <span class="footer-icon-title"
+                ><img
+                  src="../assets/svg/ubicacion.svg"
+                  alt="icono ubicación"
+                />Ubícanos en</span
+              >
             </h4>
             <p>Av. Los Fresnos 123, Santiago de Surco, Lima</p>
             <iframe
@@ -292,52 +246,45 @@
               allowfullscreen
               loading="lazy"
               title="Mapa de la ubicación de Brami en Av. Los Fresnos 123"
-            >
-            </iframe>
+            ></iframe>
           </div>
-
-          <!-- Col 4: Horarios + contacto -->
           <div class="footer-horarios">
             <h4>
-              <span class="footer-icon-title">
-                <img src="../assets/svg/reloj.svg" alt="icono reloj" />
-                HORARIOS
-              </span>
+              <span class="footer-icon-title"
+                ><img
+                  src="../assets/svg/reloj.svg"
+                  alt="icono reloj"
+                />HORARIOS</span
+              >
             </h4>
             <p>Lunes a viernes 05:00 p.m. a 02:00 a.m.</p>
             <p>Sábado : 5 p.m. - 4 a.m.</p>
             <p>Domingo : 4 p.m. - 12 a.m.</p>
-
             <div class="footer-contacto">
               <p>
                 <img
                   src="../assets/svg/telf.svg"
                   alt="Teléfono"
                   class="icono-contacto"
-                />
-                Telf: 987654321
+                />Telf: 987654321
               </p>
               <p>
                 <img
                   src="../assets/svg/email.svg"
                   alt="Correo"
                   class="icono-contacto"
-                />
-                Email: info@bramirestobar.com
+                />Email: info@bramirestobar.com
               </p>
             </div>
           </div>
-
-          <!-- Col 5: Métodos de pago -->
           <div class="footer-metodos-pago">
             <h4>
-              <span class="footer-icon-title">
-                <img
+              <span class="footer-icon-title"
+                ><img
                   src="../assets/svg/metpago.svg"
                   alt="icono métodos de pago"
-                />
-                Métodos de pago:
-              </span>
+                />Métodos de pago:</span
+              >
             </h4>
             <div class="footer-iconos-pago">
               <img src="../assets/svg/visa.svg" alt="Visa" />
@@ -346,8 +293,6 @@
               <img src="../assets/svg/billteras.svg" alt="Billeteras" />
             </div>
           </div>
-
-          <!-- Col 6: Síguenos + Libro de reclamaciones -->
           <div class="footer-siguenos">
             <h4>Síguenos a través de</h4>
             <div class="footer-redes">
@@ -361,7 +306,6 @@
                 ><img src="../assets/svg/twitter.svg" alt="Twitter"
               /></a>
             </div>
-
             <div class="footer-reclamaciones">
               <a href="#" class="footer-enlace-reclamaciones">
                 <img
