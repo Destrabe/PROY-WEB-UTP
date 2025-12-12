@@ -581,8 +581,9 @@ main {
 .section-badge {
   display: inline-block;
   padding: 8px 24px;
-  background: rgba(255, 200, 87, 0.15);
-  color: #ffc857;
+  color: var(--color-primary);
+  border: 0.5px solid var(--color-primary);
+  background: rgba(254, 226, 226);
   border-radius: 20px;
   font-size: 14px;
   font-weight: 700;
@@ -1025,7 +1026,7 @@ main {
 
 .social-stat i {
   font-size: 32px;
-  color: #ffc857;
+  color: var(--color-primary);
   margin-bottom: 15px;
 }
 
