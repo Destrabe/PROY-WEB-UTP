@@ -1,0 +1,23 @@
+/* ======================================
+   NUNITO SANS - Fuentes locales
+====================================== */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 900; /* Rango de pesos */
+  src: url("NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf")
+    format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 200 900; /* Rango de pesos */
+  src: url("NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf")
+    format("truetype-variations");
+}
+
+/* Uso recomendado */
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
